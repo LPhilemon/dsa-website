@@ -1,0 +1,131 @@
+<%- include("header") -%>
+
+  <body>
+    <!-- Navbar -->
+    <div class="w3-top w3-orange">
+      <div class="w3-bar w3-orange w3-card w3-left-align w3-large">
+        <a
+          class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-orange w3-large w3-orange"
+          href="javascript:void(0)"
+          onclick="w3_open()"
+          ><i class="fa fa-bars"></i
+        ></a>
+      
+        <a href="/" class="w3-bar-item w3-button w3-padding-large w3-orange w3-text-black"><i class="fa fa-home"></i>  Data Structures and Algorithms</a>
+        <!-- <h3 href="#" class="w3-bar-item w3-button w3-padding-small w3-text-black">Data Structures and Analysis</h3> -->
+        <a href="/chapter1" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Chapter1</a>
+        <a href="/chapter2" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">chapter2</a>
+        <a href="/chapter3" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Chapter3</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Link 4</a>
+        
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav
+      class="w3-sidebar activecolor w3-bar-block w3-collapse  w3-animate-left"
+      id="mySidebar"
+    >
+      <a
+        href="javascript:void(0)"
+        onclick="w3_close()"
+        class="w3-right w3-xlarge w3-padding-large w3-hover-orange w3-hide-large"
+        title="Close Menu"
+      >
+        <i class="fa fa-remove"></i>
+      </a>
+  <h4 class="w3-text-black">Algorithms</span> Introduction</h4>
+      
+  <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/Chapter1" >Properties</a>
+  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter1">Development</a>
+  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter1">Algorithm Analysis</a>
+  
+      
+  <h4 class="w3-text-black">Data</span> Structures</h4>
+  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge active" href="/chapter2">Definition</a>
+  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/chapter2">Abstract Data types</a>
+  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/chapter2">Linear Data Structures</a>
+  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/chapter2">Non-Linear Data Structures</a>
+  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/chapter2">Operations on data structures</a>
+
+  <h4 class="w3-text-black">All</span> Together</h4>
+  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="#">Writing Algorithms</a>
+  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="#">Algorithms Example</a>
+  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="#">Algorithm Implementation</a>
+  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="#">Algorithmic Strategies</a>
+  
+    </nav>
+
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div
+      class="w3-overlay w3-hide-large"
+      onclick="w3_close()"
+      style="cursor: pointer"
+      title="close side menu"
+      id="myOverlay"
+    ></div>
+
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left: 250px">
+      <div class="w3-row w3-padding-64">
+        <div class=" w3-container">
+          <h2 class="w3-text-orange">How to write an algorithm</h2>
+          <p>
+            An algorithms is a backbone for any implementation by some desired language. One can implement the algorithm very effectively if some method is followed in writing the algorithm.
+          </p>
+          <h3 class="w3-text-orange">Algorithm GREATEST</h3>
+          <p>This algorithm is to find the greatest element in the array A. The array contains n elements. Max will be a variable which stores greatest element of the array and i is index of an array</p>
+
+          <ol type="1">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ol>
+
+        </div>
+        
+      </div>
+<!-- end section -->
+
+        <!-- New section -->
+        <div class="w3-row">
+          <div class="w3-container">
+            <h3 class="w3-text-orange" id="#properties">Operations on Data Structures</h3>
+            
+            
+              <ul>
+                <li>In order to process elements of a data structure some kind of operation is required.</li>
+                <li>A basic operation involves <strong class="w3-text-orange">creating</strong> a data structure and reserving storage space for the elements.</li>
+              <li>Another operation is <strong class="w3-text-orange">deleting</strong> the data structure, which removes the data items and releases the allocated storage space
+                </li>
+              </ul>
+              
+              <p>Other common operations are: inserting, sorting, searching, merging, traversing.</p>
+
+              <ul>
+                <li><strong class="w3-text-orange">Inserting</strong> involves adding a data item in a specified position to the data structure.</li>
+                <li><strong class="w3-text-orange">sorting</strong> is arranging of data items in specific order.</li>
+                <li><strong class="w3-text-orange">Searching</strong> means finding an item which matches with a given key.</li>
+                <li><strong class="w3-text-orange">Merging</strong> involves combining two sets of data items according to some criterion.</li>
+                <li><strong class="w3-text-orange">Traversing</strong> means accessing each element of a data structure at least once. Used particularly on graphs and also referred to as visiting of vertices on a graph</li>
+              </ul>
+
+          </div>
+          
+        </div>
+
+        <!-- End section -->
+
+      </div>
+
+
+      <div class="w3-clear nextprev w3-padding-32">
+        <a class="w3-left w3-button w3-medium w3-round-xxlarge" style="background-color: #ff9900;" href="/"> Previous</a>
+      <a class="w3-right w3-button w3-medium w3-round-xxlarge" style="background-color: #ff9900;" href="/chapter2">Next</a>
+      </div>
+
+      <%- include("footer") -%>

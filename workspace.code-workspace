@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\..\\..\\..\\Downloads\\API'S\\LaundryHub-v1"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"cmath": "c"
+		}
+	}
+}

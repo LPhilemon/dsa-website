@@ -1,0 +1,326 @@
+<%- include("header") -%>
+
+  <body>
+    <!-- Navbar -->
+    <div class="w3-top w3-orange">
+      <div class="w3-bar w3-orange w3-card w3-left-align w3-large">
+        <a
+          class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-orange w3-large w3-orange"
+          href="javascript:void(0)"
+          onclick="w3_open()"
+          ><i class="fa fa-bars"></i
+        ></a>
+      
+        <a href="/" class="w3-bar-item w3-button w3-padding-large w3-orange w3-text-black"><i class="fa fa-home"></i>  Data Structures and Algorithms</a>
+        <!-- <h3 href="#" class="w3-bar-item w3-button w3-padding-small w3-text-black">Data Structures and Analysis</h3> -->
+        <a href="/chapter4" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Algorithms</a>
+        <a href="/chapter2" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Basic Data Structures</a>
+        <a href="/chapter3" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Trees</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Sorting and Searching</a>
+        <a href="/chapter3" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Basic Graphs</a>
+        
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav
+      class="w3-sidebar activecolor w3-bar-block w3-collapse  w3-animate-left"
+      id="mySidebar"
+    >
+      <a
+        href="javascript:void(0)"
+        onclick="w3_close()"
+        class="w3-right w3-xlarge w3-padding-large w3-hover-orange w3-hide-large"
+        title="Close Menu"
+      >
+        <i class="fa fa-remove"></i>
+      </a>
+  <h4 class="w3-text-black">Algorithms</span> Introduction</h4>
+      
+  <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/Chapter1" >Properties</a>
+  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter1">Development</a>
+  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter1">Algorithm Analysis</a>
+  
+      
+  <h4 class="w3-text-black">Data</span> Structures</h4>
+  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge active" href="/chapter2">Definition</a>
+  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/chapter2">Abstract Data types</a>
+  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/chapter2">Linear Data Structures</a>
+  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/chapter2">Non-Linear Data Structures</a>
+  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/chapter2">Operations on data structures</a>
+
+  <h4 class="w3-text-black">All</span> Together</h4>
+  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="#">Writing Algorithms</a>
+  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="#">Algorithms Example</a>
+  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="#">Algorithm Implementation</a>
+  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="#">Algorithmic Strategies</a>
+  
+    </nav>
+
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div
+      class="w3-overlay w3-hide-large"
+      onclick="w3_close()"
+      style="cursor: pointer"
+      title="close side menu"
+      id="myOverlay"
+    ></div>
+
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left: 250px">
+      <div class="w3-row w3-padding-64">
+        <div class=" w3-container">
+          <h2 class="w3-text-orange">How to write an algorithm</h2>
+          <p>
+            An algorithms is a backbone for any implementation by some desired language. One can implement the algorithm very effectively if some method is followed in writing the algorithm.
+          </p>
+          <h3 class="w3-text-orange">Algorithm GREATEST</h3>
+          <p>This algorithm is to find the greatest element in the array A. The array contains n elements. Max will be a variable which stores greatest element of the array and i is index of an array</p>
+
+          <ol type="1">
+            <li>[check whether the array A is empty] if n < 1 <br>
+                Then write (‘Array is empty’) <br>
+                Exit</li>
+            <li>[Initialize the Max with A[1] i.e. first, element of an array] <br>
+                Max← A[1] (Considering first element is largest) <br>
+                i ← 2</li>
+            <li>[Examine all the elements of an array] <br> Repeat through step 5 while i < = n</li>
+            <li>[Check if any other element of array smaller than the next element] <br>
+                If Max < A[i] Then Max ← A[i] </li>
+            <li>[Check the next element by setting next index] <br>
+                i ← i + 1</li>
+            <li>[Finished] <br>
+                Exit</li>
+
+          </ol>
+
+        </div>
+        
+      </div>
+<!-- end section -->
+
+        <!-- New section -->
+        <div class="w3-row">
+          <div class="w3-container">
+            <h3 class="w3-text-orange" id="#properties">How to write an algorithm</h3>
+            
+            <h4 class="w3-text-orange">Discussion</h4>
+            <pre>
+
+            If you have observed the above algorithm, algorithm starts at step 1
+            and continues a head.
+
+            At step 2 the variable Max is initialized to A[1], that means we
+             have assumed that very first element of an array is greatest one.
+
+            Then check whether next element of an array is greatest or not.
+
+            Thus observe all the elements of an array if any larger element is
+             obtained it will be stored in Max.
+
+            Thus the variable Max will be over written by larger element of an array.
+
+            Finally in Max largest element will get stored.
+            </pre>
+            
+           <div>  
+
+          </div>
+          
+        </div>
+
+        <!-- End section -->
+
+        <!-- New section -->
+        <div class="w3-row">
+          <div class="w3-container">
+            <h3 class="w3-text-orange" id="#properties">There is a specific format of writing the algorithm.</h3>
+            
+            
+              <ol type="1">
+                <li>Every algorithm is given an identifying name and the name should be in capitals.
+                   In the above we have given GREATEST as a name of algorithm</li>
+                <li>Algorithm name should be followed by a brief description of that algorithm.
+                   The description may also include the variables used in algorithm. 
+                   Even if some assumptions are made for that algorithm, then those can be included here.</li>
+                <li>The actual algorithm is made up of sequence of steps which should be numbered. The description of that step should be written in square brackets.
+                   Then actual action statements should be written.</li>
+                <li>4.	If comments are to be given in that algorithm it should be given in round parenthesis,
+                   the comments are given for better understanding of an algorithm</li>
+                <li>5.	Assignment statements are given with the help of ←, in our sample program Max ← A[i].
+                   We can use := symbol for assignment statement.</li>
+                <li>
+                  <pre>
+                      	If statement is given as If condition
+                        Then ----
+                        The if condition can be given in the other way as If condition
+                        Then - - - - -
+                        
+                        else	- - - -
+                        - - - - - -
+
+                  </pre>
+                </li>
+                <li>
+                  <pre>
+                      	Case statement - The case statement is used to make a choice among the several alternatives. In general the case statement is written as,
+                        select case (expression) case value 1:
+                        case value 2:
+                            .
+                            .
+                            .
+                        case value n: 
+                        Default:
+
+                  </pre>
+                </li>
+                <li>
+                  <pre>
+                      	Repeat statement – The repeat statement is written for looping such as:
+                      	Repeat for i=1,2,3,……10
+                    	  Repeat while i < 10 read (array i) else
+                        i← i + 1
+                        Repeat for i = 1,2,3,…….10 while count > 1
+
+                  </pre>
+                </li>
+                <li>
+                  <pre>
+                      	Go to and Exitloop statements – The Go To is unconditional
+                        transfer of control to the particular step. Go To step 5
+                        5:	- - - - -
+                        The Exitloop causes immediate, abrupt exit from loop
+                        For the nested loops Exitloops can be used to come out of it
+                        immediately
+
+                  </pre>
+                </li>
+                <li>
+                  <pre>
+                    Exit statement is used to terminate an algorithm
+
+                    If condition then Exit
+                    For example
+                    If condition then
+                    Exit
+
+                  </pre>
+                </li>
+                <li>Arrays	can	be	represented	as	Array	[i1,i2,i3,…..in]
+                  	where i1,i2,i3,..in are the indices or locations of array.</li>
+                <li>The input and output statements can be given by read (variable
+                  name) and write (variable name)
+                  </li>
+                <li>
+                  <pre>
+                    The	sub-algorithms	can	be given	by functions or	procedures. Hence while writing function for the algorithm simply write –
+                    
+                    Function name_of_the_function which should be followed by steps of that function,
+                    <strong>For example </strong>
+                    Function SQUARE (NUM)
+                    In this function we calculate square of variable NUM. And result will be stored in the variable RESULT.
+                    1.	[Compute the square of NUM]
+                    RESULT ← NUM * NM
+                    2.	[Return the value of RESULT] Return (RESULT)
+                    	In the	same way	procedure	is written.	The	only thing is	we use
+                    keyword procedure name_of_procedure
+                  </pre>
+                </li>
+              </ol>
+
+          </div>
+          
+        </div>
+
+        <!-- End section -->
+
+        <!-- New section -->
+        <div class="w3-row">
+          <div class="w3-container">
+            <h3 class="w3-text-orange" id="#properties">Implementation of an algorithm</h3>
+            
+            <p>Any program can be created with the help of two things <strong class="w3-text-orange">algorithm</strong>  and
+              <strong class="w3-text-orange">data structures.</strong> <br><br>
+              To develop any program we should first select a proper data structure and then develop an algorithm for implementing the given problem with the help of a data structure which we ca have chosen
+              </p>
+
+              <p>
+                This is similar to construction of a house
+                <ul>
+                  <li>You don’t just start house construction</li>
+                  <li>Rather you consult an architect and then put ideas and suggestion,cordingly he draw up a plan of the house, then he discusses it with you.</li>
+                  <li>If you have suggestions, the architects notes it down and makes the necessary changes in the plan until you are happy.</li>
+                  <li>Finally the blue print of the house gets ready and actual construction activity starts. This becomes easy and systematic for construction of the desired house</li>
+                </ul>
+                
+                <h3 class="w3-text-orange">We present a technique for the development of program called the program development cycle which involves several steps as follows:</h3>
+                
+                <ul>
+                  <li>Feasibility study</li>
+                  <li>Requirement analysis and problem specification.</li>
+                  <li>Design</li>
+                  <li>Coding</li>
+                  <li>Debugging</li>
+                  <li>Testing</li>
+                  <li>Maintenance</li>
+                  
+                </ul>
+
+                <h4>Lets discuss each step one by one</h4>
+
+                <li><strong class="w3-text-orange">Feasibility study:</strong>The problem is analyzed to decide whether it is feasible to develop some program for the given problem statement. If we found that it is feasible then the further steps will be carried out</li>
+                <li><strong class="w3-text-orange">Requirement analysis and problem specification</strong>
+                  <li>The programmer has to find out the essential requirement for
+                    solving the given problem by communicating with the users of the software. Programmer then has to decide what are the inputs needed for the program, in which form the inputs are to be given, the order of the inputs, what kind of output should be generated. Thus the total requirement for the program has to be analyzed.</li>
+                </li>
+                <li><strong class="w3-text-orange">Design:</strong>•	Once	the	requirement	analysis	is	done,	the	design	can	be
+                  prepared using the problem specification document. In this step, the algorithm has to be designed for some most suitable data structure.</li>
+                <li><strong class="w3-text-orange">Coding:</strong>•	When the design of the program is ready then coding becomes
+                  a simple job. Because the programming language is selected in the design, coding begins by simply breaking the problem into small modules.</li>
+                <li><strong class="w3-text-orange">Debugging:</strong>in this phase we compile the code and check whether any errors are there. If any error is there then we try to eliminate the
+                  errors. The debugging needs complete scan of the program.</li>
+                <li><strong class="w3-text-orange">Testing:</strong>Here, certain set of input data is given to the program and the program should show the desired results as output.</li>
+                <li><strong class="w3-text-orange">Maintenance:</strong>Once the	code is ready, it is tested properly and in case the
+                  users requires some modifications in the code then those modifications should easily be carried out. Modularity in the code has to be maintained.</li>
+                  <li>
+                  <li>The	documentation	is		not		a		separate	step	in	program development	process		but	it		is	required	at	every	step.
+                    Documentation means providing help or some manual which
+                    will help the user to make use of the code in proper direction.</li>
+                  <li>It is a good practice to maintain some kind of document for every phase of compilation process.</li>>
+                  </li>
+              </p>
+             
+              <h3>Algorithimic Strategies</h3>
+              <p>Algorithmic strategies is a general approach by which many problems can be solved algorithmically
+                <br>Algorithmic strategies are also called as <strong class="w3-text-orange">algorithmic techniques</strong>.
+              </p>
+              <h4>Various algorithmic strategies are-</h4>
+              <ul>
+                <li><strong class="w3-text-orange">Divide and conquer</strong>– In this strategy the problem is divided into smaller sub-problems and these sub-problems are solved to obtain the solution to main problem.</li>
+                <li><strong class="w3-text-orange">Greedy technique</strong>- From a set of obtained solutions the best possible solution is chosen each time, to obtain the final solution.</li>
+                <li><strong class="w3-text-orange">Back tracking</strong>- In this method, in order to obtain the solution trial and error method is followed.</li>
+                <li><strong class="w3-text-orange">Dynamic Programming</strong>- The problem is divided into smaller instances and results of smaller reoccurring instances are obtained to solve the problem.</li>
+
+                 
+                
+                
+                
+                
+              </ul>
+
+          </div>
+          
+        </div>
+
+        <!-- End section -->
+
+      </div>
+
+
+      <div class="w3-clear nextprev w3-padding-32">
+        <a class="w3-left w3-button w3-medium w3-round-xxlarge" style="background-color: #ff9900;" href="/"> Previous</a>
+      <a class="w3-right w3-button w3-medium w3-round-xxlarge" style="background-color: #ff9900;" href="/chapter2">Next</a>
+      </div>
+
+      <%- include("footer") -%>

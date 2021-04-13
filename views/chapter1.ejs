@@ -1,0 +1,197 @@
+<%- include("header") -%>
+
+  <body>
+    <!-- Navbar -->
+    <div class="w3-top w3-orange">
+      <div class="w3-bar w3-orange w3-card w3-left-align w3-large">
+        <a
+          class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-orange w3-large w3-orange"
+          href="javascript:void(0)"
+          onclick="w3_open()"
+          ><i class="fa fa-bars"></i
+        ></a>
+      
+        <a href="/" class="w3-bar-item w3-button w3-padding-large w3-orange w3-text-black"><i class="fa fa-home"></i>  Data Structures and Algorithms</a>
+        <!-- <h3 href="#" class="w3-bar-item w3-button w3-padding-small w3-text-black">Data Structures and Analysis</h3> -->
+        <a href="/chapter4" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Algorithms</a>
+        <a href="/chapter2" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Basic Data Structures</a>
+        <a href="/chapter3" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Trees</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Sorting and Searching</a>
+        <a href="/chapter3" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Basic Graphs</a>
+        
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav
+      class="w3-sidebar activecolor w3-bar-block w3-collapse  w3-animate-left"
+      id="mySidebar"
+    >
+      <a
+        href="javascript:void(0)"
+        onclick="w3_close()"
+        class="w3-right w3-xlarge w3-padding-large w3-hover-orange w3-hide-large"
+        title="Close Menu"
+      >
+        <i class="fa fa-remove"></i>
+      </a>
+      <h4 class="w3-text-black">Algorithms</span> Introduction</h4>
+      
+      <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/Chapter1" >Properties</a>
+      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter1">Development</a>
+      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter1">Algorithm Analysis</a>
+      
+          
+      <h4 class="w3-text-black">Data</span> Structures</h4>
+      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge active" href="/chapter2">Definition</a>
+      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/chapter2">Abstract Data types</a>
+      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/chapter2">Linear Data Structures</a>
+      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/chapter2">Non-Linear Data Structures</a>
+      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/chapter2">Operations on data structures</a>
+    
+      <h4 class="w3-text-black">All</span> Together</h4>
+      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="#">Writing Algorithms</a>
+      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="#">Algorithms Example</a>
+      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="#">Algorithm Implementation</a>
+      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="#">Algorithmic Strategies</a>
+    </nav>
+
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div
+      class="w3-overlay w3-hide-large"
+      onclick="w3_close()"
+      style="cursor: pointer"
+      title="close side menu"
+      id="myOverlay"
+    ></div>
+
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left: 250px">
+      <div class="w3-row w3-padding-64">
+        <div class=" w3-container">
+          <h3 class="w3-text-orange">Definition</h3>
+          <p>
+            One of the core fields that belong to the foundations of computer science deals with the design, analysis and implementation of algorithms for efficient solution of the problems concerned.
+            <p>An Algorithm may be <strong class="w3-text-orange">loosely</strong> defined as a process or procedure or method or recipe. It is a specific set of rules to obtain a definite output from specific inputs provided to the problem.
+              Data structures is connected with the design and implementation of efficient algorithms.
+              </p>
+
+              <p>Data structures deals with the study of methods, techniques and tools to organize or structure data.
+              </p>
+              <h6>Formal Definition</h6>
+              <p>An <strong class="w3-text-orange">Algorithm</strong> may be defined as a finite sequence of instructions each of which has a clear meaning and can be performed with a finite amount of effort in a finite length of time.</p>
+
+          </p>
+        </div>
+        
+      </div>
+
+      <div class="w3-row">
+        <div class="w3-container">
+          <h3 class="w3-text-orange" id="#properties">Structure and Properties</h3>
+          
+          <ul>
+            
+            <li>i.	Input step</li>
+            <li>ii.	Assignment step</li>
+            <li>iii.	Decision step</li>
+            <li>iv.	Repetitive step</li>
+            <li>v.	Output step</li>
+
+          </ul>
+          <p class="w3-text-orange">Example of structure and Properties of an algorithm</p>
+          <p>
+            <ul> 
+              <li>Consider an example of adding two numbers 987 and 76.</li>
+              <li>In this, the input step considers the two operands 987 and
+                76 for addition.</li>
+              <li>The assignment step sets the pair of digits from the two numbers and the previous carry digit if it exists, for addition.</li>
+              <li>The decision step decides at each step whether the added digits yield a value that is greater than 10 and if so, to generate the appropriate carry digit.</li>
+              <li>The repetitive step repeats the process for every pair of digits beginning from the least significant digit onwards.</li>
+              <li>The output step releases the output which is 1063</li>
+            </ul>
+            
+
+          </p>
+        </div>
+        
+      </div>
+
+      <div class="w3-row w3-padding-64">
+        <div class=" w3-container">
+          <h3 class="w3-text-black">Properties</h3>
+          <p>
+            <ul>
+              <li><strong class="w3-text-orange">Finiteness</strong>-an algorithm must terminate after a finite number of
+                steps.</li>
+              <li><strong class="w3-text-orange">Definiteness</strong>- the steps of the algorithm must be precisely defined or unambiguously specified.</li>
+              <li><strong class="w3-text-orange">Generality</strong>-an	algorithm	must	be	generic	enough	to	solve	all
+                problems of a particular class</li>
+              <li><strong class="w3-text-orange">Effectiveness</strong>– the operations of the algorithm must be basic enough to be put down on pencil and paper. They should not be too complex to warrant writing another algorithm for the operation</li>
+              <li><strong class="w3-text-orange">Input-Output</strong>– the algorithm must have certain initial and precise inputs and outputs that may be generated both at its intermediate and final steps.</li>
+
+            </ul>
+          </p>
+        </div>
+        
+        <div class="w3-row">
+          <div class="w3-container">
+            <h3 class="w3-text-orange" id="#properties">Development of an Algorithm</h3>
+            
+            <h5>The steps involved in the development of an algorithm are as follows:</h5>
+            <ul>
+              
+              <p> i.	Problem statement</p>
+              <p> ii.	Model formulation</p>
+              <p> iii.	Algorithm design</p>
+              <p> iv.	Algorithm correctness</p>
+              <p> v.	Implementation
+              <p> vi.	Algorithm analysis</p>
+              <p> vii.	Program testing</p>
+              <p> viii.	documentation</p>
+            </ul>
+
+            
+              <ul> 
+                <li>Once a clear state of the problem is done, the model for the solution of the
+                  problem is to be formulated.
+                  </li>
+                  <br>
+                <li>The next step is to design the algorithm based on the solution model that is formulated. It is here that one sees the role of data structures. The right choice of the data structure needs to be made at the design stage itself since data structure influence the efficiency of the algorithms</li>
+              </ul>
+              
+  
+            </p>
+          </div>
+          
+        </div>
+
+      </div>
+
+      <div class="w3-row">
+        <div class="w3-container">
+          <h3 class="w3-text-orange" id="#properties">Algorithm analysis</h3>
+          
+          <p>
+            Once the correctness of the algorithm is checked and the algorithm implemented, the most important step of measuring the performance of the algorithm is done. This is termed as <strong class="w3-text-orange">algorithm analysis</strong>.
+          </p>
+            
+          <p>
+            It can be seen how the use of appropriate data structures results in a better performance of the algorithm. Finally the program is tested and the development ends with proper documentation
+          </p>
+         
+        </div>
+        
+      </div>
+
+    
+
+      
+
+      <div class="w3-clear nextprev w3-padding-32">
+        <a class="w3-left w3-button w3-medium w3-round-xxlarge" style="background-color: #ff9900;" href="/"> Previous</a>
+      <a class="w3-right w3-button w3-medium w3-round-xxlarge" style="background-color: #ff9900;" href="/chapter2">Next</a>
+      </div>
+
+      <%- include("footer") -%>

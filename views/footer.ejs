@@ -1,0 +1,86 @@
+<footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-32">
+      <h4>@2021</h4>
+    </div>
+
+    <div class="w3-container w3-theme-l1">
+      <p>
+        Done by
+        <a
+          href="https://www.w3schools.com/w3css/default.asp"
+          target="_blank"
+          >Group 14</a
+        >
+      </p>
+    </div>
+  </footer>
+
+  <!-- END MAIN -->
+</div>
+
+<!-- css and js for highlighted active buttons -->
+
+<!-- css -->
+<style>
+/* Style the buttons */
+/* .w3-button {
+border: none;
+outline: none;
+padding: 10px 16px;
+background-color: #f1f1f1;
+cursor: pointer;
+} */
+
+/* Style the active class (and buttons on mouse-over) */
+.active, .w3-button:hover {
+background-color:#ff9900;
+color: black;
+} 
+
+</style>
+
+
+<script>
+
+//js 
+// Get the container element
+
+  // Get the Sidebar
+  var mySidebar = document.getElementById("mySidebar");
+
+  
+
+  // Get the DIV with overlay effect
+  var overlayBg = document.getElementById("myOverlay");
+
+  // Toggle between showing and hiding the sidebar, and add overlay effect
+  function w3_open() {
+    if (mySidebar.style.display === "block") {
+      mySidebar.style.display = "none";
+      overlayBg.style.display = "none";
+    } else {
+      mySidebar.style.display = "block";
+      overlayBg.style.display = "block";
+    }
+  }
+
+  // Close the sidebar with the close button
+  function w3_close() {
+    mySidebar.style.display = "none";
+    overlayBg.style.display = "none";
+  }
+
+  // Get all buttons with class="btn" inside the container
+var btns = btnContainer.getElementsByClassName("w3-button");
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < btns.length; i++) {
+btns[i].addEventListener("click", function() {
+var current = document.getElementsByClassName("active");
+current[0].className = current[0].className.replace(" active", "");
+this.className += " active";
+});
+} 
+</script>
+</body>
+</html>
