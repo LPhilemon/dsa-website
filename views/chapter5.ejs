@@ -4,128 +4,259 @@
     <!-- Navbar -->
     <div class="w3-top w3-orange">
       <div class="w3-bar w3-orange w3-card w3-left-align w3-large">
-        <a
-          class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-orange w3-large w3-orange"
-          href="javascript:void(0)"
-          onclick="w3_open()"
-          ><i class="fa fa-bars"></i
-        ></a>
-      
-        <a href="/" class="w3-bar-item w3-button w3-padding-large w3-orange w3-text-black"><i class="fa fa-home"></i>  Data Structures and Algorithms</a>
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-orange w3-large w3-orange"
+          href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+
+        <a href="/" class="w3-bar-item w3-button w3-padding-large w3-orange w3-text-black"><i
+            class="fa fa-home"></i>Data Structures and Algorithms</a>
         <!-- <h3 href="#" class="w3-bar-item w3-button w3-padding-small w3-text-black">Data Structures and Analysis</h3> -->
-        <a href="/chapter1" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Chapter1</a>
-        <a href="/chapter2" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">chapter2</a>
-        <a href="/chapter3" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Chapter3</a>
-        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Link 4</a>
-        
+        <a href="/chapter1"
+          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Algorithms</a>
+        <a href="/chapter5"
+          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Basic Data
+          Structures</a>
+        <a href="/chapter3"
+          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Trees</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Sorting
+          and Searching</a>
+        <a href="/chapter3"
+          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Basic Graphs</a>
+
       </div>
     </div>
 
     <!-- Sidebar -->
-    <nav
-      class="w3-sidebar activecolor w3-bar-block w3-collapse  w3-animate-left"
-      id="mySidebar"
-    >
-      <a
-        href="javascript:void(0)"
-        onclick="w3_close()"
-        class="w3-right w3-xlarge w3-padding-large w3-hover-orange w3-hide-large"
-        title="Close Menu"
-      >
+    <nav class="w3-sidebar activecolor w3-bar-block w3-collapse  w3-animate-left w3-light-grey" id="mySidebar">
+      <a href="javascript:void(0)" onclick="w3_close()"
+        class="w3-right w3-xlarge w3-padding-large w3-hover-orange w3-hide-large" title="Close Menu">
         <i class="fa fa-remove"></i>
       </a>
-  <h4 class="w3-text-black">Algorithms</span> Introduction</h4>
-      
-  <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/Chapter1" >Properties</a>
-  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter1">Development</a>
-  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter1">Algorithm Analysis</a>
-  
-      
-  <h4 class="w3-text-black">Data</span> Structures</h4>
-  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge active" href="/chapter2">Definition</a>
-  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/chapter2">Abstract Data types</a>
-  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/chapter2">Linear Data Structures</a>
-  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/chapter2">Non-Linear Data Structures</a>
-  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/chapter2">Operations on data structures</a>
 
-  <h4 class="w3-text-black">All</span> Together</h4>
-  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="#">Writing Algorithms</a>
-  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="#">Algorithms Example</a>
-  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="#">Algorithm Implementation</a>
-  <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="#">Algorithmic Strategies</a>
-  
+      <h4 class="w3-text-black">Algorithms</span> Introduction</h4>
+      
+      <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/Chapter1" >Properties</a>
+      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter1">Development</a>
+      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter1">Algorithm Analysis</a>
+      
+      	Stacks
+        	Introduction
+        	What is a stack
+        	ADT stack
+        	Implementation of a stack
+        •	Arrays
+        •	Linked list
+      	Queues
+        	Introduction
+        	What is a queue
+        	ADT queues
+        	Implementation of a queue
+        •	Arrays
+          • Linked list
+      
+      
     </nav>
 
 
     <!-- Overlay effect when opening sidebar on small screens -->
-    <div
-      class="w3-overlay w3-hide-large"
-      onclick="w3_close()"
-      style="cursor: pointer"
-      title="close side menu"
-      id="myOverlay"
-    ></div>
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor: pointer" title="close side menu"
+      id="myOverlay"></div>
 
     <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
     <div class="w3-main" style="margin-left: 250px">
       <div class="w3-row w3-padding-64">
         <div class=" w3-container">
-          <h2 class="w3-text-orange">How to write an algorithm</h2>
+          <h2 class="w3-text-orange">Stack</h2>
+          
           <p>
-            An algorithms is a backbone for any implementation by some desired language. One can implement the algorithm very effectively if some method is followed in writing the algorithm.
-          </p>
-          <h3 class="w3-text-orange">Algorithm GREATEST</h3>
-          <p>This algorithm is to find the greatest element in the array A. The array contains n elements. Max will be a variable which stores greatest element of the array and i is index of an array</p>
+            <b> The data object stack is an ordered list but the access, insertions and deletions of elements are restricted by following rules</b> <br>
 
-          <ol type="1">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ol>
+            For example, in a stack, the operations are carried out in such a way that the last element which is inserted will be the first element out. <br>
+            Such order is called Last In First Out or ‘LIFO’<br>
+            The ordered list does not have specific ordering and the
+              elements are inserted and deleted in any random order.<br>
+            Thus stacks may be treated as special cases of ordered
+              lists. <br>
+              A stack is an ordered list in which all insertions and deletions are made at one end called the top. <br>
+              If we have to make a stack of elements 20, 30, 40, 50, 60 then 20 will be the bottommost element and 60 will be the topmost element in the stack.
+
+              <img src="images/stack1.jpg" alt="stack1">
+
+              <h3>Stack ADT</h3>
+              <pre>
+<strong class="w3-text-orange">Stack()</strong>  - creates a new stack that is empty. It needs no parameters and returns an empty stack.
+
+<strong class="w3-text-orange">push(item)</strong>  -adds a new item to the top of the stack. It
+needs the item and returns nothing.
+
+<strong class="w3-text-orange">pop()</strong>  - removes the top item from the stack. It needs no parameters and returns the item. The stack is modified.
+
+<strong class="w3-text-orange">peek()</strong>  - returns the top item from the stack but does not remove it. It needs no parameters. The stack is not modified.
+
+<strong class="w3-text-orange">is_empty()</strong>  - tests to see whether the stack is empty. It needs no parameters and returns a Boolean value.
+
+<strong class="w3-text-orange">size()</strong>  - returns the number of items on the stack. It needs no parameters and returns an integer.
+
+              </pre>
+              <p><b>Primary operations: Push and Pop</b> <br>
+                	<b>Push</b> 
+                	:Add an element to the top of the stack <br>
+                	<b>Pop</b> 
+                	:Remove the element at the top of the stack<br>
+                </p>
+                <img src="images/stack2.png" alt="">
+                <img src="images/stack3.png" alt="">
+
+                <h3><b>Stack Applications</b></h3><br>
+                	<li> Real life</li>
+                	Pile of books <br>
+                	Plate trays
+                	<li> More applications related to computer science</li>
+                	Program execution stack (read more from your text)
+                	Evaluating expressions
+                	<li> Functional calls/recursion</li>
+                	<li> Undo in an editor</li>
+                	<li> Balanced parenthesis</li>
+
+          </p>
+      </div>
+      
+      </div>
+      <!-- end section -->
+      
+      <!-- New section -->
+      <div class="w3-row">
+        <div class="w3-container">
+          <h3 class="w3-text-orange" id="#properties">Implementing Stacks: Array</h3>
+
+          <b>Advantages</b>  <br>
+            •	best performance <br>
+            <b>Disadvantage</b>  <br>
+            •	fixed size <br>
+            <b>Basic implementation</b>  <br>
+            •	initially empty array <br>
+            •	field to record where the next data gets placed into <br>
+            •	if array is full, push() returns false <br>
+            •	otherwise adds it into the correct spot <br>
+            •	if array is empty, pop() returns null <br>
+            •	otherwise removes the next item in the stack <br>
+            
+            <b>Array implementation of stacks</b>
+
+            •	To implement a stack, items are inserted and
+            removed at the same end (called the top) <br>
+            •	Efficient array implementation requires that the top of the stack be towards the center of the array, not fixed at one end. <br>
+            •	To use an array to implement a stack, you need both the array itself and an integer <br>
+            <b> The integer tells you either:</b> <br>
+                ♦Which location is currently the top of the stack, or <br>
+                ♦How many elements are in the stack <br>
+
+          
+          <p>
+            <b class="w3-text-orange">Pushing and popping</b>
+            <img src="images/stack5.png" alt=""> <br>
+
+            •	If the bottom of the stack is at location 0, then an empty stack is represented by top = -1 or count = 0  <br>
+            •	To add (push) an element, either:  <br>
+            □	Increment top and store the element in	stk[top], or <br>
+            □	Store the element in	stk[count] and increment	count <br>
+            •	To remove (pop) an element, either: <br>
+            □	Get the element from	stk[top] and decrement	top, or <br>
+            □	Decrement count and get the element in	stk[count]
+
+          </p>
+
+          <p>
+            <b class="w3-text-orange">After Popping</b>
+            <img src="images/stack5.png" alt=""> <br>
+            •When	you	pop	an	element,	do	you	just	leave	the “deleted” element sitting in the array? <br>
+            •The surprising answer is, “it depends” <br>
+              □	If this is an array of primitives, or if you are programming in C or C++, then doing anything more is just a waste of time <br>
+              □	If you are programming in Java, and the array contains objects, <br>
+            you should set the “deleted” array element to null
+              □	Why? To allow it to be garbage collected!
+          </p>
+
+          <p>
+            <b class="w3-text-orange">Sharing space</b> <br>
+            •Of course, the bottom of the stack could be at
+the other end <br>
+
+            <img src="images/stack6.jpg.png" alt=""> <br>
+            •Sometimes this is done to allow two stacks to share the
+same storage area
+<img src="images/stack7.jpg.png" alt=""> <br>
+
+          </p>
+
+          <div>
+          </div>
 
         </div>
-        
-      </div>
-<!-- end section -->
 
-        <!-- New section -->
-        <div class="w3-row">
-          <div class="w3-container">
-            <h3 class="w3-text-orange" id="#properties">Operations on Data Structures</h3>
-            
-            
-              <ul>
-                <li>In order to process elements of a data structure some kind of operation is required.</li>
-                <li>A basic operation involves <strong class="w3-text-orange">creating</strong> a data structure and reserving storage space for the elements.</li>
-              <li>Another operation is <strong class="w3-text-orange">deleting</strong> the data structure, which removes the data items and releases the allocated storage space
-                </li>
-              </ul>
-              
-              <p>Other common operations are: inserting, sorting, searching, merging, traversing.</p>
+        <!-- End section -->
 
-              <ul>
-                <li><strong class="w3-text-orange">Inserting</strong> involves adding a data item in a specified position to the data structure.</li>
-                <li><strong class="w3-text-orange">sorting</strong> is arranging of data items in specific order.</li>
-                <li><strong class="w3-text-orange">Searching</strong> means finding an item which matches with a given key.</li>
-                <li><strong class="w3-text-orange">Merging</strong> involves combining two sets of data items according to some criterion.</li>
-                <li><strong class="w3-text-orange">Traversing</strong> means accessing each element of a data structure at least once. Used particularly on graphs and also referred to as visiting of vertices on a graph</li>
-              </ul>
+              <!-- New section -->
+      <div class="w3-row">
+        <div class="w3-container">
+          <h3 class="w3-text-orange" id="#properties">Error Checking</h3>
 
-          </div>
+          •	There are two stack errors that can occur: <br>
+          □	Underflow: trying to pop (or peek at) an empty stack<br>
+          □	Overflow: trying to push onto an already full stack<br>
+          •	For underflow, you should throw an exception<br>
+          □	If	you	don’t	catch	it	yourself,	Java	will	throw	an<br>
+          ArrayIndexOutOfBounds exception<br>
+          □	You could create your own, more informative exception<br>
+          •	For overflow, you could do the same things<br>
+          □	Or, you could check for the problem, and  copy everything  into a new, larger array<br>
+<br>
+          <h3 class="w3-text-orange">Implementing a Stack: Linked List</h3>
+          <pre>
+          	<b>Advantages:</b> 
+          	always constant time to push or pop an element can grow to an infinite size
+          	<b>Disadvantages</b>
+          	the	common	case	is	the	slowest	of	all	the implementations can grow to an infinite size
+          	<b>Basic implementation</b> list is initially empty
+          	push() method adds a new item to the head of the list
+          	pop() method removes the head of the list
+          </pre>
+          
+          <h3 class="w3-text-orange">Linked-list implementation of stacks</h3>
+          <pre>
+            □	Since all the action happens at the top of a stack, a singly-linked list	
+              (SLL) is a fine way to implement it
+            □	The header of the list points to the top of the stack 
+
+          	<img src="images/linked-list stack.png" alt=""> <br>
+            	  □ Pushing is inserting an element at the front of the list
+	            □ Popping is removing an element from the front of the list
+
+          </pre>
+
+          <pre>
+            •	With a linked-list representation, overflow will not happen (unless you exhaust memory, which is another kind of problem)
+            •	Underflow can happen, and should be handled the same way as for an array implementation
+            •	When a node is popped from a list, and the node references an object, the reference (the pointer in the node) does not need to be set to <b>null</b>
+              □	Unlike an array implementation, it really is removed--you can no longer get to it from the linked list
+              □	Hence, garbage collection can occur as appropriate
+
+          </pre>
           
         </div>
 
         <!-- End section -->
 
+       
+
+
       </div>
 
 
       <div class="w3-clear nextprev w3-padding-32">
-        <a class="w3-left w3-button w3-medium w3-round-xxlarge" style="background-color: #ff9900;" href="/"> Previous</a>
-      <a class="w3-right w3-button w3-medium w3-round-xxlarge" style="background-color: #ff9900;" href="/chapter2">Next</a>
+        <a class="w3-left w3-button w3-medium w3-round-xxlarge" style="background-color: #ff9900;" href="/">
+          Previous</a>
+        <a class="w3-right w3-button w3-medium w3-round-xxlarge" style="background-color: #ff9900;"
+          href="/chapter2">Next</a>
       </div>
 
       <%- include("footer") -%>

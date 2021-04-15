@@ -31,6 +31,16 @@ app.get("/chapter4", (req,res) => {
   res.render("chapter4");
 });
 
+app.get("/chapter5", (req,res) => {
+  res.render("chapter5");
+});
+app.get("/chapter6", (req,res) => {
+  res.render("chapter6");
+});
+app.get("/chapter7", (req,res) => {
+  res.render("chapter7");
+});
+
 app.listen(process.env.PORT || 3000, function() {
   console.log("Server started on port 3000");
 });

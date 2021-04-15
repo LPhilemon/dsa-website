@@ -1,0 +1,165 @@
+<%- include("header") -%>
+
+  <body>
+    <!-- Navbar -->
+    <div class="w3-top w3-orange">
+      <div class="w3-bar w3-orange w3-card w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-orange w3-large w3-orange"
+          href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+
+        <a href="/" class="w3-bar-item w3-button w3-padding-large w3-orange w3-text-black"><i
+            class="fa fa-home"></i>Data Structures and Algorithms</a>
+        <!-- <h3 href="#" class="w3-bar-item w3-button w3-padding-small w3-text-black">Data Structures and Analysis</h3> -->
+        <a href="/chapter1"
+          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Algorithms</a>
+        <a href="/chapter5"
+          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Basic Data
+          Structures</a>
+        <a href="/chapter3"
+          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Trees</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Sorting
+          and Searching</a>
+        <a href="/chapter3"
+          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Basic Graphs</a>
+
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="w3-sidebar activecolor w3-bar-block w3-collapse  w3-animate-left w3-light-grey" id="mySidebar">
+      <a href="javascript:void(0)" onclick="w3_close()"
+        class="w3-right w3-xlarge w3-padding-large w3-hover-orange w3-hide-large" title="Close Menu">
+        <i class="fa fa-remove"></i>
+      </a>
+
+      <h4 class="w3-text-black">Algorithms</span> Introduction</h4>
+      
+      <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/Chapter1" >Properties</a>
+      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter1">Development</a>
+      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter1">Algorithm Analysis</a>
+      
+      	Stacks
+        	Introduction
+        	What is a stack
+        	ADT stack
+        	Implementation of a stack
+        •	Arrays
+        •	Linked list
+      	Queues
+        	Introduction
+        	What is a queue
+        	ADT queues
+        	Implementation of a queue
+        •	Arrays
+          • Linked list
+      
+      
+    </nav>
+
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor: pointer" title="close side menu"
+      id="myOverlay"></div>
+
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left: 250px">
+      <div class="w3-row w3-padding-64">
+        <div class=" w3-container">
+      
+
+        <!-- New section -->
+          <h3 class="w3-text-orange" id="#properties">Queues</h3>
+
+         
+          
+          <h3 class="w3-text-orange">What is a queue?</h3>
+          
+          <pre>
+            □	It is an ordered group of homogeneous items of elements.
+            □	Queues have two ends:
+                •Elements are added at one end called the rear .
+                •Elements are removed from the other end called the front.
+            □	The element added first is also removed first ( <b>FIFO</b>: First In, First Out)
+            <img src="images/queue2.jpg" style="height: 500px; width: 700px;" alt=""> <br>
+          </pre>
+
+          <pre>
+            •	With a linked-list representation, overflow will not happen (unless you exhaust memory, which is another kind of problem).
+            •	Underflow can happen, and should be handled the same way as for an array implementation.
+            •	When a node is popped from a list, and the node references an object, the reference (the pointer in the node) does not need to be set to <b>null</b>.
+              □	Unlike an array implementation, it really is removed--you can no longer get to it from the linked list.
+              □	Hence, garbage collection can occur as appropriate.
+
+          </pre>
+          
+          <p>
+            <b>The queue ADT</b> <br>
+            	□ The queue abstract data type is defined by the following structure and operations.<br>
+            	□ A queue is structured as an ordered collection of items which are added at one end, called the “rear,” and removed from the other end, called the “front.” <br>
+            	□ Queues maintain a FIFO ordering property<br>
+
+              <b >
+                <b class="w3-text-orange">Queue()</b> creates a new queue that is empty. It needs no parameters and returns an empty queue.<br>
+                <b class="w3-text-orange">enqueue(item)</b> adds a new item to the rear of the queue. It needs the item and returns nothing.<br>
+                <b class="w3-text-orange">dequeue()</b> removes the front item from the queue. It needs no parameters and returns the item. The queue is modified.<br>
+                <b class="w3-text-orange">is_empty()</b> tests to see whether the queue is empty. It needs no parameters and returns a Boolean value.<br>
+                <b class="w3-text-orange">size()</b> returns the number of items in the queue. It needs no parameters and returns an integer<br>
+
+              </b>
+
+          </p>
+
+          <b class="w3-text-orange">Queues in computer science</b>
+          <pre>
+           <b>Operating systems:</b> 
+              •	queue of print jobs to send to the printer
+              •	queue of programs / processes to be run
+              •	queue of network data packets to send
+
+            <b> Programming:</b>
+              • modeling a line of customers or clients
+              • storing a queue of computations to be performed in order
+
+            <b> Real world examples:</b>
+              •	people on an escalator or waiting in a line.
+              •	cars at a gas station (or on an assembly line).
+              •	Printing Job Management.
+              •	Packet Forwarding in Routers.
+              •	Message queue in Windows.
+              •	I/O buffer.
+
+          </pre>
+
+          <h3 class="w3-text-orange">Array implementation of a queue</h3>
+          <p>
+            •	A queue is a first in, first out (FIFO) data structure <br>
+            •	This is accomplished by inserting at one end (the rear) and deleting from the other (the front)
+
+            <img src="images/queue3.png"  alt=""> <br>
+
+            •	To insert: put new element in	location 4, and set rear to 4 <br>
+            •	To delete: take element from location 0, and set front to 1
+
+            <img src="images/queue4.png" alt=""> <br>
+            •	Notice	how	the	array	contents	“crawl”	to	the	right	as elements are inserted and deleted
+            •	This will be a problem after a while!
+
+          </p>
+
+
+        </div>
+
+        <!-- End section -->
+
+
+     
+        </div>
+
+      <div class="w3-clear nextprev w3-padding-32">
+        <a class="w3-left w3-button w3-medium w3-round-xxlarge" style="background-color: #ff9900;" href="/">
+          Previous</a>
+        <a class="w3-right w3-button w3-medium w3-round-xxlarge" style="background-color: #ff9900;"
+          href="/chapter2">Next</a>
+      </div>
+
+      <%- include("footer") -%>
