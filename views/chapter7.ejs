@@ -65,183 +65,77 @@
         <!-- start section -->
         <div class=" w3-container">
           <h2 class="w3-text-orange">Introduction</h2>
-        </div>
-      </div>
+          <p>
+            <b class="w3-text-orange">Sorting</b> is a process that organizes or rearranges a collection of
+            data into either ascending or descending order.
+             Sorting sometimes is done to improve on the readability of that
+            data, at times to be able to search or extract some information
+            quickly out of that data.
+             The list should be homogeneous, that is the elements in the list
+            should be the same type.
+             To study sorting algorithms, most of the times we use a list of
+            integers and typically we sort the list of integers in an increasing
+            order of value.
+             E.g. 5,9, 8, 1, 3, 2, 4 → 1,2,3,4,5,8,9 increasing order
+            → 9,8,5,4,3, 2,1 decreasing order
+            ♦ ‘fork’, ‘knife’, ‘mouse’, ‘screen’, ‘key’ → ‘fork’, ’key’, ‘knife’, ‘mouse’,
+            ‘screen’
+          </p>
+        
+      
       <!-- end section -->
          
         <!-- start section -->
         <div class=" w3-container">
             <h2 class="w3-text-orange">Classification</h2>
-          </div>
+          
         </div>
         <!-- end section -->
                
         <!-- start section -->
         <div class=" w3-container">
             <h2 class="w3-text-orange">Implementation</h2>
-          </div>
+          
         </div>
         <!-- end section -->
                
         <!-- start section -->
         <div class=" w3-container">
             <h2 class="w3-text-orange">Insertion sort</h2>
-          </div>
+          
         </div>
         <!-- end section -->
                
         <!-- start section -->
         <div class=" w3-container">
             <h2 class="w3-text-orange">Bubble sort</h2>
-          </div>
+          
         </div>
         <!-- end section -->
                
         <!-- start section -->
         <div class=" w3-container">
             <h2 class="w3-text-orange">Merge sort</h2>
-          </div>
+          
         </div>
         <!-- end section -->
                
         <!-- start section -->
         <div class=" w3-container">
             <h2 class="w3-text-orange">Quick sort</h2>
-          </div>
+          
         </div>
         <!-- end section -->
                
         <!-- start section -->
         <div class=" w3-container">
             <h2 class="w3-text-orange">Comparison</h2>
-          </div>
+          
         </div>
         <!-- end section -->
                     
       
-      <!-- New section -->
-      <div class="w3-row">
-        <div class="w3-container">
-          <h3 class="w3-text-orange" id="#properties">Implementing Stacks: Array</h3>
-
-          <b>Advantages</b>  <br>
-            •	best performance <br>
-            <b>Disadvantage</b>  <br>
-            •	fixed size <br>
-            <b>Basic implementation</b>  <br>
-            •	initially empty array <br>
-            •	field to record where the next data gets placed into <br>
-            •	if array is full, push() returns false <br>
-            •	otherwise adds it into the correct spot <br>
-            •	if array is empty, pop() returns null <br>
-            •	otherwise removes the next item in the stack <br>
-            
-            <b>Array implementation of stacks</b>
-
-            •	To implement a stack, items are inserted and
-            removed at the same end (called the top) <br>
-            •	Efficient array implementation requires that the top of the stack be towards the center of the array, not fixed at one end. <br>
-            •	To use an array to implement a stack, you need both the array itself and an integer <br>
-            <b> The integer tells you either:</b> <br>
-                ♦Which location is currently the top of the stack, or <br>
-                ♦How many elements are in the stack <br>
-
-          
-          <p>
-            <b class="w3-text-orange">Pushing and popping</b>
-            <img src="images/stack5.png" alt=""> <br>
-
-            •	If the bottom of the stack is at location 0, then an empty stack is represented by top = -1 or count = 0  <br>
-            •	To add (push) an element, either:  <br>
-            □	Increment top and store the element in	stk[top], or <br>
-            □	Store the element in	stk[count] and increment	count <br>
-            •	To remove (pop) an element, either: <br>
-            □	Get the element from	stk[top] and decrement	top, or <br>
-            □	Decrement count and get the element in	stk[count]
-
-          </p>
-
-          <p>
-            <b class="w3-text-orange">After Popping</b>
-            <img src="images/stack5.png" alt=""> <br>
-            •When	you	pop	an	element,	do	you	just	leave	the “deleted” element sitting in the array? <br>
-            •The surprising answer is, “it depends” <br>
-              □	If this is an array of primitives, or if you are programming in C or C++, then doing anything more is just a waste of time <br>
-              □	If you are programming in Java, and the array contains objects, <br>
-            you should set the “deleted” array element to null
-              □	Why? To allow it to be garbage collected!
-          </p>
-
-          <p>
-            <b class="w3-text-orange">Sharing space</b> <br>
-            •Of course, the bottom of the stack could be at
-the other end <br>
-
-            <img src="images/stack6.jpg.png" alt=""> <br>
-            •Sometimes this is done to allow two stacks to share the
-same storage area
-<img src="images/stack7.jpg.png" alt=""> <br>
-
-          </p>
-
-          <div>
-          </div>
-
-        </div>
-
-        <!-- End section -->
-
-              <!-- New section -->
-      <div class="w3-row">
-        <div class="w3-container">
-          <h3 class="w3-text-orange" id="#properties">Error Checking</h3>
-
-          •	There are two stack errors that can occur: <br>
-          □	Underflow: trying to pop (or peek at) an empty stack<br>
-          □	Overflow: trying to push onto an already full stack<br>
-          •	For underflow, you should throw an exception<br>
-          □	If	you	don’t	catch	it	yourself,	Java	will	throw	an<br>
-          ArrayIndexOutOfBounds exception<br>
-          □	You could create your own, more informative exception<br>
-          •	For overflow, you could do the same things<br>
-          □	Or, you could check for the problem, and  copy everything  into a new, larger array<br>
-<br>
-          <h3 class="w3-text-orange">Implementing a Stack: Linked List</h3>
-          <pre>
-          	<b>Advantages:</b> 
-          	always constant time to push or pop an element can grow to an infinite size
-          	<b>Disadvantages</b>
-          	the	common	case	is	the	slowest	of	all	the implementations can grow to an infinite size
-          	<b>Basic implementation</b> list is initially empty
-          	push() method adds a new item to the head of the list
-          	pop() method removes the head of the list
-          </pre>
-          
-          <h3 class="w3-text-orange">Linked-list implementation of stacks</h3>
-          <pre>
-            □	Since all the action happens at the top of a stack, a singly-linked list	
-              (SLL) is a fine way to implement it
-            □	The header of the list points to the top of the stack 
-
-          	<img src="images/linked-list stack.png" alt=""> <br>
-            	  □ Pushing is inserting an element at the front of the list
-	            □ Popping is removing an element from the front of the list
-
-          </pre>
-
-          <pre>
-            •	With a linked-list representation, overflow will not happen (unless you exhaust memory, which is another kind of problem)
-            •	Underflow can happen, and should be handled the same way as for an array implementation
-            •	When a node is popped from a list, and the node references an object, the reference (the pointer in the node) does not need to be set to <b>null</b>
-              □	Unlike an array implementation, it really is removed--you can no longer get to it from the linked list
-              □	Hence, garbage collection can occur as appropriate
-
-          </pre>
-          
-        </div>
-
-        <!-- End section -->
-
+      
        
 
 
