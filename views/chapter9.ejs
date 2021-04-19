@@ -1,0 +1,185 @@
+<%- include("header") -%>
+
+    <body>
+        <!-- Navbar -->
+        <div class="w3-top w3-orange">
+            <div class="w3-bar w3-orange w3-card w3-left-align w3-large">
+                <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-orange w3-large w3-orange" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+
+                <a href="/" class="w3-bar-item w3-button w3-padding-large w3-orange w3-text-black"><i
+            class="fa fa-home"></i>Data Structures and Algorithms</a>
+                <!-- <h3 href="#" class="w3-bar-item w3-button w3-padding-small w3-text-black">Data Structures and Analysis</h3> -->
+                <a href="/chapter1" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Algorithms</a>
+                <a href="/chapter5" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Basic Data
+          Structures</a>
+                <a href="/chapter9" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Trees</a>
+                <a href="/chapter7" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Sorting
+          and Searching</a>
+                <a href="/chapter13" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Basic Graphs</a>
+
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <nav class="w3-sidebar activecolor w3-bar-block w3-collapse  w3-animate-left w3-light-grey" id="mySidebar">
+            <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-orange w3-hide-large" title="Close Menu">
+                <i class="fa fa-remove"></i>
+            </a>
+
+            <h4 class="w3-text-black">Trees</span>
+            </h4>
+
+            <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge active" href="/Chapter7">Introduction</a>
+            <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/Chapter7">Terminology</a>
+            <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/Chapter7">Representation</a>
+            <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/Chapter7">Implementation</a>
+            <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/Chapter7">Binary tree Traversals</a>
+            <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/Chapter7">Additional Binary Tree operations</a>
+            <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/Chapter7">Binary Search trees</a>
+
+
+
+
+
+
+        </nav>
+
+
+        <!-- Overlay effect when opening sidebar on small screens -->
+        <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor: pointer" title="close side menu" id="myOverlay"></div>
+
+        <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+        <div class="w3-main" style="margin-left: 250px">
+            <div class="w3-row w3-padding-64">
+
+                <h2 class="w3-text-orange">Tree Definition</h2>
+                <p class="w3-center">
+                    A computer scientist's view of a tree
+                    <img src="images/tree/treepicture2.png" style="height:40%; width:40%;" alt="computer scientist tree view ">
+                </p>
+                <h2>What is a Tree </h2>
+                <p>
+                    A <b>tree</b> structure means that the data are organized so that items of information are related by branches <br> A tree is a finite non-empty set of elements.
+                    <br>It is an abstract model of a hierarchical structure. consists of nodes with a parent-child relation.
+                    <br>Applications:
+                    <ul>
+                        <li>Organization charts</li>
+                        <li>File systems</li>
+                        <li>Programming environments</li>
+                    </ul>
+                </p> Examples:
+                <p class="w3-center ">
+                    <img src="images/tree/treepicture1.png " style=" height: 50%; width:50%; " alt="tree picture image ">
+                </p>
+                <p>
+                    <h3><b>Definition</b>(recursively):</h3> A tree is a finite set of one or more nodes such that;
+                    <ul>
+                        <li>There is a specially designated node called
+                            <i>root</i></li>
+                        <li>The remaining nodes are partitioned into n >= 0 disjoint set T1 ,…,Tn , where each of these sets is a tree. T1 ,…,Tn are called the
+                            <i>subtrees</i> of the root.</li>
+                    </ul>
+                    Every node in the tree is the root of some subtree
+                </p>
+                <h3><b> Tree Terminology;</b></h3>
+                <p>
+                    <ul>
+                        <li><i>Root</i> - The top node in a tree.</li>
+                        <li><i>Child</i> - A node directly connected to another node when moving away from the Root</li>
+                        <li><i>Parent</i> - The converse notion of a child.</li>
+                        <li><i>Sibling</i> - A group of nodes with the same parent</li>
+                        <li><i>Descendant</i> - A node reachable by repeated proceeding from parent to child.</li>
+                        <li>
+                            <i>Ancestor</i> - A node reachable by repeated proceeding from child to parent.</li>
+                        <li><i>Leaf</i> - (less commonly called External node) A node with no children.</li>
+                        <li><i>Branch</i></li>
+                        <li><i>Internal node</i> - A node with at least one child.</li>
+                        <li><i>Degree</i> - The number of sub trees of a node.</li>
+                        <li><i>Edge</i> - The connection between one node and another.</li>
+                        <li><i>Path</i> - A sequence of nodes and edges connecting a node with a descendant.</li>
+                        <li><i>Level</i> - The level of a node is defined by 1 + (the number of connections between the node and the root).</li>
+                        <li><i>Height of node</i> - The height of a node is the number of edges on the longest path between that node and a leaf.</li>
+                        <li><i>Height of Tree</i> - The height of a tree is the height of its root node.</li>
+                        <li><i>Depth</i> - The depth of a node is the number of edges from the tree 's root node to the node.</li>
+                        <li><i>Forest</i> - A forest is a set of n ≥ 0 disjoint trees.</li>
+                    </ul>
+                </p>
+
+
+                <div class="w4-container">
+                    <ol>
+                        <li>
+                            <b>Root:</b></li> node without parent (A)
+                        <li>
+                            <b>Siblings:</b></li> nodes share the same parent (B,C,D) are sibling sharing A
+
+                        <li>
+                            <b>Internal node:</b></li> node with at least one child (A, B, C, F)
+
+                        <li>
+                            <b>External node:(leaf)</b></li> node without children (E, I, J, K, G, H, D)
+                        <li>
+                            <b>Ancestors of a node:</b></li> parent, grandparent, grand-grandparent, etc
+                        <li>
+                            <b>Descendant of a node:</b></li> child, grandchild, grand-grandchild, etc.
+
+                        <li>
+                            <b>Depth of a node:</b></li> number of ancestors
+                        <li>
+                            <b>Height of a tree:</b></li> maximum depth of any node (3)
+                        <li>
+                            <b>Degree of a node:</b></li> the number of its children
+
+                        <li>
+                            <b>Degree of a Tree:</b></li> the maximum number of its node.
+                        <li>
+                            <b>Subtree:</b></li> tree consisting of a node and its descendants
+
+
+                    </ol>
+                </div>
+                <div class="w3-container">
+                    <img src="images/tree/treepicture3.jpg" style=" height: 50%; width: 50%;" alt="tree picture 3 ">
+                </div>
+
+
+            </div>
+            <div>
+                <h4><b> TREE PRESENTATION </b></h4>
+                A node is represented by an object storing
+                <ul>
+                    <li>Element</li>
+                    <li>Parent node</li>
+                    <li>Sequence of children</li>
+                </ul>
+                <img src="images/tree/treepicture4.jpg " style="height: 25%; width: 25%; margin-left: 50px; " alt="treepicture4 ">
+                <img src="images/tree/treepicture5.jpg " style="height: 25%; width: 25%; margin-left: 100px; " alt="treepicture5 ">
+
+                <h3><b>Representation Of Trees</b></h3>
+
+                <ol>
+                    <li> List Representation:</li>We can write of Figure 5.2 as a list in which each of the subtrees is also a list ( A ( B ( E ( K, L ), F ), C ( G ), D ( H ( M ), I, J ) ) )
+
+
+                </ol>
+
+            </div>
+
+
+            <!-- end -->
+
+            <!-- start section -->
+
+            <div class=" w3-container ">
+                <h2 class="w3-text-orange ">Comparison</h2>
+
+            </div>
+            <!-- end section -->
+
+            <div class="w3-clear nextprev w3-padding-32 ">
+                <a class="w3-left w3-button w3-medium w3-round-xxlarge " style="background-color: #ff9900; " href="/chapter8 ">
+                Previous</a>
+                <a class="w3-right w3-button w3-medium w3-round-xxlarge " style="background-color: #ff9900; " href="/chapter13 ">Next</a>
+            </div>
+
+            <%- include("footer") -%>
