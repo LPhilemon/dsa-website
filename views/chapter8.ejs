@@ -1,0 +1,328 @@
+<%- include("header") -%>
+
+  <body>
+    <!-- Navbar -->
+    <div class="w3-top w3-orange">
+      <div class="w3-bar w3-orange w3-card w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-orange w3-large w3-orange"
+          href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+
+        <a href="/" class="w3-bar-item w3-button w3-padding-large w3-orange w3-text-black"><i
+            class="fa fa-home"></i>Data Structures and Algorithms</a>
+        <!-- <h3 href="#" class="w3-bar-item w3-button w3-padding-small w3-text-black">Data Structures and Analysis</h3> -->
+        <a href="/chapter1"
+          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Algorithms</a>
+        <a href="/chapter5"
+          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Basic Data
+          Structures</a>
+        <a href="/chapter3"
+          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Trees</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Sorting
+          and Searching</a>
+        <a href="/chapter3"
+          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Basic Graphs</a>
+
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="w3-sidebar activecolor w3-bar-block w3-collapse  w3-animate-left w3-light-grey" id="mySidebar">
+      <a href="javascript:void(0)" onclick="w3_close()"
+        class="w3-right w3-xlarge w3-padding-large w3-hover-orange w3-hide-large" title="Close Menu">
+        <i class="fa fa-remove"></i>
+      </a>
+
+
+
+      <h4 class="w3-text-black">Searching</span></h4>
+      
+      <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge active" href="/Chapter8" >Introduction</a>
+      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter8"> <b>Linear Search</b></a>
+      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter8">Unordered linear search</a>
+      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter8">Ordered linear search</a>
+      <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/Chapter8" >Time-complexity</a>
+      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter8"> <b>Binary Search</b> </a>
+      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter8">Time complexity</a>
+      
+    </nav>
+
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor: pointer" title="close side menu"
+      id="myOverlay"></div>
+
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left: 250px">
+      <div class="w3-row w3-padding-64">
+
+        <!-- start section -->
+        <div class=" w3-container">
+          <h2 class="w3-text-orange">Introduction</h2>
+          There are some very common problems
+          that we use computers to solve:<br>
+          • Searching through a lot of records for a
+          specific record or set of records<br>
+          •Placing records in order, which we call
+          sorting <br>
+          •There are numerous algorithms to perform
+          searches and sorts. We will briefly explore
+          a few common ones.
+
+          <p>
+            •A question you should always ask when selecting a
+            search algorithm is “How fast does the search have to
+            be?” <br>
+            The reason is that, in general, the faster the
+            algorithm is, the more complex it is.<br>
+            •Bottom line: you don’t always need to use or should
+            use the fastest algorithm.<br>
+            •Let’s explore the following search algorithms, keeping
+            speed in mind.<br>
+
+            <li>Sequential (linear) search</li>
+            <li>Binary search</li>
+             
+             
+          </p>
+         
+        
+      
+      <!-- end section -->
+         
+        <!-- start section -->
+        <div class=" w3-container">
+            <h2 class="w3-text-orange"><b>Linear Search</b></h2>
+          
+        </div>
+        <!-- end section -->
+               
+        <!-- start section -->
+        <div class=" w3-container">
+            <h2>Unordered linear search</h2>
+            <p>
+              •Search an unordered array of integers for a value and return its index if the
+                value is found. Otherwise, return -1. <br>
+                <img src="images/unordered.png" alt=""> <br>
+                
+                <pre>
+                  •Algorithm: 
+                  Start with the first array element (index 0)
+                    <b>while</b>(more elements in array){
+                    if value found at current index, return index;
+                    Try next element (increment index);
+                    }
+                    Value not found, <b>return</b> -1;
+                </pre>
+
+            </p>
+          
+        </div>
+        <!-- end section -->
+               
+        <!-- start section -->
+        <div class=" w3-container">
+            <h2 class="w3-text-orange">Ordered linear search</h2>
+            •Search an ordered array of integers for a value and return its index if
+            the value is found; Otherwise, return -1. <br>
+
+            <img src="images/ordered.png" alt=""> <br>
+
+            <p> •Linear search can stop immediately when it has passed the possible
+              position of the search value.</p>
+
+              <pre>
+                •Algorithm:
+                    Start with the first array element (index 0)
+                    <b>while</b>(more elements in the array){
+                    <b>if</b> value at current index is greater than value,
+                              value not found, <b>return</b> –1;
+                    <b>if</b> value found at current index, <b>return</b> index;
+                    Try next element (increment index);
+                    }
+                    value not found, <b>return</b> –1;
+              </pre>
+
+        </div>
+        <!-- end section -->
+               
+        <!-- start section -->
+        <div class=" w3-container">
+            <h2 class="w3-text-orange">Time-complexity</h2>
+
+            <h5 class="w3-text-orange">Linear Search: Best Case</h5>
+            <p>
+              <b>How long will our search take?</b> <br>
+              •In the best case, the target value is in the first
+              element of the array.<br>
+              •So the search takes some tiny, and constant,
+              amount of time.<br>
+              •Computer scientists denote this O(1) .<br>
+              •In real life, we don’t care about the best case,
+              because it so rarely actually happens.<br>
+            </p>
+            <h5 class="w3-text-orange">Linear Search: Worst Case</h5>
+            <p>
+              <b>How long will our search take?</b> <br>
+              •In the worst case, the target value is in the
+              last element of the array. <br>
+              •So the search takes an amount of time
+              proportional to the length of the array. <br>
+              •Computer scientists denote this O(n) –
+              which we explained. <br>
+            </p>
+            <h5 class="w3-text-orange">Linear Search: Average Case</h5>
+
+            <p>
+              <b>How long will our search take?</b> <br>
+              • In the average case, the target value is somewhere in the
+              array. <br>
+              • In fact, since the target value can be anywhere in the array,
+              any element of the array is equally likely.<br>
+              • So on average, the target value will be in the middle of the
+              array.<br>
+              • So the search takes an amount of time proportional to half
+              the length of the array – also proportional to the length of
+              the array – O(n) again!
+            </p>
+
+
+
+          
+        </div>
+        <!-- end section -->
+               
+        <!-- start section -->
+        <div class=" w3-container">
+            <h2 class="w3-text-orange"><b>Binary Search</b> </h2>
+          <ol type="1">
+            <b>Binary search is based on the “divide-and-conquer”
+              strategy which works as follows:</b>
+              <i>Start by looking at the middle element of the array</i>
+            <li>If the value it holds is lower than the search element,
+            eliminate the first half of the array from further
+            consideration.</li>
+            <li>If the value it holds is higher than the search
+              element, eliminate the second half of the array from
+              further consideration.</li>
+              Repeat this process until the element is found, or until
+              the entire array has been eliminated.
+            
+          </ol>
+
+          <p>
+            The general term for a smart search through sorted data is a
+            binary search. <br>
+            1. The initial search region is the whole array.<br>
+            2. Look at the data value in the middle of the search region.<br>
+            3. If you’ve found your target, stop.<br>
+            4. If your target is less than the middle data value, the new
+            search region is the lower half of the data.<br>
+            5. If your target is greater than the middle data value, the
+            new search region is the higher half of the data.<br>
+            6. Continue from Step 2.<br>
+
+            <li> Search an ordered array of integers for a value and return
+              its index if the value is found. Otherwise, return -1.</li>
+            <img src="images/binary1.png" alt="">
+            <li>Binary search skips over parts of the array if the search
+              value cannot possibly be there.</li>
+
+              <pre>
+                Algorithm:
+                  Set first and last boundary of array to be searched 
+                  Repeat the following: 
+                  <li>Find middle element between first and last boundaries;</li>
+                  <b>if</b> (middle element contains the search value)
+                  <b>return</b> middle_element position;
+                  <b>else if</b> (<b>first</b> >= <b>last</b> )
+                  <b>return</b> –1;
+                  <b>else if</b> (value < the value of middle_element)
+                  set <b>last</b> to middle_element position – 1;
+                  <b>else</b>
+                  set <b>first</b> to middle_element position + 1;
+              </pre>
+              <pre>
+                <b class="w3-text-orange">Binary Search: Iterative</b>
+
+                <b>BinarySearch</b>(A,n,x){
+
+                  low &larr; 0
+                  high &larr; n-1
+
+                  <b>while</b>)(low &#x2264; high)
+                  {
+                    mid &larr; (low + high)/2
+                    <b>if</b>(x == a[mid])
+                          <b>return</b> mid;
+                    <b>elseif</b>(x < A[mid]) 
+                             high &larr; mid-1
+                       else
+                                low &larr;-1
+                  }
+                            return -1
+                }
+              </pre>
+
+              <pre>
+                <b class="w3-text-orange">Binary Search: Recursive</b>
+                
+                <b>BinarySearch</b>(A,n,x){
+                  if(low > high)
+                      return -1
+                    mid &larr; (low+high)/2
+                       if (x == a[mid])
+                      <b>return</b> mid;
+                    <b>elseif</b>(x < A[mid])
+                          <b>return</b> BinarySearch(A,low,mid - 1,x)
+                    <b>else</b>
+                          <b>rerturn</b> BinarySearch(A,mid + 1, high, x)
+                }
+              </pre>
+          </p>
+        </div>
+        <!-- end section -->
+               
+        <!-- start section -->
+        <div class=" w3-container">
+            <h2 class="w3-text-orange">Time complexity of Binary Search</h2>
+
+            <p>
+              <b class="w3-text-orange">Binary Search 1</b>
+              <p>
+               <b><i> How fast is binary search?</i></b> <br>
+                • Think about how it operates: after you examine a value, you cut the
+                search region in half. <br>
+                • So, the first iteration of the loop, your search region is the whole array.<br>
+                • The second iteration, it’s half the array.<br>
+                • The third iteration, it’s a quarter of the array.<br>
+                • ...<br>
+                • The kth iteration, it’s (1/2k-1) of the array.<br>
+              </p>
+              <b class="w3-text-orange">Binary Search 2</b> <br>
+
+              <b><i> How fast is binary search?</i></b> <br>
+              
+              • For the kth iteration of the binary search loop, the search region is (1/2k-
+              1) of the array. <br>
+              • What’s the maximum number of loop iterations?
+              log2n
+              • That is, we can’t cut the search region in half more than that many
+              times. <br>
+              • So, the time complexity of binary search is O(log2n) which is exactly
+              the same as O(log n). <br>
+            </p>
+          
+        </div>
+        <!-- end section -->
+
+      </div>
+
+
+      <div class="w3-clear nextprev w3-padding-32">
+        <a class="w3-left w3-button w3-medium w3-round-xxlarge" style="background-color: #ff9900;" href="/chapter7">
+          Previous</a>
+        <a class="w3-right w3-button w3-medium w3-round-xxlarge" style="background-color: #ff9900;"
+          href="/chapter9">Next</a>
+      </div>
+
+      <%- include("footer") -%>
