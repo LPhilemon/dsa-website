@@ -808,3 +808,13 @@ h2 {
 
 }
 
+.Lights{
+  width: 50%;
+  float: left;
+
+}
+
+.Lights2{
+  width: 50%;
+  float: right;
+}
