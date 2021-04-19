@@ -43,6 +43,9 @@ app.get("/chapter7", (req,res) => {
 app.get("/chapter8", (req,res) => {
   res.render("chapter8");
 });
+app.get("/chapter9", (req,res) => {
+  res.render("chapter9");
+});
 app.get("/chapter12", (req,res) => {
   res.render("chapter12");
 });
