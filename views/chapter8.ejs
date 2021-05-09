@@ -1,34 +1,9 @@
 <%- include("header") -%>
 
-  <body>
-    <!-- Navbar -->
-    <div class="w3-top w3-orange">
-      <div class="w3-bar w3-orange w3-card w3-left-align w3-large">
-        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-orange w3-large w3-orange"
-          href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-
-        <a href="/" class="w3-bar-item w3-button w3-padding-large w3-orange w3-text-black"><i
-            class="fa fa-home"></i>Data Structures and Algorithms</a>
-        <!-- <h3 href="#" class="w3-bar-item w3-button w3-padding-small w3-text-black">Data Structures and Analysis</h3> -->
-        <a href="/chapter1"
-          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Algorithms</a>
-        <a href="/chapter5"
-          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Basic Data
-          Structures</a>
-        <a href="/chapter3"
-          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Trees</a>
-        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Sorting
-          and Searching</a>
-        <a href="/chapter3"
-          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Basic Graphs</a>
-
-      </div>
-    </div>
-
     <!-- Sidebar -->
     <nav class="w3-sidebar activecolor w3-bar-block w3-collapse  w3-animate-left w3-light-grey" id="mySidebar">
       <a href="javascript:void(0)" onclick="w3_close()"
-        class="w3-right w3-xlarge w3-padding-large w3-hover-orange w3-hide-large" title="Close Menu">
+        class="w3-right w3-xlarge w3-padding-large w3-hover-queue w3-hide-large" title="Close Menu">
         <i class="fa fa-remove"></i>
       </a>
 
@@ -57,7 +32,7 @@
 
         <!-- start section -->
         <div class=" w3-container">
-          <h2 class="w3-text-orange">Introduction</h2>
+          <h2 class="w3-text-queue">Introduction</h2>
           There are some very common problems
           that we use computers to solve:<br>
           • Searching through a lot of records for a
@@ -91,7 +66,7 @@
          
         <!-- start section -->
         <div class=" w3-container">
-            <h2 class="w3-text-orange"><b>Linear Search</b></h2>
+            <h2 class="w3-text-queue"><b>Linear Search</b></h2>
           
         </div>
         <!-- end section -->
@@ -121,7 +96,7 @@
                
         <!-- start section -->
         <div class=" w3-container">
-            <h2 class="w3-text-orange">Ordered linear search</h2>
+            <h2 class="w3-text-queue">Ordered linear search</h2>
             •Search an ordered array of integers for a value and return its index if
             the value is found; Otherwise, return -1. <br>
 
@@ -147,9 +122,9 @@
                
         <!-- start section -->
         <div class=" w3-container">
-            <h2 class="w3-text-orange">Time-complexity</h2>
+            <h2 class="w3-text-queue">Time-complexity</h2>
 
-            <h5 class="w3-text-orange">Linear Search: Best Case</h5>
+            <h5 class="w3-text-queue">Linear Search: Best Case</h5>
             <p>
               <b>How long will our search take?</b> <br>
               •In the best case, the target value is in the first
@@ -160,7 +135,7 @@
               •In real life, we don’t care about the best case,
               because it so rarely actually happens.<br>
             </p>
-            <h5 class="w3-text-orange">Linear Search: Worst Case</h5>
+            <h5 class="w3-text-queue">Linear Search: Worst Case</h5>
             <p>
               <b>How long will our search take?</b> <br>
               •In the worst case, the target value is in the
@@ -170,7 +145,7 @@
               •Computer scientists denote this O(n) –
               which we explained. <br>
             </p>
-            <h5 class="w3-text-orange">Linear Search: Average Case</h5>
+            <h5 class="w3-text-queue">Linear Search: Average Case</h5>
 
             <p>
               <b>How long will our search take?</b> <br>
@@ -193,7 +168,7 @@
                
         <!-- start section -->
         <div class=" w3-container">
-            <h2 class="w3-text-orange"><b>Binary Search</b> </h2>
+            <h2 class="w3-text-queue"><b>Binary Search</b> </h2>
           <ol type="1">
             <b>Binary search is based on the “divide-and-conquer”
               strategy which works as follows:</b>
@@ -242,7 +217,7 @@
                   set <b>first</b> to middle_element position + 1;
               </pre>
               <pre>
-                <b class="w3-text-orange">Binary Search: Iterative</b>
+                <b class="w3-text-queue">Binary Search: Iterative</b>
 
                 <b>BinarySearch</b>(A,n,x){
 
@@ -264,7 +239,7 @@
               </pre>
 
               <pre>
-                <b class="w3-text-orange">Binary Search: Recursive</b>
+                <b class="w3-text-queue">Binary Search: Recursive</b>
                 
                 <b>BinarySearch</b>(A,n,x){
                   if(low > high)
@@ -284,10 +259,10 @@
                
         <!-- start section -->
         <div class=" w3-container">
-            <h2 class="w3-text-orange">Time complexity of Binary Search</h2>
+            <h2 class="w3-text-queue">Time complexity of Binary Search</h2>
 
             <p>
-              <b class="w3-text-orange">Binary Search 1</b>
+              <b class="w3-text-queue">Binary Search 1</b>
               <p>
                <b><i> How fast is binary search?</i></b> <br>
                 • Think about how it operates: after you examine a value, you cut the
@@ -298,7 +273,7 @@
                 • ...<br>
                 • The kth iteration, it’s (1/2k-1) of the array.<br>
               </p>
-              <b class="w3-text-orange">Binary Search 2</b> <br>
+              <b class="w3-text-queue">Binary Search 2</b> <br>
 
               <b><i> How fast is binary search?</i></b> <br>
               
@@ -319,9 +294,9 @@
 
 
       <div class="w3-clear nextprev w3-padding-32">
-        <a class="w3-left w3-button w3-medium w3-round-xxlarge" style="background-color: #ff9900;" href="/chapter7">
+        <a class="w3-left w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;" href="/chapter7">
           Previous</a>
-        <a class="w3-right w3-button w3-medium w3-round-xxlarge" style="background-color: #ff9900;"
+        <a class="w3-right w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;"
           href="/chapter9">Next</a>
       </div>
 

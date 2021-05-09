@@ -1,32 +1,10 @@
 <%- include("header") -%>
 
-  <body>
-    <!-- Navbar -->
-    <!-- Navbar -->
-    <div class="w3-top w3-orange">
-      <div class="w3-bar w3-orange w3-card w3-left-align w3-large">
-        <a
-          class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-orange w3-large w3-orange"
-          href="javascript:void(0)"
-          onclick="w3_open()"
-          ><i class="fa fa-bars"></i
-        ></a>
-      
-        <a href="/" class="w3-bar-item w3-button w3-padding-large w3-orange w3-text-black"><i class="fa fa-home"></i>  Data Structures and Algorithms</a>
-        <!-- <h3 href="#" class="w3-bar-item w3-button w3-padding-small w3-text-black">Data Structures and Analysis</h3> -->
-        <a href="/chapter1" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black active">Algorithms</a>
-        <a href="/chapter5" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Basic Data Structures</a>
-        <a href="/chapter9" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Trees</a>
-        <a href="/chapter7" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Sorting and Searching</a>
-        <a href="/chapter13" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Basic Graphs</a>
-        
-      </div>
-    </div>
 
     <!-- Sidebar -->
     <nav class="w3-sidebar activecolor w3-bar-block w3-collapse  w3-animate-left w3-light-grey" id="mySidebar">
       <a href="javascript:void(0)" onclick="w3_close()"
-        class="w3-right w3-xlarge w3-padding-large w3-hover-orange w3-hide-large" title="Close Menu">
+        class="w3-right w3-xlarge w3-padding-large w3-hover-queue w3-hide-large" title="Close Menu">
         <i class="fa fa-remove"></i>
       </a>
 
@@ -55,7 +33,7 @@
     <div class="w3-main" style="margin-left: 250px">
       <div class="w3-row w3-padding-64">
         <div class=" w3-container">
-          <h2 class="w3-text-orange">Stack</h2>
+          <h2 class="w3-text-queue">Stack</h2>
           
           <p>
             <b> The data object stack is an ordered list but the access, insertions and deletions of elements are restricted by following rules</b> <br>
@@ -73,18 +51,18 @@
 
               <h3>Stack ADT</h3>
               <pre>
-<strong class="w3-text-orange">Stack()</strong>  - creates a new stack that is empty. It needs no parameters and returns an empty stack.
+<strong class="w3-text-queue">Stack()</strong>  - creates a new stack that is empty. It needs no parameters and returns an empty stack.
 
-<strong class="w3-text-orange">push(item)</strong>  -adds a new item to the top of the stack. It
+<strong class="w3-text-queue">push(item)</strong>  -adds a new item to the top of the stack. It
 needs the item and returns nothing.
 
-<strong class="w3-text-orange">pop()</strong>  - removes the top item from the stack. It needs no parameters and returns the item. The stack is modified.
+<strong class="w3-text-queue">pop()</strong>  - removes the top item from the stack. It needs no parameters and returns the item. The stack is modified.
 
-<strong class="w3-text-orange">peek()</strong>  - returns the top item from the stack but does not remove it. It needs no parameters. The stack is not modified.
+<strong class="w3-text-queue">peek()</strong>  - returns the top item from the stack but does not remove it. It needs no parameters. The stack is not modified.
 
-<strong class="w3-text-orange">is_empty()</strong>  - tests to see whether the stack is empty. It needs no parameters and returns a Boolean value.
+<strong class="w3-text-queue">is_empty()</strong>  - tests to see whether the stack is empty. It needs no parameters and returns a Boolean value.
 
-<strong class="w3-text-orange">size()</strong>  - returns the number of items on the stack. It needs no parameters and returns an integer.
+<strong class="w3-text-queue">size()</strong>  - returns the number of items on the stack. It needs no parameters and returns an integer.
 
               </pre>
               <p><b>Primary operations: Push and Pop</b> <br>
@@ -116,7 +94,7 @@ needs the item and returns nothing.
       <!-- New section -->
       <div class="w3-row">
         <div class="w3-container">
-          <h3 class="w3-text-orange" id="#properties">Implementing Stacks: Array</h3>
+          <h3 class="w3-text-queue" id="#properties">Implementing Stacks: Array</h3>
 
           <b>Advantages</b>  <br>
             •	best performance <br>
@@ -142,7 +120,7 @@ needs the item and returns nothing.
 
           
           <p>
-            <b class="w3-text-orange">Pushing and popping</b>
+            <b class="w3-text-queue">Pushing and popping</b>
             <img src="images/stack5.png" alt=""> <br>
 
             •	If the bottom of the stack is at location 0, then an empty stack is represented by top = -1 or count = 0  <br>
@@ -156,7 +134,7 @@ needs the item and returns nothing.
           </p>
 
           <p>
-            <b class="w3-text-orange">After Popping</b>
+            <b class="w3-text-queue">After Popping</b>
             <img src="images/stack5.png" alt=""> <br>
             •When	you	pop	an	element,	do	you	just	leave	the “deleted” element sitting in the array? <br>
             •The surprising answer is, “it depends” <br>
@@ -167,7 +145,7 @@ needs the item and returns nothing.
           </p>
 
           <p>
-            <b class="w3-text-orange">Sharing space</b> <br>
+            <b class="w3-text-queue">Sharing space</b> <br>
             •Of course, the bottom of the stack could be at
 the other end <br>
 
@@ -188,7 +166,7 @@ same storage area
               <!-- New section -->
       <div class="w3-row">
         <div class="w3-container">
-          <h3 class="w3-text-orange" id="#properties">Error Checking</h3>
+          <h3 class="w3-text-queue" id="#properties">Error Checking</h3>
 
           •	There are two stack errors that can occur: <br>
           □	Underflow: trying to pop (or peek at) an empty stack<br>
@@ -200,7 +178,7 @@ same storage area
           •	For overflow, you could do the same things<br>
           □	Or, you could check for the problem, and  copy everything  into a new, larger array<br>
 <br>
-          <h3 class="w3-text-orange">Implementing a Stack: Linked List</h3>
+          <h3 class="w3-text-queue">Implementing a Stack: Linked List</h3>
           <pre>
           	<b>Advantages:</b> 
           	always constant time to push or pop an element can grow to an infinite size
@@ -211,7 +189,7 @@ same storage area
           	pop() method removes the head of the list
           </pre>
           
-          <h3 class="w3-text-orange">Linked-list implementation of stacks</h3>
+          <h3 class="w3-text-queue">Linked-list implementation of stacks</h3>
           <pre>
             □	Since all the action happens at the top of a stack, a singly-linked list	
               (SLL) is a fine way to implement it
@@ -243,9 +221,9 @@ same storage area
 
 
       <div class="w3-clear nextprev w3-padding-32">
-        <a class="w3-left w3-button w3-medium w3-round-xxlarge" style="background-color: #ff9900;" href="/chapter4">
+        <a class="w3-left w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;" href="/chapter4">
           Previous</a>
-        <a class="w3-right w3-button w3-medium w3-round-xxlarge" style="background-color: #ff9900;"
+        <a class="w3-right w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;"
           href="/chapter6">Next</a>
       </div>
 

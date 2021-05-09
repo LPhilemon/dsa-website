@@ -1,31 +1,9 @@
 <%- include("header") -%>
 
-  <body>
-    <!-- Navbar -->
-    <div class="w3-top w3-orange">
-      <div class="w3-bar w3-orange w3-card w3-left-align w3-large">
-        <a
-          class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-orange w3-large w3-orange"
-          href="javascript:void(0)"
-          onclick="w3_open()"
-          ><i class="fa fa-bars"></i
-        ></a>
-      
-        <a href="/" class="w3-bar-item w3-button w3-padding-large w3-orange w3-text-black"><i class="fa fa-home"></i>  Data Structures and Algorithms</a>
-        <!-- <h3 href="#" class="w3-bar-item w3-button w3-padding-small w3-text-black">Data Structures and Analysis</h3> -->
-        <a href="/chapter1" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black active">Algorithms</a>
-        <a href="/chapter5" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Basic Data Structures</a>
-        <a href="/chapter9" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Trees</a>
-        <a href="/chapter7" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Sorting and Searching</a>
-        <a href="/chapter13" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Basic Graphs</a>
-        
-      </div>
-    </div>
-
     <!-- Sidebar -->
     <nav class="w3-sidebar activecolor w3-bar-block w3-collapse  w3-animate-left w3-light-grey" id="mySidebar">
         <a href="javascript:void(0)" onclick="w3_close()"
-          class="w3-right w3-xlarge w3-padding-large w3-hover-orange w3-hide-large" title="Close Menu">
+          class="w3-right w3-xlarge w3-padding-large w3-hover-queue w3-hide-large" title="Close Menu">
           <i class="fa fa-remove"></i>
         </a>
   
@@ -57,11 +35,11 @@
       
 
         <!-- New section -->
-          <h3 class="w3-text-orange" id="#properties">Queues</h3>
+          <h3 class="w3-text-queue" id="#properties">Queues</h3>
 
          
           
-          <h3 class="w3-text-orange">What is a queue?</h3>
+          <h3 class="w3-text-queue">What is a queue?</h3>
           
           <pre>
             □	It is an ordered group of homogeneous items of elements.
@@ -88,17 +66,17 @@
             	□ Queues maintain a FIFO ordering property<br>
 
               <b >
-                <b class="w3-text-orange">Queue()</b> creates a new queue that is empty. It needs no parameters and returns an empty queue.<br>
-                <b class="w3-text-orange">enqueue(item)</b> adds a new item to the rear of the queue. It needs the item and returns nothing.<br>
-                <b class="w3-text-orange">dequeue()</b> removes the front item from the queue. It needs no parameters and returns the item. The queue is modified.<br>
-                <b class="w3-text-orange">is_empty()</b> tests to see whether the queue is empty. It needs no parameters and returns a Boolean value.<br>
-                <b class="w3-text-orange">size()</b> returns the number of items in the queue. It needs no parameters and returns an integer<br>
+                <b class="w3-text-queue">Queue()</b> creates a new queue that is empty. It needs no parameters and returns an empty queue.<br>
+                <b class="w3-text-queue">enqueue(item)</b> adds a new item to the rear of the queue. It needs the item and returns nothing.<br>
+                <b class="w3-text-queue">dequeue()</b> removes the front item from the queue. It needs no parameters and returns the item. The queue is modified.<br>
+                <b class="w3-text-queue">is_empty()</b> tests to see whether the queue is empty. It needs no parameters and returns a Boolean value.<br>
+                <b class="w3-text-queue">size()</b> returns the number of items in the queue. It needs no parameters and returns an integer<br>
 
               </b>
 
           </p>
 
-          <b class="w3-text-orange">Queues in computer science</b>
+          <b class="w3-text-queue">Queues in computer science</b>
           <pre>
            <b>Operating systems:</b> 
               •	queue of print jobs to send to the printer
@@ -119,7 +97,7 @@
 
           </pre>
 
-          <h3 class="w3-text-orange">Array implementation of a queue</h3>
+          <h3 class="w3-text-queue">Array implementation of a queue</h3>
           <p>
             •	A queue is a first in, first out (FIFO) data structure <br>
             •	This is accomplished by inserting at one end (the rear) and deleting from the other (the front)
@@ -145,9 +123,9 @@
         </div>
 
       <div class="w3-clear nextprev w3-padding-32">
-        <a class="w3-left w3-button w3-medium w3-round-xxlarge" style="background-color: #ff9900;" href="/">
+        <a class="w3-left w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;" href="/">
           Previous</a>
-        <a class="w3-right w3-button w3-medium w3-round-xxlarge" style="background-color: #ff9900;"
+        <a class="w3-right w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;"
           href="/chapter2">Next</a>
       </div>
 

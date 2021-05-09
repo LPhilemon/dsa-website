@@ -1,31 +1,10 @@
 <%- include("header") -%>
 
-  <body>
-  <!-- Navbar -->
-  <div class="w3-top w3-orange">
-    <div class="w3-bar w3-orange w3-card w3-left-align w3-large">
-      <a
-        class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-orange w3-large w3-orange"
-        href="javascript:void(0)"
-        onclick="w3_open()"
-        ><i class="fa fa-bars"></i
-      ></a>
-    
-      <a href="/" class="w3-bar-item w3-button w3-padding-large w3-orange w3-text-black"><i class="fa fa-home"></i>  Data Structures and Algorithms</a>
-      <!-- <h3 href="#" class="w3-bar-item w3-button w3-padding-small w3-text-black">Data Structures and Analysis</h3> -->
-      <a href="/chapter1" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black active">Algorithms</a>
-      <a href="/chapter5" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Basic Data Structures</a>
-      <a href="/chapter9" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Trees</a>
-      <a href="/chapter7" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Sorting and Searching</a>
-      <a href="/chapter13" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Basic Graphs</a>
-      
-    </div>
-  </div>
 
     <!-- Sidebar -->
     <nav class="w3-sidebar activecolor w3-bar-block w3-collapse  w3-animate-left w3-light-grey" id="mySidebar">
       <a href="javascript:void(0)" onclick="w3_close()"
-        class="w3-right w3-xlarge w3-padding-large w3-hover-orange w3-hide-large" title="Close Menu">
+        class="w3-right w3-xlarge w3-padding-large w3-hover-queue w3-hide-large" title="Close Menu">
         <i class="fa fa-remove"></i>
       </a>
 
@@ -77,7 +56,7 @@
     <div class="w3-main" style="margin-left: 250px">
       <div class="w3-row w3-padding-64">
         <div class=" w3-container">
-          <h2 class="w3-text-orange">Analysis of algorithms</h2>
+          <h2 class="w3-text-queue">Analysis of algorithms</h2>
           <p>
             The efficiency of an algorithm can be decided by measuring the performance of an algorithm. We can measure
             the performance of an algorithm by computing two factors:
@@ -88,11 +67,11 @@
             <li>Amount of time required by an algorithm to execute.</li>
             <li>Amount of storage required by an algorithm.</li>
           </ol>
-          <p>This is popularly known as <strong class="w3-text-orange"> time complexity and space complexity of
+          <p>This is popularly known as <strong class="w3-text-queue"> time complexity and space complexity of
               an algoithm.</strong>
           </p>
           <img class="w3-md4" src="images/Image_006.jpg" alt="analysis of algorithms">
-          <p class="w3-text-orange">There are many criteria upon which we can judge program. For instance</p>
+          <p class="w3-text-queue">There are many criteria upon which we can judge program. For instance</p>
           <p>
             Does my program work on what I want to do?<br>
             Does it work correctly according to original specifications?
@@ -100,7 +79,7 @@
             Is the code readable?<br><br><br>
 
           </p>
-          <p class="w3-text-orange">If one asks the question that how much time it takes to execute this statement. It
+          <p class="w3-text-queue">If one asks the question that how much time it takes to execute this statement. It
             is impossible to determine exact timing taken by the statement to execute unless we have the following
             information.</p>
           <p>
@@ -111,14 +90,14 @@
             And the kind of operating system (multi-programming or time sharing)
             The information may vary from machine to machine and perhaps we won’t get the exact figures.
             So the better ideas is to determine the time taken by each instruction to execute called the <strong
-              class="w3-text-orange">‘frequency count’</strong> .
+              class="w3-text-queue">‘frequency count’</strong> .
           </p>
           <p>There are basically two approaches of analyzing algorithms <br>
             <li>Empirical/ Experimental analysis</li>
             <li>Analytical approach</li>
           </p>
 
-          <h3 class="w3-text-orange">Empirical/Experimental Analysis</h3>
+          <h3 class="w3-text-queue">Empirical/Experimental Analysis</h3>
           <p>
             One way to study the efficiency of an algorithm is to implement it and experiment by running the program on
             various test inputs while recording the time spent during each execution <br><br>
@@ -145,7 +124,7 @@
 
 
               </pre>
-          <p class="w3-text-orange"> Our goal is to develop an approach to analysing the efficiency of algorithms that:
+          <p class="w3-text-queue"> Our goal is to develop an approach to analysing the efficiency of algorithms that:
           </p>
           <pre>
                 Allows us to evaluate the relative efficiency of any two algorithms in a way that is independent of the hardware and software environment.
@@ -156,7 +135,7 @@
                 This calls for an analytical method that does not require
                 implementation of an algorithm
                 
-                <h3 class="w3-text-orange">Analytical Method</h3>
+                <h3 class="w3-text-queue">Analytical Method</h3>
                 
                 This analysis uses mathematical techniques to estimate the running time.
                 It	identifies	time	consuming	crucial operations in an algorithm.
@@ -173,7 +152,7 @@
 
           Counting the primitive operations can be used as measure for algorithm performance.
 
-          <h4 class="w3-text-orange"> We define a set of primitive operations such as the following:</h4>
+          <h4 class="w3-text-queue"> We define a set of primitive operations such as the following:</h4>
 
           <strong>
             <li>Assigning a value to a variable</li>
@@ -202,10 +181,10 @@
       <!-- New section -->
       <div class="w3-row">
         <div class="w3-container">
-          <h3 class="w3-text-orange" id="#properties">Common Functions used in analysis.</h3>
+          <h3 class="w3-text-queue" id="#properties">Common Functions used in analysis.</h3>
           
           <ol></ol>
-        <h3 class="w3-text-orange">The Constant Function f(n) = C</h3>
+        <h3 class="w3-text-queue">The Constant Function f(n) = C</h3>
           For any argument n, the constant function f(n) assigns the value C. It doesn't matter what the input size n is, f(n) will always be equal to the constant value C. <br>
           The most fundamental constant function is f(n) = 1, and this is the
           typical constant function that is used<br>
@@ -215,12 +194,12 @@
           declaration, assignment statement, invoking a method or function.
           
           
-        <h3 class="w3-text-orange">The Logarithm Function f(n) = logn</h3>
+        <h3 class="w3-text-queue">The Logarithm Function f(n) = logn</h3>
           Running time varies as log N, where N is size of problem.<br>
           It grows slowly, and has the best performance.<br>
           If	the	problem	size	increases	by	factor	of	1000,	running	time increases by 10<br>
           Example: Binary search algorithm<br>
-        <h3 class="w3-text-orange">Linear Algorithm O(N)</h3>
+        <h3 class="w3-text-queue">Linear Algorithm O(N)</h3>
           Execution time grows in direct proportion to the size of a problem.<br>
           Performance is rated as good<br>
           Algorithm, which are based on a single loop, shows linear growth rate.<br>
@@ -228,27 +207,27 @@
           array
           
           
-        <h3 class="w3-text-orange">The N-Log-N Function f(n) = nlogn</h3>
+        <h3 class="w3-text-queue">The N-Log-N Function f(n) = nlogn</h3>
             This function grows a little faster than the linear function and a lot
             slower than the quadratic function (n2)<br>
             Example: Divide – and – Conquer algorithms show this behavior like the merge sort, quick sort etc.
-          <h3 class="w3-text-orange">The Quadratic Function f(n) = n2</h3>
+          <h3 class="w3-text-queue">The Quadratic Function f(n) = n2</h3>
             It appears a lot in the algorithm analysis, since there are many algorithms that have nested loops, where the inner loop performs a linear number of operations and the outer loop is performed a linear  number  of  times.  In  such  cases,   the   algorithm performs n*n = n2 operations.<br>
             Quadratic algorithms are practical for relatively small problems. Whenever n doubles, the running time increases fourfold.<br>
             Example: some manipulations of the n by n array.
 
 
-          <h3 class="w3-text-orange">The Cubic Function and Other Polynomials</h3>
+          <h3 class="w3-text-queue">The Cubic Function and Other Polynomials</h3>
             The cubic function f(n) = n3. This function appears less frequently in the context of the algorithm analysis than the constant, linear, and quadratic functions. It's practical for use only on small problems.<br>
             Whenever n doubles, the running time increases eightfold.<br>
             Example: n by n matrix multiplication.
-          <h3 class="w3-text-orange">The Exponential Function f(n) = bn</h3>
+          <h3 class="w3-text-queue">The Exponential Function f(n) = bn</h3>
             In this function, b is a positive constant, called the base, and the argument n is the exponent.<br>
             Exponential algorithm is usually not appropriate for practical use.<br>
             Example: Towers of the Hanoi.
 
 
-          <h3 class="w3-text-orange">The Factorial Function f(n) = n!</h3>
+          <h3 class="w3-text-queue">The Factorial Function f(n) = n!</h3>
             Factorial  function  is  even  worse  than  the  exponential  function. Whenever n increases by 1, the running time increases by a factor of n.<br>
             For example, permutations of n elements.
 
@@ -279,9 +258,9 @@
 
 
       <div class="w3-clear nextprev w3-padding-32">
-        <a class="w3-left w3-button w3-medium w3-round-xxlarge" style="background-color: #ff9900;" href="/chapter3">
+        <a class="w3-left w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;" href="/chapter3">
           Previous</a>
-        <a class="w3-right w3-button w3-medium w3-round-xxlarge" style="background-color: #ff9900;"
+        <a class="w3-right w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;"
           href="/chapter5">Next</a>
       </div>
 

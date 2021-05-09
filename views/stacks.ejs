@@ -1,0 +1,152 @@
+<%- include("header") -%>
+
+   <!-- Sidebar -->
+   <nav class="w3-sidebar activecolor w3-bar-block w3-collapse  w3-animate-left w3-light-grey" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()"
+      class="w3-right w3-xlarge w3-padding-large w3-hover-teal w3-hide-large" title="Close Menu">
+      <i class="fa fa-remove"></i>
+    </a>
+
+    <h4 class="w3-text-black">Recursion</span></h4>
+    
+    <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/fibonaccis" >Fibonacci</a>
+    <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/factorials">Factorial</a>
+    <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/hanoi">Towers of Hanoi</a>
+
+    <h4 class="w3-text-black">Data Structures </span></h4>
+    
+    <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge  active" href="/stacks" >Stack</a>
+    <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/queue">Queue</a>
+    <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/Chapter1" >Singly linked list</a>
+    <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter1">Doubly linked list</a>
+    
+  </nav>
+
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor: pointer" title="close side menu"
+      id="myOverlay"></div>
+
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left: 250px">
+      <div class="w3-row w3-padding-64">
+        <div class=" w3-container">
+      
+
+        <!-- New section -->
+          <h1 class="w3-text-teal" id="#properties">STACK IMPLEMENTATION</h1>
+       
+          <h3 class="w3-text-teal">ADD,REMOVE,COUNT</h3>
+
+          <form>
+
+
+
+
+            <input type="text"  name="input" placeholder="Number" value = 0>
+              <p><input style="background-color: #009494;" type="button" value = "push item"onClick="createdStack.add(this.form.input.value)">
+                <p><input style="background-color: #009494;" type="button" value = "pop item"onClick="createdStack.remove()">
+              <p><input style="background-color: #009494;" type="button" value = "retieve all"onClick="this.form.output.value = createdStack.items">
+                <p><input style="background-color: #009494;" type="button" value = "retieve top"onClick="this.form.output.value = createdStack.peek()">
+                  <p><input style="background-color: #009494;" type="button" value = "stack size"onClick="this.form.output.value = createdStack.size()">
+              <p>Output: <input type="text" name="output">
+                <p><input style="background-color: #009494;" type="button" value = "Create Stack"onClick="createStack()">
+            <!-- <a class=" w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;" type="submit">ENTER</a> -->
+             
+              
+              <!-- <INPUT TYPE = "text" NAME="input" VALUE=0>
+                <P><INPUT TYPE="button" VALUE="new queue"onClick="newQueue()">
+                <P><INPUT TYPE="button" VALUE="add item"onClick="ikeaList.enqueue(this.form.input.value)">
+                <P><INPUT TYPE="button" VALUE="remove item"onClick="ikeaList.dequeue()">
+                <P><INPUT TYPE="button" VALUE="check if queue is empty"onClick="this.form.output.value = ikeaList.isEmpty()">
+                <P><INPUT TYPE="button" VALUE="size of queue"onClick="this.form.output.value = ikeaList.size()">
+                <P><INPUT TYPE="button" VALUE="item at index"onClick="this.form.output.value = ikeaList.peek()">
+                <P>Results: <INPUT TYPE="text" NAME="output"> -->
+
+          </form>
+ 
+          
+
+        </div>
+
+        <!-- End section -->
+
+     
+        </div>
+
+        <script>
+            // program to implement stack data structure
+        class Stack {
+          constructor() {
+              this.items = [];
+          }
+          
+          // add element to the stack
+          add(element) {
+              return this.items.push(element);
+          }
+          
+          // remove element from the stack
+          remove() {
+              if(this.items.length > 0) {
+                  return this.items.pop();
+              }
+          }
+          
+          // view the first element
+          peek() {
+              return this.items[this.items.length - this.items.length];
+          }
+          
+          // check if the stack is empty
+          isEmpty(){
+            return this.items.length == 0;
+          }
+        
+          // the size of the stack
+          size(){
+              return this.items.length;
+          }
+
+          // empty the stack
+          clear(){
+              this.items = [];
+          }
+        }
+
+        let createdStack;
+        
+        function createStack(){
+     createdStack = new Stack();
+     }
+
+        // stack.add(1);
+        // stack.add(2);
+        // stack.add(4);
+        // stack.add(8);
+
+        // //WE NEED DIFFERENT PARTS TO SHOW BUTTON EFFECTS
+        // console.log(stack.items);
+
+        // stack.remove();
+        // console.log(stack.items);
+
+        // console.log(stack.peek());
+
+        // console.log(stack.isEmpty());
+
+        // console.log(stack.size());
+
+        // stack.clear();
+
+        // console.log(stack.items);
+        </script>
+
+      <!-- <div class="w3-clear nextprev w3-padding-32">
+        <a class="w3-left w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;" href="/chapter9">
+          Previous</a>
+        <a class="w3-right w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;"
+          href="#">Next</a>
+      </div> -->
+
+      <%- include("footer") -%>

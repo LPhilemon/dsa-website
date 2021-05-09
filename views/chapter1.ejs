@@ -1,26 +1,5 @@
 <%- include("header") -%>
 
-  <body>
-    <!-- Navbar -->
-    <div class="w3-top w3-orange">
-      <div class="w3-bar w3-orange w3-card w3-left-align w3-large">
-        <a
-          class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-orange w3-large w3-orange"
-          href="javascript:void(0)"
-          onclick="w3_open()"
-          ><i class="fa fa-bars"></i
-        ></a>
-      
-        <a href="/" class="w3-bar-item w3-button w3-padding-large w3-orange w3-text-black"><i class="fa fa-home"></i>  Data Structures and Algorithms</a>
-        <!-- <h3 href="#" class="w3-bar-item w3-button w3-padding-small w3-text-black">Data Structures and Analysis</h3> -->
-        <a href="/chapter1" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black active">Algorithms</a>
-        <a href="/chapter5" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Basic Data Structures</a>
-        <a href="/chapter9" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Trees</a>
-        <a href="/chapter7" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Sorting and Searching</a>
-        <a href="/chapter13" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Basic Graphs</a>
-        
-      </div>
-    </div>
 
     <!-- Sidebar -->
     <nav
@@ -30,20 +9,20 @@
       <a
         href="javascript:void(0)"
         onclick="w3_close()"
-        class="w3-right w3-xlarge w3-padding-large w3-hover-orange w3-hide-large"
+        class="w3-right w3-xlarge w3-padding-large w3-hover-teal w3-hide-large"
         title="Close Menu"
       >
         <i class="fa fa-remove"></i>
       </a>
       <h4 class="w3-text-black">Algorithms</span> Introduction</h4>
       
-      <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/Chapter1" >Properties</a>
+      <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge active" href="/Chapter1" >Properties</a>
       <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter1">Development</a>
       <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter1">Algorithm Analysis</a>
       
           
       <h4 class="w3-text-black">Data</span> Structures</h4>
-      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge active" href="/chapter2">Definition</a>
+      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/chapter2">Definition</a>
       <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/chapter2">Abstract Data types</a>
       <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/chapter2">Linear Data Structures</a>
       <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/chapter2">Non-Linear Data Structures</a>
@@ -87,17 +66,17 @@
     <div class="w3-main" style="margin-left: 250px">
       <div class="w3-row w3-padding-64">
         <div class=" w3-container">
-          <h3 class="w3-text-orange">Definition</h3>
+          <h3 class="w3-text-teal">Definition</h3>
           <p>
             One of the core fields that belong to the foundations of computer science deals with the design, analysis and implementation of algorithms for efficient solution of the problems concerned.
-            <p>An Algorithm may be <strong class="w3-text-orange">loosely</strong> defined as a process or procedure or method or recipe. It is a specific set of rules to obtain a definite output from specific inputs provided to the problem.
+            <p>An Algorithm may be <strong class="w3-text-teal">loosely</strong> defined as a process or procedure or method or recipe. It is a specific set of rules to obtain a definite output from specific inputs provided to the problem.
               Data structures is connected with the design and implementation of efficient algorithms.
               </p>
 
               <p>Data structures deals with the study of methods, techniques and tools to organize or structure data.
               </p>
               <h6>Formal Definition</h6>
-              <p>An <strong class="w3-text-orange">Algorithm</strong> may be defined as a finite sequence of instructions each of which has a clear meaning and can be performed with a finite amount of effort in a finite length of time.</p>
+              <p>An <strong class="w3-text-teal">Algorithm</strong> may be defined as a finite sequence of instructions each of which has a clear meaning and can be performed with a finite amount of effort in a finite length of time.</p>
 
           </p>
         </div>
@@ -106,7 +85,7 @@
 
       <div class="w3-row">
         <div class="w3-container">
-          <h3 class="w3-text-orange" id="#properties">Structure and Properties</h3>
+          <h3 class="w3-text-teal" id="#properties">Structure and Properties</h3>
           
           <ul>
             
@@ -117,7 +96,7 @@
             <li>v.	Output step</li>
 
           </ul>
-          <p class="w3-text-orange">Example of structure and Properties of an algorithm</p>
+          <p class="w3-text-teal">Example of structure and Properties of an algorithm</p>
           <p>
             <ul> 
               <li>Consider an example of adding two numbers 987 and 76.</li>
@@ -140,13 +119,13 @@
           <h3 class="w3-text-black">Properties</h3>
           <p>
             <ul>
-              <li><strong class="w3-text-orange">Finiteness</strong>-an algorithm must terminate after a finite number of
+              <li><strong class="w3-text-teal">Finiteness</strong>-an algorithm must terminate after a finite number of
                 steps.</li>
-              <li><strong class="w3-text-orange">Definiteness</strong>- the steps of the algorithm must be precisely defined or unambiguously specified.</li>
-              <li><strong class="w3-text-orange">Generality</strong>-an	algorithm	must	be	generic	enough	to	solve	all
+              <li><strong class="w3-text-teal">Definiteness</strong>- the steps of the algorithm must be precisely defined or unambiguously specified.</li>
+              <li><strong class="w3-text-teal">Generality</strong>-an	algorithm	must	be	generic	enough	to	solve	all
                 problems of a particular class</li>
-              <li><strong class="w3-text-orange">Effectiveness</strong>– the operations of the algorithm must be basic enough to be put down on pencil and paper. They should not be too complex to warrant writing another algorithm for the operation</li>
-              <li><strong class="w3-text-orange">Input-Output</strong>– the algorithm must have certain initial and precise inputs and outputs that may be generated both at its intermediate and final steps.</li>
+              <li><strong class="w3-text-teal">Effectiveness</strong>– the operations of the algorithm must be basic enough to be put down on pencil and paper. They should not be too complex to warrant writing another algorithm for the operation</li>
+              <li><strong class="w3-text-teal">Input-Output</strong>– the algorithm must have certain initial and precise inputs and outputs that may be generated both at its intermediate and final steps.</li>
 
             </ul>
           </p>
@@ -154,7 +133,7 @@
         
         <div class="w3-row">
           <div class="w3-container">
-            <h3 class="w3-text-orange" id="#properties">Development of an Algorithm</h3>
+            <h3 class="w3-text-teal" id="#properties">Development of an Algorithm</h3>
             
             <h5>The steps involved in the development of an algorithm are as follows:</h5>
             <ul>
@@ -188,10 +167,10 @@
 
       <div class="w3-row">
         <div class="w3-container">
-          <h3 class="w3-text-orange" id="#properties">Algorithm analysis</h3>
+          <h3 class="w3-text-teal" id="#properties">Algorithm analysis</h3>
           
           <p>
-            Once the correctness of the algorithm is checked and the algorithm implemented, the most important step of measuring the performance of the algorithm is done. This is termed as <strong class="w3-text-orange">algorithm analysis</strong>.
+            Once the correctness of the algorithm is checked and the algorithm implemented, the most important step of measuring the performance of the algorithm is done. This is termed as <strong class="w3-text-teal">algorithm analysis</strong>.
           </p>
             
           <p>
@@ -207,8 +186,8 @@
       
 
       <div class="w3-clear nextprev w3-padding-32">
-        <a class="w3-left w3-button w3-medium w3-round-xxlarge" style="background-color: #ff9900;" href="/"> Previous</a>
-      <a class="w3-right w3-button w3-medium w3-round-xxlarge" style="background-color: #ff9900;" href="/chapter2">Next</a>
+        <a class="w3-left w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;" href="/"> Previous</a>
+      <a class="w3-right w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;" href="/chapter2">Next</a>
       </div>
 
       <%- include("footer") -%>

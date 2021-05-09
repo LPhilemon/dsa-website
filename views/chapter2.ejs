@@ -1,27 +1,5 @@
 <%- include("header") -%>
 
-  <body>
-    <!-- Navbar -->
-    <div class="w3-top w3-orange">
-      <div class="w3-bar w3-orange w3-card w3-left-align w3-large">
-        <a
-          class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-orange w3-large w3-orange"
-          href="javascript:void(0)"
-          onclick="w3_open()"
-          ><i class="fa fa-bars"></i
-        ></a>
-      
-        <a href="/" class="w3-bar-item w3-button w3-padding-large w3-orange w3-text-black"><i class="fa fa-home"></i>  Data Structures and Algorithms</a>
-        <!-- <h3 href="#" class="w3-bar-item w3-button w3-padding-small w3-text-black">Data Structures and Analysis</h3> -->
-        <a href="/chapter1" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black active">Algorithms</a>
-        <a href="/chapter5" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Basic Data Structures</a>
-        <a href="/chapter9" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Trees</a>
-        <a href="/chapter7" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Sorting and Searching</a>
-        <a href="/chapter13" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Basic Graphs</a>
-        
-      </div>
-    </div>
-
     <!-- Sidebar -->
     <nav
       class="w3-sidebar activecolor w3-bar-block w3-collapse  w3-animate-left w3-light-grey"
@@ -30,7 +8,7 @@
       <a
         href="javascript:void(0)"
         onclick="w3_close()"
-        class="w3-right w3-xlarge w3-padding-large w3-hover-orange w3-hide-large"
+        class="w3-right w3-xlarge w3-padding-large w3-hover-teal w3-hide-large"
         title="Close Menu"
       >
         <i class="fa fa-remove"></i>
@@ -88,9 +66,9 @@
     <div class="w3-main" style="margin-left: 250px">
       <div class="w3-row w3-padding-64">
         <div class=" w3-container">
-          <h2 class="w3-text-orange">Data Structures Definition</h2>
+          <h2 class="w3-text-teal">Data Structures Definition</h2>
           <p>
-           The design of an efficient algorithm for the solution of the problem calls for the inclusion of appropriate <strong class="w3-text-orange">data structures</strong>.
+           The design of an efficient algorithm for the solution of the problem calls for the inclusion of appropriate <strong class="w3-text-teal">data structures</strong>.
             <p>A clear, unambiguous set of instructions following the properties of the algorithm alone does not contribute to the efficiency of the solution.
               	It is essential that the data on which the program need to work on are appropriately structured to suit the needs of the problem, thereby contributing to the efficiency of the solution
               </p>
@@ -104,8 +82,8 @@
                 efficiency of the algorithms.
            </p>
               <h6>Formal Definition</h6>
-              <p>All in all <strong class="w3-text-orange">data structures</strong> are simply the study of various ways 
-                of organizing data in a computer so that the information can be manipulated by systematic and step by step procedure called <strong class="w3-text-orange">algorithms.</strong></p>
+              <p>All in all <strong class="w3-text-teal">data structures</strong> are simply the study of various ways 
+                of organizing data in a computer so that the information can be manipulated by systematic and step by step procedure called <strong class="w3-text-teal">algorithms.</strong></p>
                 <p>The data structure can be defined as the collection of elements and all the possible operations which are required for those set of elements. In other words data structure will tell us which are the elements
                    required as well as the legal operations on those set of elements.</p>
           </p>
@@ -115,20 +93,20 @@
 
       <div class="w3-row">
         <div class="w3-container">
-          <h3 class="w3-text-orange" id="#properties">Abstract Data types</h3>
+          <h3 class="w3-text-teal" id="#properties">Abstract Data types</h3>
           
           <ul>
             
-            <li>A <strong class="w3-text-orange">data type</strong>- refers to the type of values that variables in a programming language hold. Thus data types of integer, real, character, Boolean which are inherently provided in programming languages are referred as <strong class="w3-text-orange">primitive data types</strong>.</li>
-            <li>A list of  elements is  called  a  <strong class="w3-text-orange">data  object.</strong>  For  example a list of
+            <li>A <strong class="w3-text-teal">data type</strong>- refers to the type of values that variables in a programming language hold. Thus data types of integer, real, character, Boolean which are inherently provided in programming languages are referred as <strong class="w3-text-teal">primitive data types</strong>.</li>
+            <li>A list of  elements is  called  a  <strong class="w3-text-teal">data  object.</strong>  For  example a list of
               integers or a list of alphabetical strings as data objects
               </li>
-            <li>The data objects which comprise the data structure and their fundamental operations are known as <strong class="w3-text-orange">Abstract Data Type (ADT)</strong></li>
+            <li>The data objects which comprise the data structure and their fundamental operations are known as <strong class="w3-text-teal">Abstract Data Type (ADT)</strong></li>
             <li>In other words, an ADT is defined as a set of data objects D
               defined over a domain L and supporting a list of operations O.
               </li>
           </ul>
-          <h3 class="w3-text-orange">Characteristics of Abstract Data Structures</h3>
+          <h3 class="w3-text-teal">Characteristics of Abstract Data Structures</h3>
           <p>
             <ul class="w3-twothird"> 
               <li>Provides a description of elements in terms of data types.</li>
@@ -136,7 +114,7 @@
               <li>Valid operations and parameters to be passed.</li>
               <li>Error conditions associated with the operations.</li>
 
-              <h4 class="w3-text-orange">For example an ADT stack can be defined by packaging together the following operations</h4>
+              <h4 class="w3-text-teal">For example an ADT stack can be defined by packaging together the following operations</h4>
               
               <li> <strong>Push</strong>  – insert an item into the stack</li>
               <li> <strong>Pop</strong> – Returns a data item from stack</li>
@@ -159,9 +137,9 @@
 
       <div class="w3-row w3-padding-64">
         <div class=" w3-container">
-          <h3 class="w3-text-orange">Linear Data Structures</h3>
+          <h3 class="w3-text-teal">Linear Data Structures</h3>
           <p>
-            <strong class="w3-text-orange">Linear Data structures </strong> –are data structures in which data is arranged in a list or in a straight line. 
+            <strong class="w3-text-teal">Linear Data structures </strong> –are data structures in which data is arranged in a list or in a straight line. 
             They are further classified as sequential and linked representations.
           </p>
           <div class="w3-center">
@@ -170,25 +148,25 @@
 
           <h3>Classification of Linear Data Sructures</h3>
 
-          <p><strong class="w3-text-orange">Linked lists</strong> consist of data items called nodes. Each data element contains two field; information field and a link field connected to another data items.<img class="mb-4" src="images\LINKEDLIST.jpg" alt="LINKEDLIST" ></p>
-          <p>In<strong class="w3-text-orange"> a stack</strong> last item added can be taken off first. Works on the principle of LIFO<img class="mb-4" src="images\STACK.jpg" alt="Stack" ></p>
-          <p>A<strong class="w3-text-orange"> queue</strong> is a data structure in which an item can be added at one end and removed from the other end. It works on the principle of FIFO.<img class="mb-4" src="images\QUEUE.jpg" alt="QUEUE" ></p>
-          <p>An<strong class="w3-text-orange"> array </strong>is a collection of homogeneous items<img class="mb-4" src="images\ARRAY.jpg" alt="ARRAY" ></p>
+          <p><strong class="w3-text-teal">Linked lists</strong> consist of data items called nodes. Each data element contains two field; information field and a link field connected to another data items.<img class="mb-4" src="images\LINKEDLIST.jpg" alt="LINKEDLIST" ></p>
+          <p>In<strong class="w3-text-teal"> a stack</strong> last item added can be taken off first. Works on the principle of LIFO<img class="mb-4" src="images\STACK.jpg" alt="Stack" ></p>
+          <p>A<strong class="w3-text-teal"> queue</strong> is a data structure in which an item can be added at one end and removed from the other end. It works on the principle of FIFO.<img class="mb-4" src="images\QUEUE.jpg" alt="QUEUE" ></p>
+          <p>An<strong class="w3-text-teal"> array </strong>is a collection of homogeneous items<img class="mb-4" src="images\ARRAY.jpg" alt="ARRAY" ></p>
 
         </div>
         
         <div class="w3-row">
           <div class="w3-container">
-            <h3 class="w3-text-orange" id="#properties">Non-Linear Data Structures</h3>
+            <h3 class="w3-text-teal" id="#properties">Non-Linear Data Structures</h3>
             
             <p>
-              <strong class="w3-text-orange">Non-linear data structures  </strong> –are the data structures in which data may be arranged in hierarchical manner.
+              <strong class="w3-text-teal">Non-linear data structures  </strong> –are the data structures in which data may be arranged in hierarchical manner.
             </p>
 
             <img class="mb-4" src="images\NLDS.jpg" alt="NLDS" >
 
             <h3>Classification of Non-Linear Data Structures</h3>
-            <p>A<strong class="w3-text-orange"> tree</strong> is a data structure that consists of a set of data items called nodes.
+            <p>A<strong class="w3-text-teal"> tree</strong> is a data structure that consists of a set of data items called nodes.
               <ul>
               <li>It contains an information field and a link filed, which is address of related element</li>
               <li>There are variations of trees i.e binary, AVL, Red and Black, Splay,
@@ -197,7 +175,7 @@
               </ul>
               
               <img class="mb-4" src="images\TREE.jpg" alt="TREE" ></p>
-          <p>A<strong class="w3-text-orange"> graph </strong>Graph is a set of data items, called vertices or nodes, connected by links termed as edges or arcs.<img class="mb-4" src="images\GRAPH.jpg" alt="graph" ></p>
+          <p>A<strong class="w3-text-teal"> graph </strong>Graph is a set of data items, called vertices or nodes, connected by links termed as edges or arcs.<img class="mb-4" src="images\GRAPH.jpg" alt="graph" ></p>
             <br>
             <br>
             <H5>CLASSIFICATION OF DATA STRUCTURES</H5>
@@ -210,24 +188,24 @@
         <!-- New section -->
         <div class="w3-row">
           <div class="w3-container">
-            <h3 class="w3-text-orange" id="#properties">Operations on Data Structures</h3>
+            <h3 class="w3-text-teal" id="#properties">Operations on Data Structures</h3>
             
             
               <ul>
                 <li>In order to process elements of a data structure some kind of operation is required.</li>
-                <li>A basic operation involves <strong class="w3-text-orange">creating</strong> a data structure and reserving storage space for the elements.</li>
-              <li>Another operation is <strong class="w3-text-orange">deleting</strong> the data structure, which removes the data items and releases the allocated storage space
+                <li>A basic operation involves <strong class="w3-text-teal">creating</strong> a data structure and reserving storage space for the elements.</li>
+              <li>Another operation is <strong class="w3-text-teal">deleting</strong> the data structure, which removes the data items and releases the allocated storage space
                 </li>
               </ul>
               
               <p>Other common operations are: inserting, sorting, searching, merging, traversing.</p>
 
               <ul>
-                <li><strong class="w3-text-orange">Inserting</strong> involves adding a data item in a specified position to the data structure.</li>
-                <li><strong class="w3-text-orange">sorting</strong> is arranging of data items in specific order.</li>
-                <li><strong class="w3-text-orange">Searching</strong> means finding an item which matches with a given key.</li>
-                <li><strong class="w3-text-orange">Merging</strong> involves combining two sets of data items according to some criterion.</li>
-                <li><strong class="w3-text-orange">Traversing</strong> means accessing each element of a data structure at least once. Used particularly on graphs and also referred to as visiting of vertices on a graph</li>
+                <li><strong class="w3-text-teal">Inserting</strong> involves adding a data item in a specified position to the data structure.</li>
+                <li><strong class="w3-text-teal">sorting</strong> is arranging of data items in specific order.</li>
+                <li><strong class="w3-text-teal">Searching</strong> means finding an item which matches with a given key.</li>
+                <li><strong class="w3-text-teal">Merging</strong> involves combining two sets of data items according to some criterion.</li>
+                <li><strong class="w3-text-teal">Traversing</strong> means accessing each element of a data structure at least once. Used particularly on graphs and also referred to as visiting of vertices on a graph</li>
               </ul>
 
           </div>
@@ -238,10 +216,9 @@
 
       </div>
 
-
       <div class="w3-clear nextprev w3-padding-32">
-        <a class="w3-left w3-button w3-medium w3-round-xxlarge" style="background-color: #ff9900;" href="/chapter1"> Previous</a>
-      <a class="w3-right w3-button w3-medium w3-round-xxlarge" style="background-color: #ff9900;" href="/chapter3">Next</a>
+        <a class="w3-left w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;" href="/chapter1"> Previous</a>
+      <a class="w3-right w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;" href="/chapter3">Next</a>
       </div>
 
       <%- include("footer") -%>

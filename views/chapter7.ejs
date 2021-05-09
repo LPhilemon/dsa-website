@@ -1,34 +1,9 @@
 <%- include("header") -%>
 
-  <body>
-    <!-- Navbar -->
-    <div class="w3-top w3-orange">
-      <div class="w3-bar w3-orange w3-card w3-left-align w3-large">
-        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-orange w3-large w3-orange"
-          href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-
-        <a href="/" class="w3-bar-item w3-button w3-padding-large w3-orange w3-text-black"><i
-            class="fa fa-home"></i>Data Structures and Algorithms</a>
-        <!-- <h3 href="#" class="w3-bar-item w3-button w3-padding-small w3-text-black">Data Structures and Analysis</h3> -->
-        <a href="/chapter1"
-          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Algorithms</a>
-        <a href="/chapter5"
-          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Basic Data
-          Structures</a>
-        <a href="/chapter3"
-          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Trees</a>
-        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Sorting
-          and Searching</a>
-        <a href="/chapter3"
-          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Basic Graphs</a>
-
-      </div>
-    </div>
-
     <!-- Sidebar -->
     <nav class="w3-sidebar activecolor w3-bar-block w3-collapse  w3-animate-left w3-light-grey" id="mySidebar">
       <a href="javascript:void(0)" onclick="w3_close()"
-        class="w3-right w3-xlarge w3-padding-large w3-hover-orange w3-hide-large" title="Close Menu">
+        class="w3-right w3-xlarge w3-padding-large w3-hover-queue w3-hide-large" title="Close Menu">
         <i class="fa fa-remove"></i>
       </a>
 
@@ -64,22 +39,36 @@
 
         <!-- start section -->
         <div class=" w3-container">
-          <h2 class="w3-text-orange">Introduction</h2>
+          <h2 class="w3-text-queue">♦ Introduction</h2>
           <p>
-            <b class="w3-text-orange">Sorting</b> is a process that organizes or rearranges a collection of
-            data into either ascending or descending order.
-             Sorting sometimes is done to improve on the readability of that
+            <b class="w3-text-queue">♦ Sorting</b> is a process that organizes or rearranges a collection of
+            data into either ascending or descending order.<br>
+            • Sorting sometimes is done to improve on the readability of that
             data, at times to be able to search or extract some information
-            quickly out of that data.
-             The list should be homogeneous, that is the elements in the list
-            should be the same type.
-             To study sorting algorithms, most of the times we use a list of
+            quickly out of that <br>
+            • The list should be homogeneous, that is the elements in the list
+            should be the same type. <br>
+            • To study sorting algorithms, most of the times we use a list of
             integers and typically we sort the list of integers in an increasing
-            order of value.
-             E.g. 5,9, 8, 1, 3, 2, 4 → 1,2,3,4,5,8,9 increasing order
-            → 9,8,5,4,3, 2,1 decreasing order
+            order of value. <br>
+            ♦ E.g. 5,9, 8, 1, 3, 2, 4 → 1,2,3,4,5,8,9 increasing order <br>
+                                      → 9,8,5,4,3, 2,1 decreasing order <br>
             ♦ ‘fork’, ‘knife’, ‘mouse’, ‘screen’, ‘key’ → ‘fork’, ’key’, ‘knife’, ‘mouse’,
-            ‘screen’
+            ‘screen’ <br> <br>
+
+            <b>There are a number of areas where we would like
+            to keep our data sorted</b> <br>
+               ♦ Words in the dictionary <br>
+               ♦ Telephone numbers <br>
+               ♦ Students records in class for easy access of
+                 any information required <br>
+               ♦ A model tally where we are able to see which
+                 team is at the top and which team at the
+                 bottom. <br>
+
+<p>
+              
+            </p>
           </p>
         
       
@@ -87,49 +76,366 @@
          
         <!-- start section -->
         <div class=" w3-container">
-            <h2 class="w3-text-orange">Classification</h2>
-          
+            <h2 class="w3-text-queue">♦ Classification</h2>
+          <p>
+            • In this lecture we are going to study, analyze and
+              compare different sorting algorithms <br>
+            • Some of the sorting algorithms that we will be talking about,
+              that we will be analyzing about are Bubble sort, Selection
+              sort, Insertion sort, Merge Sort, Quick sort etc. <br>
+            • We have so many algorithms for sorting that have been
+              designed over a long period of time. <br>
+            • We often classify sorting algorithms based on some parameters as follows: <br>
+            <b class="w3-text-queue">♦ Time complexity</b> – which is the measure of rate of
+              growth of time taken by an algorithm with respect to
+              input size. Some algorithms will be relatively faster than
+              the others. <br>
+
+              <b class="w3-text-queue">♦ Space Complexity or memory usage</b> -some sorting
+              algorithms are in place, they use constant amount of
+              extra memory to rearrange the elements in the list, while
+              some sorting algorithms like merge sort, use extra
+              memory to temporarily store data and the memory usage
+              grows with input size <br>
+
+              <b class="w3-text-queue">♦ Stability</b>- sorting algorithm is said to be stable if two
+              objects with equal keys appear in the same order in
+              sorted output as they appear in the input array to be
+              sorted. <br> 
+              
+             <b class="w3-text-queue">♦ Internal sort or External sort</b> –
+                  • when all the records that need to be sorted are in the
+                    memory or RAM, such sort is internal sort
+                  • If the records are on auxiliary storage like disk and
+                    tapes, quite often it is not possible to get all of them
+                    in the main memory in one go, then we call such a sort
+                    external sort.
+                    <b class="w3-text-queue">♦  Recursive or non-recursive</b>
+                  • Some sorting algorithms like quick sort and merge
+                    sort are recursive while other like insertion sort and
+                    selection sort are non-recursive <br>
+
+                  •Any significant amount of computer output is generally arranged in some sorted order so that it can be interpreted. <br> 
+
+                  •Sorting also has <b class="w3-text-queue"> indirect uses</b>. An initial sort of the data can significantly <b class="w3-text-blue">enhance
+                    the performance of an algorithm</b>. <br>
+
+                  •Majority of programming projects use a sort somewhere, and in many cases, the sorting cost determines the running time. <br>
+
+
+          </p>
         </div>
         <!-- end section -->
                
         <!-- start section -->
         <div class=" w3-container">
-            <h2 class="w3-text-orange">Implementation</h2>
-          
+            <h2 class="w3-text-queue">♦ Selection Sort</h2>
+          <p>• The list is divided into two sublists, sorted and
+            unsorted, which are divided by an imaginary wall. <br>
+            • We find the smallest element from the unsorted
+            sublist and swap it with the element at the beginning of the unsorted data. <br>
+            • After each selection and swapping, the imaginary
+            wall between the two sublists move one element
+            ahead, increasing the number of sorted elements
+            and decreasing the number of unsorted ones. <br>
+            • Each time we move one element from the unsorted
+            sublist to the sorted sublist, we say that we have
+            completed a sort pass. <br>
+            • A list of n elements requires n-1 passes to completely rearrange the data. <br>    
+
+            <img src="images/unsorted.png" alt="">
+          </p>
+          <h2 class="w3-text-queue">♦ Selection Sort Algorithm</h2>
+          <p>
+          •Step 1 − Set MIN to location 0 <br>
+          •Step 2 − Search the minimum element in the list <br>
+          •Step 3 − Swap with value at location MIN <br>
+          •Step 4 − Increment MIN to point to next element <br>
+          •Step 5 − Repeat until list is sorted <br>
+
+          SelectionSort ( A, n){ <br>
+            for (i &larr; 0 to n – 1) { <br>
+            imin &larr; i <br>
+            for(j &larr; i+1 to n-1 ){ <br> 
+            if(A[j]< A[imin] <br>
+            imin &larr; j <br>
+            swap(A[i], A[imin]); <br>
+            } <br>
+            temp &larr; A[i] <br>
+            A[i] &larr; A[imin] <br>
+            A[imin] &larr; temp <br>
+            } <br>
+            } <br>
+         </p>
+         <h2 class="w3-text-queue">♦ Selection Sort -- Analysis</h2>
+       <p>• In general, we compare keys and move items (or exchange items) in a sorting algorithm (which uses key comparisons). <br>
+              ♦ So, to analyze a sorting algorithm we should count
+          the number of key comparisons and the number of
+          moves. <br>
+              ♦ Ignoring other operations does not affect our final
+          result. <br>
+          • In selectionSort function, the outer for loop executes
+          n-1 times. <br>
+          • We invoke swap function once at each iteration. <br>
+              ♦ Total Swaps: n-1 <br>
+              ♦ Total Moves: 3*(n-1)(Each swap has three moves) <br>
+              • The inner for loop executes the size of the unsorted
+                part minus 1 (from 1 to n-1), and in each iteration we
+                make one key comparison. <br>
+                → # of key comparisons = 1+2+...+n-1 = n*(n-1)/2 <br>
+                → So, Selection sort is O(n<sup>2</sup>) <br>
+              • The best case, the worst case, and the average case of
+                the selection sort algorithm are same.
+                → all of them are O(n<sup>2</sup>) <br>
+                ♦ This means that the behavior of the selection sort algorithm
+                  does not depend on the initial organization of data. <br>
+                ♦ Since O(n<sup>2</sup>) grows so rapidly, the selection sort algorithm is
+                  appropriate only for small n. <br>
+                ♦ Although the selection sort algorithm requires O(n<sup>2</sup>) key comparisons, it only requires O(n) moves. <br>
+                ♦ A selection sort could be a good choice if data moves are costly
+                  but key comparisons are not costly (short keys, long records) <br>
+            </p>
+            <p><h2 class="w3-text-queue">♦ Comparison of N, logN and N<sup>2</sup></h2>
+              <img src="images/compare.png" alt=""> 
+            </p>
         </div>
         <!-- end section -->
                
         <!-- start section -->
         <div class=" w3-container">
-            <h2 class="w3-text-orange">Insertion sort</h2>
-          
+            <h2 class="w3-text-queue">♦ Insertion sort</h2>
+          <p>
+            •Insertion sort is slower than quick sort,
+              but not as slow as bubble sort, and it is
+              easy to understand. <br>
+            •Insertion sort works the same way as
+              arranging your hand when playing cards. <br>
+              ♦ Out of the pile of unsorted cards that were
+                dealt to you, you pick up a card and place it
+                in your hand in the correct position relative
+                to the cards you’re already holding. <br>
+            •Insertion sort is a simple sorting algorithm that is appropriate for small inputs. <br>
+              ♦ Most common sorting technique used by card players. <br>
+            •The list is divided into two parts:sorted and unsorted. <br>
+            •In each pass, the first element of the unsorted part is picked up, transferred to the sorted sublist, and inserted at the appropriate place. <br>
+            •A list of n elements will take at most n-1 passes to sort the data. <br>
+            
+            <img src="images/un.png" alt="">
+
+            <h2 class="w3-text-queue">♦ Insertion Sort Algorithm</h2>
+            <img src="images/s.png" alt="">
+            
+            template<classItem> <br>
+              voidinsertionSort(Itema[],intn) <br>
+              { <br>
+              for(inti=1;i< n;i++) <br>
+              { <br>
+              Itemtmp=a[i]; <br>
+              for(intj=i;j>0&&tmp< a[j-1];j--) <br>
+              a[j]=a[j-1]; <br>
+              a[j]=tmp; <br>
+              } <br>
+              } <br>
+
+            <h2 class="w3-text-queue">♦ Insertion Sort Pseudocode</h2>
+            <img src="images/p.png" alt=""> 
+
+            <h2 class="w3-text-queue">♦ Insertion Sort - Analysis</h2>
+            •Running time depends on not only the size of the array but also the contents of the array. <br>
+            •Best-case:       → O(n) <br>
+              ♦ Array is already sorted in ascending order. <br>
+              ♦ Inner loop will not be executed. <br>
+              ♦ The number of key comparisons:(n-1)   → O(n) <br>
+            •Worst-case:    → O(n<sup>2</sup>) <br>
+              ♦ Array is in reverse order: <br>
+              ♦ Inner loop is executed i-1 times,for i=2,3,…,n <br>
+              ♦ The number of key comparisons:(1+2+...+n-1)=n*(n-1)/2 → O(n<sup>2</sup>) <br>
+            •Average-case: → O(n<sup>2</sup>) <br>
+              ♦ We have to look at all possible initial data organizations. <br>
+            •So,Insertion Sort is  O(n<sup>2</sup>)
+          </p>
         </div>
         <!-- end section -->
                
         <!-- start section -->
         <div class=" w3-container">
-            <h2 class="w3-text-orange">Bubble sort</h2>
-          
+            <h2 class="w3-text-queue">♦ Bubble sort</h2>
+          <p>
+            • The bubble sort makes multiple passes through a list. <br>
+            • It compares adjacent items and exchanges those that are out of order. <br>
+            • Each pass through the list places the next largest value in its proper place. <br>
+            • Inessence, each item “bubbles” up to the location where it belongs <br>
+
+            <img src="images/b.png" alt="">
+
+            <h2 class="w3-text-queue">♦ Bubble Sort Algorithm</h2>
+
+            <img src="images/a.png" alt=""> <br>
+
+            BubbleSort (A,n){ <br>
+              for (k &larr; 1 to n–1){ <br>
+              for (i &larr; 0 to n–2){ <br>
+              if (A[i] > A[i+1]){ <br>
+              swap(A[i],A[i+1]) <br>
+              } <br>
+              } <br>
+              } <br>
+              } <br>
+
+              <h2 class="w3-text-queue">♦ Bubble Sort - Analysis</h2>
+              • <b>Best-case: →</b> O(n) <br>
+                    ♦ Array is already sorted in ascending order. <br>
+                    ♦ The number of key comparisons:(n-1) → O(n) <br>
+              • <b>Worst-case: →</b> O(n<sup>2</sup>) <br>
+                    ♦ Array is in reverse order: <br>
+                    ♦ Outer loop is executed n-1 times, <br>
+                    ♦ The number of key comparisons: (n-1)+(n-2)+(n-3)+.....+3+2+1 <br>
+                    ♦ Sum = n(n-1)/2 i.e. O(n<sup>2</sup>) → O(n<sup>2</sup>) <br>
+              • Average-case: → O(n<sup>2</sup>) <br>
+                    ♦ We have to look at all possible initial data organizations. <br>
+              • <b>So, Bubble Sort is O(n<sup>2</sup>)</b> <br>
+                          
+          </p>
         </div>
         <!-- end section -->
                
         <!-- start section -->
         <div class=" w3-container">
-            <h2 class="w3-text-orange">Merge sort</h2>
-          
+            <h2 class="w3-text-queue">♦ Merge sort</h2>
+          <p> • Merge sort algorithm is one of two important divide-and-conquer sorting algorithms (the other one is quick sort). <br>
+              • It is are cursive algorithm. <br>
+                ♦ Divides the list into halves, <br>
+                ♦ Sort each halve separately, and <br>
+                ♦ Then merge the sorted halves into one sorted array <br>
+
+                <h2 class="w3-text-queue">♦ Merge sort - Example 1</h2>
+                <img src="images/m.png" alt=""> <br> 
+
+                <h2 class="w3-text-queue">♦ Merge sort - Example 2</h2>
+                <img src="images/2.png" alt=""> <br> 
+
+                <h2 class="w3-text-queue">♦ Merge sort - Example 3</h2>
+                <img src="images/3.png" alt=""> <br>
+
+                <h2 class="w3-text-queue">♦ Merge sort Algorithm</h2>
+                MergeSort(arr[],l,r) <br>
+                If r > l <br>
+                1. Find the middle point to divide the array into two halves: <br>
+                      middle m = (l+r)/2 <br>
+                2. Call mergeSort for first half: <br>
+                      Call mergeSort(arr, l, m) <br>
+                3. Call mergeSort for second half: <br>
+                      Call mergeSort(arr, m+1, r) <br>
+                4.Merge the two halves sorted in step 2 and 3: <br>
+                Call merge(arr, l, m, r) <br>
+
+                <h2 class="w3-text-queue">♦ Merge sort Pseudocode</h2>
+                void mergesort (DataType theArray[], int first, int last) { <br>
+                  if (first < last) { <br>
+                  int mid = (first + last)/2; // index of midpoint <br>
+                  mergesort (theArray, first, mid); <br>
+                  mergesort (theArray, mid+1, last); <br>                  //merge the two halves <br>
+                  merge (theArray, first, mid, last); <br>
+                  } <br>
+                  } //end mergesort <br>
+
+                  <h2 class="w3-text-queue">♦ Merge sort - Analysis</h2>
+                  • Mergesort is extremely efficient algorithm with respect to time. <br>
+                      ♦ Both worst case and average cases are O(n*log<sub>2</sub>n) <br>
+                  • But, merge sort requires an extra array whose size equals to the size of the original array. <br>
+                  • If we use a linked list, we do not need an extra array <br>
+                      ♦ But, we need space for the links <br>
+                      ♦ And, it will be difficult to divide the list into half (O(n)) <br>
+          </p>
         </div>
         <!-- end section -->
                
         <!-- start section -->
         <div class=" w3-container">
-            <h2 class="w3-text-orange">Quick sort</h2>
-          
-        </div>
+            <h2 class="w3-text-queue">♦ Quick sort</h2>
+          <p>
+            • <b>QuickSort</b> is a Divide and Conquer algorithm. <br>
+            • It picks an element as pivot and partitions the given array around the picked pivot. <br>
+            • There are many different versions of quickSort that pick pivot in different ways. <br>
+                1. Always pick first element as pivot. <br>
+                2. Always pick last element as pivot (implemented below) <br>
+                3. Pick a random element as pivot. <br>
+                4. Pick median as pivot. <br>
+</p>
+<p>
+            The quick-sort algorithm consists of the following three steps: <br>
+            1. <b>Divide</b>: Partition the list. <br>
+                    ♦ To partition the list, we first choose some element from the list for which we hope about half the elements will come before and half after. Call this element the <b>pivot</b>. <br>
+                    • <b class="w3-text-blue">(Always pick last element as pivot).</b> <br>            
+                    ♦ Then we partition the elements so that all those with values less than the pivot come in one sublist and all those with greater values come in another. <br>
+            2. <b>Recursion</b>: Recursively sort the sublists separately. <br>
+            3. <b>Conquer</b>: Put the sorted sublists together by a simple concatenation. <br>
+</p>
+
+<h2 class="w3-text-queue">♦ Partition</h2>
+• Partitioning places the pivot in its correct place position within the array. <br>
+
+<img src="images/pa.png" alt=""> <br>
+
+• Arranging the array elements around the pivot p generates two smaller sorting problems. <br>
+      ♦ sort the left section of the array, and sort the right section of the array. <br>
+      ♦ when these two smaller sorting problems are solved recursively, our bigger sorting problem is solved. <br>
+
+      <h2 class="w3-text-queue">♦ Partition –Choosing the pivot</h2>
+        
+        • First, we have to select a pivot element among the elements of the given array, and we put this pivot in to the first location of the array before partitioning. <br>  
+        • Which array item should be selected as pivot? <br>
+            ♦ Some how we have to select a pivot, and we hope that we will get a good partitioning. <br>
+            ♦ If the items in the array arranged randomly, we choose a pivot randomly. <br>
+            ♦ We can choose the first or last element as a pivot (it may not give a good partitioning). <br>
+            ♦ We can use different techniques to select the pivot <br> 
+  
+            <h2 class="w3-text-queue">♦ Partition Function</h2>
+            <img src="images/f.png" alt=""> <br>
+
+            Partition (A, start, end) <br>
+              { <br>
+                pivot &larr; A[end] <br>
+                pindex &larr; start <br>
+                for i &larr; start to end – 1 <br>
+                { <br>
+                if (A[i] &le; pivot) <br>
+                { <br>
+                swap(A[i], A[pindex]) <br>
+                pindex &larr; pindex+1 <br>
+                } <br>
+                }swap (A[pindex], A[end]) <br>
+                returnpindex; <br>
+                } <br>
+
+                <h2 class="w3-text-queue">♦ Quick Sort Algorithm</h2>
+                • Step 1 − Choose the highest index value as pivot <br>
+                • Step 2 − Take two variables to point left and right of the list excluding pivot <br>
+                • Step 3 − left points to the low index <br>
+                • Step 4 − right points to the high <br>
+                • Step 5 − while value at left is less than pivot move right <br>
+                • Step 6 − while value at right is greater than pivot move left <br>
+                • Step 7 − if both step 5 and step 6 does not match swap left and right <br>
+                • Step 8 − if left ≥ right, the point where they met is new pivot <br>
+     
+                <h2 class="w3-text-queue">♦ Quicksort Function</h2>
+                <img src="images/q.png" alt=""> <br>
+
+                <h2 class="w3-text-queue">♦ Quicksort –Analysis</h2>
+                <img src="images/w.png" alt=""> <br>
+                • Quicksort is O(n*log<sub>2</sub>n) in the best case and average case. br
+                • Quicksort is slow when the array is sorted and we choose the first element as the pivot. <br>
+                • Although the worst case behavior is not so good, its average case behavior is much better than its worst case. <br>
+                     ♦ So, Quicksort is one of best sorting algorithms using key comparisons <br>
+              </div>
         <!-- end section -->
                
         <!-- start section -->
         <div class=" w3-container">
-            <h2 class="w3-text-orange">Comparison</h2>
+            <h2 class="w3-text-queue">♦ Comparison of Sorting Algorithms</h2>
+            <img src="images/co.png" alt=""> <br>
+
+            <p><img src="images/ao.png" alt=""> <br></p>
           
         </div>
         <!-- end section -->
@@ -143,10 +449,10 @@
 
 
       <div class="w3-clear nextprev w3-padding-32">
-        <a class="w3-left w3-button w3-medium w3-round-xxlarge" style="background-color: #ff9900;" href="/chapter6">
+        <a class="w3-left w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;" href="/chapter8">
           Previous</a>
-        <a class="w3-right w3-button w3-medium w3-round-xxlarge" style="background-color: #ff9900;"
-          href="/chapter8">Next</a>
+        <a class="w3-right w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;"
+          href="/chapter6">Next</a>
       </div>
 
       <%- include("footer") -%>

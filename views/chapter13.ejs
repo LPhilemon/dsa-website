@@ -1,31 +1,9 @@
 <%- include("header") -%>
 
-  <body>
-   <!-- Navbar -->
-   <div class="w3-top w3-orange">
-    <div class="w3-bar w3-orange w3-card w3-left-align w3-large">
-      <a
-        class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-orange w3-large w3-orange"
-        href="javascript:void(0)"
-        onclick="w3_open()"
-        ><i class="fa fa-bars"></i
-      ></a>
-    
-      <a href="/" class="w3-bar-item w3-button w3-padding-large w3-orange w3-text-black"><i class="fa fa-home"></i>  Data Structures and Algorithms</a>
-      <!-- <h3 href="#" class="w3-bar-item w3-button w3-padding-small w3-text-black">Data Structures and Analysis</h3> -->
-      <a href="/chapter1" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black active">Algorithms</a>
-      <a href="/chapter5" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Basic Data Structures</a>
-      <a href="/chapter9" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Trees</a>
-      <a href="/chapter7" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Sorting and Searching</a>
-      <a href="/chapter13" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Basic Graphs</a>
-      
-    </div>
-  </div>
-
     <!-- Sidebar -->
     <nav class="w3-sidebar activecolor w3-bar-block w3-collapse  w3-animate-left w3-light-grey" id="mySidebar">
         <a href="javascript:void(0)" onclick="w3_close()"
-          class="w3-right w3-xlarge w3-padding-large w3-hover-orange w3-hide-large" title="Close Menu">
+          class="w3-right w3-xlarge w3-padding-large w3-hover-queue w3-hide-large" title="Close Menu">
           <i class="fa fa-remove"></i>
         </a>
   
@@ -56,9 +34,9 @@
       
 
         <!-- New section -->
-          <h1 class="w3-text-orange" id="#properties">GRAPHS</h1>
+          <h1 class="w3-text-queue" id="#properties">GRAPHS</h1>
        
-          <h3 class="w3-text-orange">What is a graph?</h3>
+          <h3 class="w3-text-queue">What is a graph?</h3>
 
             <p>
                     
@@ -71,7 +49,7 @@
                   vertices <br>
                 </p>
 
-                <h4><strong class="w3-text-orange">
+                <h4><strong class="w3-text-queue">
                   Formal Definition:
                 </strong></h4>
                 <pre>
@@ -89,17 +67,17 @@
 
                 <!-- New section -->
        
-                <h3 class="w3-text-orange">Graph Terminology</h3>
+                <h3 class="w3-text-queue">Graph Terminology</h3>
 
                 <p>
-                  • A graph <strong class="w3-text-orange">G = (V,E)</strong> consists of an ordered pair consisting of a
-                  set of vertices <strong class="w3-text-orange">V</strong> and a set of edges <strong class="w3-text-orange">E</strong>, such that each edge in <strong class="w3-text-orange">E</strong>
-                  is a connection between a pair of vertices in <strong class="w3-text-orange"></strong>V. <br><br>
-                  • The number of vertices is written <strong class="w3-text-orange">|V|</strong>, and the number of edges
-                  is written <strong class="w3-text-orange">|E|</strong>. <br><strong class="w3-text-orange">|E|</strong> can range from zero to a maximum of <strong class="w3-text-orange">|V|2 − |V|</strong>. <br><br>
-                  • A graph with relatively few edges is called <strong class="w3-text-orange">sparse</strong>, while a graph
-                  with many edges is called <strong class="w3-text-orange">dense</strong>. <br><br>
-                  • A graph containing all possible edges is said to be <strong class="w3-text-orange">complete</strong>. <br>
+                  • A graph <strong class="w3-text-queue">G = (V,E)</strong> consists of an ordered pair consisting of a
+                  set of vertices <strong class="w3-text-queue">V</strong> and a set of edges <strong class="w3-text-queue">E</strong>, such that each edge in <strong class="w3-text-queue">E</strong>
+                  is a connection between a pair of vertices in <strong class="w3-text-queue"></strong>V. <br><br>
+                  • The number of vertices is written <strong class="w3-text-queue">|V|</strong>, and the number of edges
+                  is written <strong class="w3-text-queue">|E|</strong>. <br><strong class="w3-text-queue">|E|</strong> can range from zero to a maximum of <strong class="w3-text-queue">|V|2 − |V|</strong>. <br><br>
+                  • A graph with relatively few edges is called <strong class="w3-text-queue">sparse</strong>, while a graph
+                  with many edges is called <strong class="w3-text-queue">dense</strong>. <br><br>
+                  • A graph containing all possible edges is said to be <strong class="w3-text-queue">complete</strong>. <br>
                 </p>
 
                 <h3>Graph Types</h3>
@@ -108,34 +86,34 @@
                 <img src="images/graphs/directed.png" alt="">
                 <p>
                   A graph with edges directed from one vertex to another is
-              called a <strong class="w3-text-orange">directed graph</strong> or <strong class="w3-text-orange">digraph</strong>.
+              called a <strong class="w3-text-queue">directed graph</strong> or <strong class="w3-text-queue">digraph</strong>.
             </p>
                 <li type="i"><b>Undirected graph</b></li>
                 <img src="images/graphs/undirected.png" alt="">
                 <p>
-                  A graph whose edges are not directed is called an <strong class="w3-text-orange">undirected
+                  A graph whose edges are not directed is called an <strong class="w3-text-queue">undirected
                     graph.</strong>
                   </p>
                   
               <h5><b>Graph Terminology</b></h5>
               • A graph with labels associated with its vertices is called a
-              <strong class="w3-text-orange"></strong>labeled graph. <br>
-              • Two vertices are <strong class="w3-text-orange">adjacent</strong> if they are joined by an edge. Such
-              vertices are also called <strong class="w3-text-orange">neighbors</strong>.<br>
-              •The <strong class="w3-text-orange">size</strong> of a graph is the number of nodes or vertices
+              <strong class="w3-text-queue"></strong>labeled graph. <br>
+              • Two vertices are <strong class="w3-text-queue">adjacent</strong> if they are joined by an edge. Such
+              vertices are also called <strong class="w3-text-queue">neighbors</strong>.<br>
+              •The <strong class="w3-text-queue">size</strong> of a graph is the number of nodes or vertices
               in it<br>
-              • The <strong class="w3-text-orange">length</strong> of a path is the number of edges it contains. <br>
-              • The <strong class="w3-text-orange">empty</strong> graph has size zero (no nodes)<br>
+              • The <strong class="w3-text-queue">length</strong> of a path is the number of edges it contains. <br>
+              • The <strong class="w3-text-queue">empty</strong> graph has size zero (no nodes)<br>
               • An edge connecting Vertices U and V is written (U, V).
-              Such an edge is said to be <strong class="w3-text-orange">incident</strong> on Vertices U and V.<br>
-              • Associated with each edge may be a <strong class="w3-text-orange">cost</strong> or <strong class="w3-text-orange">weight</strong>.
+              Such an edge is said to be <strong class="w3-text-queue">incident</strong> on Vertices U and V.<br>
+              • Associated with each edge may be a <strong class="w3-text-queue">cost</strong> or <strong class="w3-text-queue">weight</strong>.
               Graphs whose edges have weights are said to be
               <strong class="w3-text-black">weighted</strong>.<br>
-              • The <strong class="w3-text-orange">degree</strong> of a node is the number of edges
+              • The <strong class="w3-text-queue">degree</strong> of a node is the number of edges
               it has.<br>
 
               <p>
-                <b class="w3-text-orange">For directed graphs,</b> <br>
+                <b class="w3-text-queue">For directed graphs,</b> <br>
                 1.If a directed edge goes from node S to node D, <br>
                 we call S the <b> source</b> and D the <b> destination</b> of the
                 edge <br>
@@ -155,9 +133,9 @@
         </div>
 
       <div class="w3-clear nextprev w3-padding-32">
-        <a class="w3-left w3-button w3-medium w3-round-xxlarge" style="background-color: #ff9900;" href="/chapter9">
+        <a class="w3-left w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;" href="/chapter9">
           Previous</a>
-        <a class="w3-right w3-button w3-medium w3-round-xxlarge" style="background-color: #ff9900;"
+        <a class="w3-right w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;"
           href="#">Next</a>
       </div>
 

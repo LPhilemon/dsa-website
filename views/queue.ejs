@@ -1,0 +1,210 @@
+<%- include("header") -%>
+
+   <!-- Sidebar -->
+   <nav class="w3-sidebar activecolor w3-bar-block w3-collapse  w3-animate-left w3-light-grey" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()"
+      class="w3-right w3-xlarge w3-padding-large w3-hover-teal w3-hide-large" title="Close Menu">
+      <i class="fa fa-remove"></i>
+    </a>
+
+    <h4 class="w3-text-black">Recursion</span></h4>
+    
+    <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/fibonaccis" >Fibonacci</a>
+    <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/factorials">Factorial</a>
+    <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/hanoi">Towers of Hanoi</a>
+
+    <h4 class="w3-text-black">Data Structures </span></h4>
+    
+    <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/stacks" >Stack</a>
+    <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge  active" href="/queue">Queue</a>
+    <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/Chapter1" >Singly linked list</a>
+    <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter1">Doubly linked list</a>
+    
+  </nav>
+
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor: pointer" title="close side menu"
+      id="myOverlay"></div>
+
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left: 250px">
+      <div class="w3-row w3-padding-64">
+        <div class=" w3-container">
+      
+
+        <!-- New section -->
+          <h1 class="w3-text-teal w3-center" id="#properties"> QUEUE IMPLEMENTATION</h1>
+       
+
+          <h4 class="w3-text-black" >How it works</h4>
+
+            <p>
+                <ul type="1">
+                    <li><b class = "w3-text-teal">Create Queue Sized</b> - As the button states, it is used to create a button of a given size which is determined by the user.
+                        <br> <b>To create</b>  a queue, Fill the space having placeholder (Number) with the size wanted. Go ahead and tap the <i>Create sized queue button.</i> 
+                    </li>
+
+                        <li>
+                            <b class = "w3-text-teal">enqueue</b> Enter a value and tap this button to enque the value.
+                        </li>
+
+                        <li>
+                            <b class = "w3-text-teal">dequeue</b> - Tap this button to deque a value.
+                        </li>
+
+                        <li>
+                            <b class = "w3-text-teal">retieve all</b> - Tap this button to see all values in the queue.
+                        </li>
+
+                        <li>
+                            <b class = "w3-text-teal">Filled size</b> - Tap this button to see how much of the queue has been filled.
+                        </li>
+
+                        <li>
+                            <b class = "w3-text-teal">Queue size</b> - Tap this button to view the size of the queue you created. <br>
+                            <i>Note: </i>This is different from <strong>filled size</strong> which shows how many items are in the queue.
+                        </li>
+
+                        <li>
+                            <b class = "w3-text-teal">Is Queue Empty</b> - returns true if the queue is empty and false if it isn't.
+                        </li>
+
+                        <li>
+                            <b class = "w3-text-teal">Is Queue Full</b> - returns true if the queue is full and false if it isn't.
+                        </li>
+                </li>
+                
+            </p>
+
+
+
+
+
+
+          <form class="w3-center">
+
+
+
+
+            <input type="text"  name="input" placeholder="Number" value = 0>
+              <p><input style="background-color: #009494;" type="button" value = "enqueue"onClick="createdQueue.enqueue(this.form.input.value)">
+                <input style="background-color: #009494;" type="button" value = "dequeue"onClick="createdQueue.dequeue()" >
+              <input style="background-color: #009494;" type="button" value = "retieve all"onClick="this.form.output.value = createdQueue.element">
+                <input style="background-color: #009494;" type="button" value = "Filled size"onClick="this.form.output.value = createdQueue.sizer()">
+                  <p><input style="background-color: #009494;" type="button" value = "Queue size"onClick="this.form.output.value = createdQueue.sized()">
+                    <input style="background-color: #009494;" type="button" value = "Is Queue Empty"onClick="this.form.output.value = createdQueue.isEmpty()">
+                        <input style="background-color: #009494;" type="button" value = "Is Queue Full"onClick="this.form.output.value = createdQueue.isFull()">
+              <p>Output: <input type="text" name="output">
+                <p><input style="background-color: #009494;" type="button" value = "Create Queue Sized"onClick="createQueue(this.form.input.value)">
+            <!-- <a class=" w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;" type="submit">ENTER</a> -->
+             
+              
+              <!-- <INPUT TYPE = "text" NAME="input" VALUE=0>
+                <P><INPUT TYPE="button" VALUE="new queue"onClick="newQueue()">
+                <P><INPUT TYPE="button" VALUE="add item"onClick="ikeaList.enqueue(this.form.input.value)">
+                <P><INPUT TYPE="button" VALUE="remove item"onClick="ikeaList.dequeue()">
+                <P><INPUT TYPE="button" VALUE="check if queue is empty"onClick="this.form.output.value = ikeaList.isEmpty()">
+                <P><INPUT TYPE="button" VALUE="size of queue"onClick="this.form.output.value = ikeaList.size()">
+                <P><INPUT TYPE="button" VALUE="item at index"onClick="this.form.output.value = ikeaList.peek()">
+                <P>Results: <INPUT TYPE="text" NAME="output"> -->
+
+          </form>
+ 
+          
+
+        </div>
+
+        <!-- End section -->
+
+     
+        </div>
+
+        <script>
+            
+            // circular queue
+        class CircularQueue {
+
+                constructor(size) {
+                this.element = [];
+                this.size = size
+                this.length = 0
+                this.front = 0
+                this.back = -1
+                }
+
+
+                isEmpty() {
+                return (this.length == 0)
+                }
+
+                //check if queue is full
+                isFull() {
+                return (this.length >= this.size)
+                }
+
+
+                // add element to the queue                
+                enqueue(element) {
+                if (this.length >= this.size) throw (new Error("Maximum length exceeded"))
+                this.back++
+                this.element[this.back % this.size] = element
+                this.length++
+                }
+                
+                // remove element from the queue
+                dequeue() {
+                if (this.isEmpty()) throw (new Error("No elements in the queue"))
+                const value = this.getFront()
+                this.element[this.front % this.size] = null
+                this.front++
+                this.length--
+                return value
+                }
+                
+                // check if the queue is empty                
+                getFront() {
+                if (this.isEmpty()) throw (new Error("No elements in the queue"))
+                return this.element[this.front % this.size]
+                }
+
+                // the size of the queue
+                sized() {
+                     let val = this.size;
+                        return val;
+                }
+
+                    //check the current number of items in the queue
+                sizer() {
+                     let val = this.length;
+                        return val;
+                }
+                
+                // empty the queue
+                clear() {
+                this.element = new Array()
+                this.length = 0
+                this.back = 0
+                this.front = -1
+                }
+
+                }
+
+                let createdQueue;
+                        
+                        function createQueue(sized){
+                    createdQueue = new CircularQueue(sized);
+                    }
+        // program to implement queue data structure
+
+                
+        </script>
+
+      <!-- <div class="w3-clear nextprev w3-padding-32">
+        <a class="w3-left w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;" href="/chapter9">
+          Previous</a>
+        <a class="w3-right w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;"
+          href="#">Next</a>
+      </div> -->
+
+      <%- include("footer") -%>
