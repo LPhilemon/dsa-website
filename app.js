@@ -148,6 +148,10 @@ app.get("/queue", (req,res) => {
   res.render("queue");
 });
 
+app.get("/singly2", (req,res) => {
+  res.render("singly2");
+});
+
 
 
 app.listen(process.env.PORT || 3000, function() {

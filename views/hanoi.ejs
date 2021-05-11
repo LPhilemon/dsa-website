@@ -1,48 +1,26 @@
 <%- include("header") -%>
 
-  <body>
-   <!-- Navbar -->
-   <div class="w3-top w3-teal">
-    <div class="w3-bar w3-teal w3-card w3-left-align w3-large">
-      <a
-        class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-teal w3-large w3-teal"
-        href="javascript:void(0)"
-        onclick="w3_open()"
-        ><i class="fa fa-bars"></i
-      ></a>
+   <!-- Sidebar -->
+   <nav class="w3-sidebar activecolor w3-bar-block w3-collapse  w3-animate-left w3-light-grey" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()"
+      class="w3-right w3-xlarge w3-padding-large w3-hover-teal w3-hide-large" title="Close Menu">
+      <i class="fa fa-remove"></i>
+    </a>
+
+    <h4 class="w3-text-black">Recursion</span></h4>
     
-      <a href="/" class="w3-bar-item w3-button w3-padding-large w3-teal w3-text-black"><i class="fa fa-home"></i>  Data Structures and Algorithms</a>
-      <!-- <h3 href="#" class="w3-bar-item w3-button w3-padding-small w3-text-black">Data Structures and Analysis</h3> -->
-      <a href="/chapter1" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black active">Algorithms</a>
-      <a href="/chapter5" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Basic Data Structures</a>
-      <a href="/chapter9" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Trees</a>
-      <a href="/chapter7" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Sorting and Searching</a>
-      <a href="/chapter13" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Basic Graphs</a>
-      <a href="/fibonaccis" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-text-black">Implementations</a>
-    </div>
-  </div>
+    <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/fibonaccis" >Fibonacci</a>
+    <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/factorials">Factorial</a>
+    <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/hanoi">Towers of Hanoi</a>
 
-    <!-- Sidebar
-    <nav class="w3-sidebar activecolor w3-bar-block w3-collapse  w3-animate-left w3-light-grey" id="mySidebar">
-      <a href="javascript:void(0)" onclick="w3_close()"
-        class="w3-left w3-xlarge w3-padding-large w3-hover-teal w3-hide-large" title="Close Menu">
-        <i class="fa fa-remove"></i>
-      </a>
-
-      <h4 class="w3-text-black">Recursion</span></h4>
-      
-      <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/fibonaccis" >Fibonacci</a>
-      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge  active" href="/factorials">Factorial</a>
-      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/hanoi">Towers of Hanoi</a>
-
-      <h4 class="w3-text-black">Data Structures </span></h4>
-      
-      <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/stacks" >Stack</a>
-      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter1">Queue</a>
-      <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/Chapter1" >Singly linked list</a>
-      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter1">Doubly linked list</a>
-      
-    </nav> -->
+    <h4 class="w3-text-black">Data Structures </span></h4>
+    
+    <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/stacks" >Stack</a>
+    <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge  active" href="/queue">Queue</a>
+    <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/Chapter1" >Singly linked list</a>
+    <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter1">Doubly linked list</a>
+    
+  </nav>
 
 
     <!-- Overlay effect when opening sidebar on small screens -->
@@ -56,54 +34,49 @@
       
 
         <!-- New section -->
-          <h1 class="w3-text-teal" id="#properties"FACTORIAL>Towers of Hanoi</h1>
-
-          
+          <h1 class="w3-text-teal w3-center" id="#properties"> Hanoi Towers IMPLEMENTATION</h1>
        
+
+          <h4 class="w3-text-black" >How it works</h4>
+
+           
+          <canvas id="canvas" width="600" height="300"></canvas>
+    <div id="introduction">
+      <div id="introduction-message">
+        <h1>The Towers of Hanoi</h1>
+        <p>Your objective in <a href="http://en.wikipedia.org/wiki/Tower_of_Hanoi">Towers of Hanoi</a> is simple: move
+          your entire stack of disks from the first tower to one of the other two towers. There's only one
+          catch&mdash;you may not place a larger disk on top of a smaller one.</p>
+        <input id="start-new-game" type="button" value="Start game" />
+      </div>
+    </div>
+    <div id="victory-notification">
+      <div id="victory-message">
+        <h1>Victory!</h1>
+        <p>Congratulations! You just
+          <a href="http://en.wikipedia.org/wiki/Towers_of_hanoi#Origins">ended the world</a>.</p>
+        <p><input id="play-again" type="button" value="Play again" /> with
+          <input id="disks-count" type="text" size="2" maxlength="2" value="3" /> disks.</p>
+      </div>
+    </div>
+    <div id="debug"></div>
+
+
+
+
+
          
-          <div id="container">
+ 
+          
 
-
-            <div id="bar0"><img src="Bar.png" /></div>
-            
-            <div id="bar1"><img src="Bar.png" /></div>
-            
-            <div id="bar2"><img src="Bar.png" /></div>
-            <div id="bottombar"></div>
-            
-            <div class="disk" id="disk0" ><img class="insideImg"  style="left:94px;"  src="Bar2.png" /></div> 
-            <div class="disk" id="disk1" ><img class="insideImg"  style="left:74px;"  src="Bar2.png" /></div> 
-            <div class="disk" id="disk2" ><img class="insideImg"  style="left:54px;"  src="Bar2.png" /></div> 
-            <div class="disk" id="disk3" ><img class="insideImg"  style="left:34px;"  src="Bar2.png" /></div> 
-            <div class="disk" id="disk4" ><img class="insideImg"  style="left:14px;"  src="Bar2.png" /></div> 
-            
-            <button onclick="executeHanoi()" >Start</button>
-             
-            <label>Speed <select id="speedSelectList" >
-            <option  value="1" >fast</option>
-            <option  value="10" >medium</option>
-            <option  value="20" >slow</option>
-            </select>
-            </label>
-            
-            <label>No. of Disks<select id="diskSelectList" >
-            <option  value="5" >5 disks</option>
-            <option  value="4" >4 disks</option>
-            <option  value="3" >3 disks</option>
-            </select>
-            </label>
-            </div> 
-    
-            
-            
-            
-            
-        
+        </div>
 
         <!-- End section -->
 
      
         </div>
+
+      
 
       <!-- <div class="w3-clear nextprev w3-padding-32">
         <a class="w3-left w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;" href="/chapter9">
@@ -111,191 +84,5 @@
         <a class="w3-right w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;"
           href="#">Next</a>
       </div> -->
-      <script type="text/javascript" >
-        "use strict";
-        var myTimer = null;
-        var moveInfo;
-        var moveInc = 1;
-        var speed;
-    
-        var callStack;
-    
-        var barsInfo = [{}, {}, {}, {}, {}];
-    
-        var diskPosTop, diskPosLeft, DiskID;
-    
-        window.onload = function ()
-        {   diskPosTop = new Array();
-            diskPosLeft = new Array();
-            DiskID = [disk0, disk1, disk2, disk3, disk4]
-            for (var i = 0; i < 5; i++)
-            {  diskPosTop[i] = DiskID[i].style.top; 
-               diskPosLeft[i] = DiskID[i].style.left; } 
-    
-        } 
-    
-        function executeHanoi()
-         {
-            var speed = parseInt(speedSelectList.options[speedSelectList.selectedIndex].value);
-            var  diskCount = parseInt(diskSelectList.options[diskSelectList.selectedIndex].value);
-            // alert(diskCount);
-            // var diskCount =3;
-    
-            // Move Disks to start column  
-            for (var i = 0; i < 5; i++)
-            {  DiskID[i].style.top = diskPosTop[i];
-               DiskID[i].style.left= diskPosLeft[i];
-            } 
-      
-            barsInfo[0].disks = ['disk0', 'disk1', 'disk2', 'disk3', 'disk4'];
-            //alert(barsInfo[0].disks.pop().id);
-            barsInfo[1].disks = [];
-            barsInfo[2].disks = [];
-            barsInfo[3].disks = [];
-            barsInfo[4].disks = [];
-    
-            switch (diskCount) {
-                case 3: barsInfo[0].disks.pop(); barsInfo[0].disks.pop();
-                    disk3.style.display = "none"; disk4.style.display = "none"; break;
-    
-                case 4: barsInfo[0].disks.pop();
-                    disk4.style.display = "none"; break;
-            }
-    
-            callStack = [];  // callStack array is global
-    
-            Hanoi(diskCount, 0, 2, 1);
-    
-            moveDisk(); // moveDisk takes its parameters from callStack
-        }
-    
-    
-        function Hanoi(n, from, to, via) {
-            if (n == 0) return;
-    
-            Hanoi(n - 1, from, via, to);
-            // moveDisk(from,to);
-    
-            callStack.push([from, to]); // save parameters to callStack array
-            Hanoi(n - 1, via, to, from);
-    
-        }
-    
-    
-        function moveDisk() {
-            if (callStack.length == 0) return;
-    
-            var param = callStack.shift();  // Get call parameters from callStack
-            // Note: throughout the code, I use fromBar, toBar to refer to towers
-            var  fromBar = param[0];
-            var toBar = param[1];
-    
-            var elem = document.getElementById(barsInfo[fromBar].disks.pop());  // find top elemnet in fromBar
-    
-            moveInfo = { elem: elem,
-                fromBar: fromBar,
-                toBar: toBar,
-                whichPos: "top", // element position property for movement
-                dir: -1,  // 1 or -1
-                state: "up", // move upward
-                endPos: 60    // end position (in pixels) for move upward
-            }
-    
-            myTimer = setInterval(animateMove, speed); // Start animation
-        }
-    
-        function animateMove() {
-            var elem = moveInfo.elem;
-            var dir = moveInfo.dir;
-    
-            var pos = parseInt(elem[(moveInfo.whichPos == "left") ? "offsetLeft" : "offsetTop"]);
-    
-            if (((dir == 1) && (pos >= moveInfo.endPos)) || ((dir == -1) && (pos <= moveInfo.endPos))) {  // alert(moveInfo.state); 
-                if (moveInfo.state == "up") {
-                    moveInfo.state = "hor";
-                    moveInfo.whichPos = "left";
-                    moveInfo.dir = 1;
-                    if (moveInfo.fromBar > moveInfo.toBar) moveInfo.dir = -1;
-                    //alert("toBar:" + moveInfo.toBar);
-                    var toBar = document.getElementById("bar" + moveInfo.toBar);
-                    // Next line: 15px is half of tower width    
-                    moveInfo.endPos = toBar.offsetLeft - Math.floor(elem.offsetWidth / 2) + 15;
-                    return;
-                }
-    
-                else if (moveInfo.state == "hor") // move down
-                {
-                    moveInfo.state = "down";
-                    moveInfo.whichPos = "top";
-                    moveInfo.dir = 1;
-                    //alert(elem.offsetHeight);
-                    moveInfo.endPos = document.getElementById("bottombar").offsetTop - (barsInfo[moveInfo.toBar].disks.length + 1) * elem.offsetHeight;
-                    return;
-                }
-    
-                else // end of current call to moveDisk, issue next call
-                {
-                    clearInterval(myTimer);  // cancel timer 
-                    barsInfo[moveInfo.toBar].disks.push(elem.id);
-                    moveDisk();
-                    return;
-                }
-            }
-    
-    
-            // Move Disk
-            pos = pos + dir * moveInc;
-            elem.style[moveInfo.whichPos] = pos + "px";
-    
-            // Move the inside middle image
-            if (moveInfo.state == "up") {
-                var fromBar = document.getElementById("bar" + moveInfo.fromBar);
-                if (elem.offsetTop < fromBar.offsetTop) {
-                    var x = elem.getElementsByClassName("insideImg")[0].offsetHeight;
-                    if (x > 0) elem.getElementsByClassName("insideImg")[0].style.height = x - moveInc + "px";
-                }
-            }
-    
-            if (moveInfo.state == "down") {
-                var toBar = document.getElementById("bar" + moveInfo.toBar);
-                if (elem.offsetTop > toBar.offsetTop) {
-                    var x = elem.getElementsByClassName("insideImg")[0].offsetHeight;
-                    if (x < 14) elem.getElementsByClassName("insideImg")[0].style.height = x + moveInc + "px";
-                }
-            }
-    
-        }
-    
-    </script>
-    
-    <style> 
-      
-     #container { position:absolute; top:30px; left:20px; border:1px solid black; height:350px; width:760px; }
-    
-     #bar0 { position:absolute; top:100px; left:130px; height:200px; width:30px; }
-    
-     #bar1 { position:absolute; top:100px; left:360px; height:200px; width:30px; }
-    
-     #bar2 { position:absolute; top:100px; left:600px; height:200px; width:30px; }
-    
-     .disk { padding:0; margin:0; position:absolute; border:1px solid gray; height:26px; 
-             -moz-box-sizing:border-box; box-sizing:border-box; border-radius:4px;}
-    
-     /* left of disk0 at 35px; left = 130 (bar0 left) -w/2 + 15 (bar width/2)  */
-     #disk0  { top:274px; left:35px;background:#DDEEFE; width:220px;  } 
-     #disk1 { top:248px; left:55px;background:#CEEDDF; width:180px; }
-     #disk2 { top:222px; left:75px;background:#FEEEEF; width:140px; }  
-     #disk3 { top:196px; left:95px;background:#EEFEFF; width:100px; }
-     #disk4 { top:170px; left:115px;background:#EEFECC; width:60px;  }
-    
-     #bottombar { position:absolute; top:300px; left:10px;background:#222; border:1px solid black; height:30px; width:740px; }
-      
-     label { float:right; width:100px; margin-top:8px;}
-    
-     button { float:right; margin-top:26px; margin-right:16px; padding:2px 8px; height:28px;}
-    
-     img { height:200px; width:30px; padding:0; margin:0; } /* for towers (bars) */
-     
-    .insideImg { z-index:100; position:absolute; border:0;top:-1px; height:14px; width:30px; }
-    </style>  
+
       <%- include("footer") -%>

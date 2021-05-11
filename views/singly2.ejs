@@ -1,0 +1,215 @@
+
+<%- include("header") -%>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar activecolor w3-bar-block w3-collapse  w3-animate-left w3-light-grey" id="mySidebar">
+ <a href="javascript:void(0)" onclick="w3_close()"
+   class="w3-right w3-xlarge w3-padding-large w3-hover-teal w3-hide-large" title="Close Menu">
+   <i class="fa fa-remove"></i>
+ </a>
+
+ <h4 class="w3-text-black">Recursion</span></h4>
+ 
+ <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/fibonaccis" >Fibonacci</a>
+ <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/factorials">Factorial</a>
+ <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/hanoi">Towers of Hanoi</a>
+
+ <h4 class="w3-text-black">Data Structures </span></h4>
+ 
+ <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/stacks" >Stack</a>
+ <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge  active" href="/queue">Queue</a>
+ <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/Chapter1" >Singly linked list</a>
+ <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter1">Doubly linked list</a>
+ 
+</nav>
+
+
+ <!-- Overlay effect when opening sidebar on small screens -->
+ <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor: pointer" title="close side menu"
+   id="myOverlay"></div>
+
+ <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+ <div class="w3-main" style="margin-left: 250px">
+   <div class="w3-row w3-padding-64">
+     <div class=" w3-container">
+   
+
+     <!-- New section -->
+       <h1 class="w3-text-teal w3-center" id="#properties"> QUEUE IMPLEMENTATION</h1>
+    
+
+       <h4 class="w3-text-black" >How it works</h4>
+
+         <p>
+             <ul type="1">
+                 <li><b class = "w3-text-teal">Create Queue Sized</b> - As the button states, it is used to create a button of a given size which is determined by the user.
+                     <br> <b>To create</b>  a queue, Fill the space having placeholder (Number) with the size wanted. Go ahead and tap the <i>Create sized queue button.</i> 
+                 </li>
+
+                     <li>
+                         <b class = "w3-text-teal">enqueue</b> Enter a value and tap this button to enque the value.
+                     </li>
+
+                     <li>
+                         <b class = "w3-text-teal">dequeue</b> - Tap this button to deque a value.
+                     </li>
+
+                     <li>
+                         <b class = "w3-text-teal">retieve all</b> - Tap this button to see all values in the queue.
+                     </li>
+
+                     <li>
+                         <b class = "w3-text-teal">Filled size</b> - Tap this button to see how much of the queue has been filled.
+                     </li>
+
+                     <li>
+                         <b class = "w3-text-teal">Queue size</b> - Tap this button to view the size of the queue you created. <br>
+                         <i>Note: </i>This is different from <strong>filled size</strong> which shows how many items are in the queue.
+                     </li>
+
+                     <li>
+                         <b class = "w3-text-teal">Is Queue Empty</b> - returns true if the queue is empty and false if it isn't.
+                     </li>
+
+                     <li>
+                         <b class = "w3-text-teal">Is Queue Full</b> - returns true if the queue is full and false if it isn't.
+                     </li>
+             </li>
+             
+         </p>
+
+
+
+
+
+
+       <form class="w3-center">
+
+
+
+
+         <input type="text"  name="input" placeholder="Number" value = 0>
+           <p><input style="background-color: #009494;" type="button" value = "push"onClick="createdSingly.push(this.form.input.value)">
+             <input style="background-color: #009494;" type="button" value = "append"onClick="createdSingly.append(this.form.input.value)" >
+           <input style="background-color: #009494;" type="button" value = "retieve all"onClick="this.form.output.value = createdSingly.printList()">
+             <!-- <input style="background-color: #009494;" type="button" value = "Filled size"onClick="this.form.output.value = createdQueue.sizer()"> -->
+               <!-- <p><input style="background-color: #009494;" type="button" value = "Queue size"onClick="this.form.output.value = createdQueue.sized()"> -->
+                 <!-- <input style="background-color: #009494;" type="button" value = "Is Queue Empty"onClick="this.form.output.value = createdQueue.isEmpty()"> -->
+                     <!-- <input style="background-color: #009494;" type="button" value = "Is Queue Full"onClick="this.form.output.value = createdQueue.isFull()"> -->
+           <p>Output: <input type="text" name="output">
+             <p><input style="background-color: #009494;" type="button" value = "Create Singly linked"onClick="createdSingli()">
+               <p> <input type="text"  name="input1" placeholder="Previous" value = 0>
+                 <input type="text"  name="input2" placeholder="New" value = 0>
+               <p><input style="background-color: #009494;" type="button" value = "insert after"onClick="createdSingly.insertAfter(this.form.input1.value, this.form.input2.value)" >
+         <!-- <a class=" w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;" type="submit">ENTER</a> -->
+          
+         
+
+       </form>
+
+       
+
+     </div>
+
+     <!-- End section -->
+
+  
+     </div>
+
+     
+         
+         <script>
+    var LinkedList = /** @class */ (function () {
+      function LinkedList() {
+        if (this.head === undefined) {
+          this.head = null;
+        }
+      }
+      LinkedList.prototype.push = function (new_data) {
+        var new_node = new LinkedList.Node(this, new_data);
+        new_node.next = this.head;
+        this.head = new_node;
+      };
+      LinkedList.prototype.insertAfter = function (prev_node, new_data) {
+        if (prev_node == null) {
+          console.info("The given previous node cannot be null");
+          return;
+        }
+        var new_node = new LinkedList.Node(this, new_data);
+        new_node.next = prev_node.next;
+        prev_node.next = new_node;
+      };
+      LinkedList.prototype.append = function (new_data) {
+        var new_node = new LinkedList.Node(this, new_data);
+        if (this.head == null) {
+          this.head = new LinkedList.Node(this, new_data);
+          return;
+        }
+        new_node.next = null;
+        var last = this.head;
+        while (last.next != null) {
+          last = last.next;
+        }
+        last.next = new_node;
+        return;
+      };
+      LinkedList.prototype.printList = function () {
+        var tnode = this.head;
+        var printer = [];
+        var i = 0; 
+        while (tnode != null) {
+          {
+            printer[i] = tnode.data;
+            // console.info(tnode.data + " ");
+            tnode = tnode.next;
+            i++;
+          }
+        }
+        return printer;
+      };
+      return LinkedList;
+    })();
+    LinkedList["__class"] = "LinkedList";
+    (function (LinkedList) {
+      var Node = /** @class */ (function () {
+        function Node(__parent, d) {
+          this.__parent = __parent;
+          if (this.data === undefined) {
+            this.data = 0;
+          }
+          if (this.next === undefined) {
+            this.next = null;
+          }
+          this.data = d;
+          this.next = null;
+        }
+        return Node;
+      })();
+      LinkedList.Node = Node;
+      Node["__class"] = "LinkedList.Node";
+    })(LinkedList || (LinkedList = {}));
+
+
+    
+    let createdSingly;
+                     
+                     function createdSingli(){
+                 createdSingly = new LinkedList();
+                 }
+     // program to implement queue data structure
+  </script>
+  
+
+
+             
+
+
+   <!-- <div class="w3-clear nextprev w3-padding-32">
+     <a class="w3-left w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;" href="/chapter9">
+       Previous</a>
+     <a class="w3-right w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;"
+       href="#">Next</a>
+   </div> -->
+
+   <%- include("footer") -%>
+<
