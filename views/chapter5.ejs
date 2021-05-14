@@ -10,17 +10,17 @@
 
       <h4 class="w3-text-black">Stacks</span> </h4>
       
-      <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge active" href="/Chapter5" >Introduction</a>
-      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter5">What is a stack</a>
-      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter5">ADT stack</a>
-      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter5">Implementation of a stack</a>
+      <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge active" href="/Chapter5#def" >Introduction</a>
+      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter5#what">What is a stack</a>
+      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter5#adt">ADT stack</a>
+      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter5#implementation">Implementation of a stack</a>
 
       <h4 class="w3-text-black">Queues </span></h4>
-      
-      <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/Chapter1" >Introduction</a>
-      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter1">What is a queue</a>
-      <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/Chapter1" >ADT queues</a>
-      <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter1">Implementation of a queue</a>
+        
+        <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter6#what" >Introduction</a>
+        <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter6#what">What is a queue</a>
+        <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/Chapter6#adt" >ADT queues</a>
+        <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter6#implementation">Implementation of a queue</a>
       
     </nav>
 
@@ -32,11 +32,11 @@
     <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
     <div class="w3-main" style="margin-left: 250px">
       <div class="w3-row w3-padding-64">
-        <div class=" w3-container">
+        <div id="def" class=" w3-container">
           <h2 class="w3-text-teal">Stack</h2>
           
           <p>
-            <b> The data object stack is an ordered list but the access, insertions and deletions of elements are restricted by following rules</b> <br>
+            <b id="what"> The data object stack is an ordered list but the access, insertions and deletions of elements are restricted by following rules</b> <br>
 
             For example, in a stack, the operations are carried out in such a way that the last element which is inserted will be the first element out. <br>
             Such order is called Last In First Out or ‘LIFO’<br>
@@ -49,7 +49,7 @@
 
               <img src="images/stack1.jpg" alt="stack1">
 
-              <h3>Stack ADT</h3>
+              <h3 id="adt">Stack ADT</h3>
               <pre>
 <strong class="w3-text-teal">Stack()</strong>  - creates a new stack that is empty. It needs no parameters and returns an empty stack.
 
@@ -178,7 +178,7 @@ same storage area
           •	For overflow, you could do the same things<br>
           □	Or, you could check for the problem, and  copy everything  into a new, larger array<br>
 <br>
-          <h3 class="w3-text-teal">Implementing a Stack: Linked List</h3>
+          <h3 class="w3-text-teal" id="implementation">Implementing a Stack: Linked List</h3>
           <pre>
           	<b>Advantages:</b> 
           	always constant time to push or pop an element can grow to an infinite size
