@@ -148,8 +148,12 @@ app.get("/queue", (req,res) => {
   res.render("queue");
 });
 
-app.get("/singly2", (req,res) => {
-  res.render("singly2");
+app.get("/singly", (req,res) => {
+  res.render("singly");
+});
+
+app.get("/doubly", (req,res) => {
+  res.render("doubly");
 });
 
 

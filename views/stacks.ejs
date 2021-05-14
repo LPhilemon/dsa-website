@@ -16,9 +16,9 @@
     <h4 class="w3-text-black">Data Structures </span></h4>
     
     <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge  active" href="/stacks" >Stack</a>
-    <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/queue">Queue</a>
-    <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/Chapter1" >Singly linked list</a>
-    <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter1">Doubly linked list</a>
+ <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/queue">Queue</a>
+ <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/singly" >Singly linked list</a>
+ <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/doubly">Doubly linked list</a>
     
   </nav>
 
@@ -36,20 +36,35 @@
         <!-- New section -->
           <h1 class="w3-text-teal" id="#properties">STACK IMPLEMENTATION</h1>
        
-          <h3 class="w3-text-teal">ADD,REMOVE,COUNT</h3>
+          <h3 class="w3-text-teal">How it works</h3>
+
+          <p>
+            <ul type="1">
+              <li><b class = "w3-text-teal">Create Stack</b> - This button creates a new stack.
+              </li>
+              <li><b class = "w3-text-teal">Push item</b> - A value is required from the user and when tapped, this 
+                button adds a value onto the stack using Last in First out(LIFO) system.
+              </li>
+              <li><b class="w3-text-teal">Pop item</b> - Removes top item, which is the last value input.</li>
+              <li><b class="w3-text-teal">retrieve top</b> - Returns bottom or first item input in the stack.
+                </li>
+              <li><b class="w3-text-teal">retireve all</b>- Returns all values in the stack</li>
+              <li><b class="w3-text-teal">stack size</b> - Shows number of items in the stack.</li>
+            <ul>
+          </p>
 
           <form>
 
 
 
 
-            <input type="text"  name="input" placeholder="Number" value = 0>
+            <input type="text"  name="input" placeholder="Input Number">
               <p><input style="background-color: #009494;" type="button" value = "push item"onClick="createdStack.add(this.form.input.value)">
-                <p><input style="background-color: #009494;" type="button" value = "pop item"onClick="createdStack.remove()">
-              <p><input style="background-color: #009494;" type="button" value = "retieve all"onClick="this.form.output.value = createdStack.items">
-                <p><input style="background-color: #009494;" type="button" value = "retieve top"onClick="this.form.output.value = createdStack.peek()">
-                  <p><input style="background-color: #009494;" type="button" value = "stack size"onClick="this.form.output.value = createdStack.size()">
-              <p>Output: <input type="text" name="output">
+                <input style="background-color: #009494;" type="button" value = "pop item"onClick="createdStack.remove()">
+                <input style="background-color: #009494;" type="button" value = "retieve top"onClick="this.form.output.value = createdStack.peek()">
+                <p><input style="background-color: #009494;" type="button" value = "retieve all"onClick="this.form.output.value = createdStack.items">
+                  <input style="background-color: #009494;" type="button" value = "stack size"onClick="this.form.output.value = createdStack.size()">
+              <p>Output: <input type="text" placeholder = "output appears here" name="output">
                 <p><input style="background-color: #009494;" type="button" value = "Create Stack"onClick="createStack()">
             <!-- <a class=" w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;" type="submit">ENTER</a> -->
              

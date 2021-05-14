@@ -16,9 +16,9 @@
     <h4 class="w3-text-black">Data Structures </span></h4>
     
     <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/stacks" >Stack</a>
-    <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge  active" href="/queue">Queue</a>
-    <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/Chapter1" >Singly linked list</a>
-    <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter1">Doubly linked list</a>
+ <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge  active" href="/queue">Queue</a>
+ <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/singly" >Singly linked list</a>
+ <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/doubly">Doubly linked list</a>
     
   </nav>
 
@@ -73,7 +73,7 @@
                         <li>
                             <b class = "w3-text-teal">Is Queue Full</b> - returns true if the queue is full and false if it isn't.
                         </li>
-                </li>
+                </ul>
                 
             </p>
 
@@ -87,7 +87,7 @@
 
 
 
-            <input type="text"  name="input" placeholder="Number" value = 0>
+            <input type="text"  name="input" placeholder="Input Number" value = 0>
               <p><input style="background-color: #009494;" type="button" value = "enqueue"onClick="createdQueue.enqueue(this.form.input.value)">
                 <input style="background-color: #009494;" type="button" value = "dequeue"onClick="createdQueue.dequeue()" >
               <input style="background-color: #009494;" type="button" value = "retieve all"onClick="this.form.output.value = createdQueue.element">
@@ -95,7 +95,7 @@
                   <p><input style="background-color: #009494;" type="button" value = "Queue size"onClick="this.form.output.value = createdQueue.sized()">
                     <input style="background-color: #009494;" type="button" value = "Is Queue Empty"onClick="this.form.output.value = createdQueue.isEmpty()">
                         <input style="background-color: #009494;" type="button" value = "Is Queue Full"onClick="this.form.output.value = createdQueue.isFull()">
-              <p>Output: <input type="text" name="output">
+              <p>Output: <input type="text" placeholder="output appears here" name="output">
                 <p><input style="background-color: #009494;" type="button" value = "Create Queue Sized"onClick="createQueue(this.form.input.value)">
             <!-- <a class=" w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;" type="submit">ENTER</a> -->
              

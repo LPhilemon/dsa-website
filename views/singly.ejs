@@ -1,0 +1,353 @@
+<%- include("header") -%>
+
+
+<!-- Sidebar -->
+<nav class="w3-sidebar activecolor w3-bar-block w3-collapse  w3-animate-left w3-light-grey" id="mySidebar">
+ <a href="javascript:void(0)" onclick="w3_close()"
+   class="w3-right w3-xlarge w3-padding-large w3-hover-teal w3-hide-large" title="Close Menu">
+   <i class="fa fa-remove"></i>
+ </a>
+
+ <h4 class="w3-text-black">Recursion</span></h4>
+ 
+ <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/fibonaccis" >Fibonacci</a>
+ <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/factorials">Factorial</a>
+ <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/hanoi">Towers of Hanoi</a>
+
+ <h4 class="w3-text-black">Data Structures </span></h4>
+ 
+ <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/stacks" >Stack</a>
+ <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/queue">Queue</a>
+ <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge  active" href="/singly" >Singly linked list</a>
+ <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/doubly">Doubly linked list</a>
+ 
+</nav>
+
+
+ <!-- Overlay effect when opening sidebar on small screens -->
+ <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor: pointer" title="close side menu"
+   id="myOverlay"></div>
+
+ <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+ <div class="w3-main" style="margin-left: 250px">
+   <div class="w3-row w3-padding-64">
+     <div class=" w3-container">
+   
+
+     <!-- New section -->
+       <h1 class="w3-text-teal w3-center" id="#properties"> SINGLY LINKED LIST IMPLEMENTATION</h1>
+    
+
+       <h4 class="w3-text-black" >How it works</h4>
+
+         <p>
+             <ul type="1">
+
+                     <li>
+                         <b class = "w3-text-teal">Create Singly linked</b> - Tap this button to create the list.
+                     </li>
+
+                     <li>
+                         <b class = "w3-text-teal">push</b> - Tap this button to add a value (entered in "input number" space) at the front of the list.
+                     </li>
+
+                     <li>
+                         <b class = "w3-text-teal">append</b> - Tap this button to add a value (entered in "input number" space) at the end of the list.
+                     </li>
+
+                     <li>
+                         <b class = "w3-text-teal">retrieve all</b> - Use this to return and show all values in the current list.
+                     </li>
+
+                     <li>
+                         <b class = "w3-text-teal">remove head</b> - Tap this remove item at front of the list.
+                     </li>
+
+                     <li>
+                      <b class = "w3-text-teal">remove Tail</b> - Tap this to remove item at the end of the list.
+                    </li>
+
+                    <li>
+                    <b class = "w3-text-teal">remove Before</b> - Enter a value for which you want the value before it deleted.
+                    <br> <i>Note:</i> This won't work for some scenarios like; one value in the list, trying to delete the value before first value in 
+                    the list etcetera.
+
+                    </li>
+
+                    <li>
+                      <b class = "w3-text-teal">remove After - Enter a value for which you want its succeeding value removed.</b> - 
+                      </li>
+
+                    <li>
+                      <b class = "w3-text-teal">Insert after</b> - Enter the node value for which you want a value inserted after in the space labelled(first) and the value you want inserted in the (second space).
+                    </li>
+
+                    <li>
+                      <b class = "w3-text-teal">Insert Before</b> - Enter the node value for which you want a value inserted before in the space labelled(first) and the value you want inserted in the (second space).
+                    </li>
+
+                     
+             </ul>
+             
+         </p>
+
+
+
+
+
+
+       <form class="w3-center">
+
+
+         
+         
+         <input type="text"  name="input" placeholder="Input Number">
+         <p><input style="background-color: #009494;" type="button" value = "push"onClick="createdSingly.push(this.form.input.value)">
+          <input style="background-color: #009494;" type="button" value = "append"onClick="createdSingly.append(this.form.input.value)" >
+          <input style="background-color: #009494;" type="button" value = "retieve all"onClick="this.form.output.value = createdSingly.printList()">
+          <p><input style="background-color: #009494;" type="button" value = "remove head"onClick="createdSingly.removeHead()" >
+          <input style="background-color: #009494;" type="button" value = "remove Tail"onClick="createdSingly.removeEnd()" >
+          <input style="background-color: #009494;" type="button" value = "remove Before"onClick="createdSingly.removeBefore(this.form.input.value)">
+          <input style="background-color: #009494;" type="button" value = "remove After"onClick="createdSingly.removeAfter(this.form.input.value)">
+          <!-- <input style="background-color: #009494;" type="button" value = "Filled size"onClick="this.form.output.value = createdQueue.sizer()"> -->
+          <!-- <p><input style="background-color: #009494;" type="button" value = "Queue size"onClick="this.form.output.value = createdQueue.sized()"> -->
+            <!-- <input style="background-color: #009494;" type="button" value = "Is Queue Empty"onClick="this.form.output.value = createdQueue.isEmpty()"> -->
+            <!-- <input style="background-color: #009494;" type="button" value = "Is Queue Full"onClick="this.form.output.value = createdQueue.isFull()"> -->
+            <p>Output: <input type="text" placeholder="output appears here" name="output">
+              <p><input style="background-color: #009494;" type="button" value = "Create Singly linked"onClick="createdSingli()">
+                <!-- <a class=" w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;" type="submit">ENTER</a> -->
+                
+                <p> <input type="text" id="prev" name="input1" placeholder="First" >
+                <input type="text"  id="val" name="input2" placeholder="Second" >
+                <p><input style="background-color: #009494;" type="button" value = "insert after"onClick="InsertedAfter()" >
+                  <input style="background-color: #009494;" type="button" value = "insert before"onClick="InsertedBefore()" >
+                 <!-- <p><input style="background-color: #009494;" type="button" value = "insert after"onClick="createdSingly.insertAfter(this.form.input1.value, this.form.input2.value)" > -->
+                
+
+       </form>
+
+       
+
+     </div>
+
+     <!-- End section -->
+
+  
+     </div>
+
+     
+         
+         <script>
+    var LinkedList = /** @class */ (function () {
+      function LinkedList() {
+        if (this.head === undefined) {
+          this.head = null;
+        }
+      }
+      LinkedList.prototype.push = function (new_data) {
+        var new_node = new LinkedList.Node(this, new_data);
+        new_node.next = this.head;
+        this.head = new_node;
+      };
+      LinkedList.prototype.removeHead = function () {
+      
+          this.head = this.head.next;
+   
+      };
+      LinkedList.prototype.insertAfter = function (prevNode, new_data) {
+        
+        // search for node 
+        var nodes = this.head;
+        var prev_Node;
+        while(nodes.data != prevNode){
+            nodes = nodes.next
+        }
+
+        prev_Node = nodes;
+        if (prev_Node == null) {
+            console.info("The given previous node cannot be NULL ");
+            return;
+        }
+                 
+                  var new_node = new LinkedList.Node(this, new_data);
+                  new_node.next = prev_Node.next;
+                  prev_Node.next = new_node;
+  
+              return;           
+      };
+      LinkedList.prototype.insertBefore = function (afterNode, new_data) {
+        
+        // search for node 
+        var nodes = this.head;
+        var prev_Node;
+        while(nodes != null){
+            nodes = nodes.next;
+            if(nodes.data === afterNode){
+                      prev_Node = nodes;
+               
+                        
+                          var new_node = new LinkedList.Node(this, new_data);
+                          new_node.next = prev_Node.next;
+                          prev_Node.next = new_node;
+                          break;
+                    }
+        }
+
+        
+  
+              return;           
+      };
+      LinkedList.prototype.removeBefore = function (value) {
+        
+        // search for node 
+        var nodes = this.head;
+        var nodekeeper2;
+        while(nodes != null){
+          nodekeeper = nodes;
+          nodes = nodes.next;
+          if(nodes.data === value){
+            var nodes2 = this.head;
+
+            while(nodes2 != null){
+          nodekeeper2 = nodes2;
+          nodes2 = nodes2.next;
+          if(nodes2 === nodekeeper){
+            nodekeeper2.next = nodes;
+          }
+        }
+        break;
+          }
+        }
+
+              return;           
+      };
+      LinkedList.prototype.removeEnd = function () {
+        
+        // search for node 
+        var nodes = this.head;
+        var keeper,nodekeeper2;
+        nodekeep = this.head;
+        
+        while(nodes != null){
+          keeper = nodes;
+          nodes = nodes.next;
+          
+        }
+        
+        while(nodekeep != keeper){
+          nodekeeper2 = nodekeep;
+          nodekeep = nodekeep.next;
+          if(nodekeep === keeper){
+            nodekeeper2.next = null;
+            break;
+          }
+        }
+              return;           
+      };
+      LinkedList.prototype.removeAfter = function (value) {
+        
+        // search for node 
+        var nodes = this.head;
+        var nodekeeper;
+        while(nodes != null){
+          nodes = nodes.next;
+          nodekeeper = nodes;
+          if(nodekeeper.data === value){
+            nodes = nodes.next;
+            nodekeeper.next = nodes.next;
+
+        break;
+          }
+        }
+
+              return;           
+      };
+      LinkedList.prototype.append = function (new_data) {
+        var new_node = new LinkedList.Node(this, new_data);
+        if (this.head == null) {
+          this.head = new LinkedList.Node(this, new_data);
+          return;
+        }
+        new_node.next = null;
+        var last = this.head;
+        while (last.next != null) {
+          last = last.next;
+        }
+        last.next = new_node;
+        return;
+      };
+    
+      LinkedList.prototype.printList = function () {
+        var tnode = this.head;
+        var printer = [];
+        var i = 0; 
+        while (tnode != null) {
+          {
+            printer[i] = tnode.data;
+            // console.info(tnode.data + " ");
+            tnode = tnode.next;
+            i++;
+          }
+        }
+        return printer;
+      };
+      return LinkedList;
+    })();
+    LinkedList["__class"] = "LinkedList";
+    (function (LinkedList) {
+      var Node = /** @class */ (function () {
+        function Node(__parent, d) {
+          this.__parent = __parent;
+          if (this.data === undefined) {
+            this.data = 0;
+          }
+          if (this.next === undefined) {
+            this.next = null;
+          }
+          this.data = d;
+          this.next = null;
+        }
+        return Node;
+      })();
+      LinkedList.Node = Node;
+      Node["__class"] = "LinkedList.Node";
+    })(LinkedList || (LinkedList = {}));
+
+
+    
+    let createdSingly;
+                     
+                     function createdSingli(){
+                 createdSingly = new LinkedList();
+                 
+                 }
+     // program to implement queue data structure
+     function InsertedAfter() { 
+    var fn, ln; 
+    fn = document.getElementById("prev").value; 
+    ln = document.getElementById("val").value; 
+    createdSingly.insertAfter(fn,ln);
+    // document.getElementById("demo2").innerHTML = result; 
+}
+function InsertedBefore() { 
+    var fn, ln; 
+    fn = document.getElementById("prev").value; 
+    ln = document.getElementById("val").value; 
+    createdSingly.insertBefore(fn,ln);
+    // document.getElementById("demo2").innerHTML = result; 
+}
+  </script>
+  
+
+
+             
+
+
+   <!-- <div class="w3-clear nextprev w3-padding-32">
+     <a class="w3-left w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;" href="/chapter9">
+       Previous</a>
+     <a class="w3-right w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;"
+       href="#">Next</a>
+   </div> -->
+
+   <%- include("footer") -%>

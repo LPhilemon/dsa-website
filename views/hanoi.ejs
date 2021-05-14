@@ -1,4 +1,84 @@
-<%- include("header") -%>
+<!DOCTYPE html>
+<html lang="en">
+  <title>Data Structures and analysis</title>
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/styles3.css" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+
+  <script type="text/javascript" src="javascripts/miscellany.js"></script>
+    <script type="text/javascript" src="javascripts/game.js"></script>
+    <script type="text/javascript" src="javascripts/debug.js"></script>
+    <script type="text/javascript" src="javascripts/input_handler.js"></script>
+    <script type="text/javascript" src="javascripts/point.js"></script>
+    <script type="text/javascript" src="javascripts/element_coordinate_finder.js"></script>
+    <script type="text/javascript" src="javascripts/tower_manager.js"></script>
+    <script type="text/javascript" src="javascripts/game_state.js"></script>
+    <script type="text/javascript" src="javascripts/victory_celebrator.js"></script>
+    <script type="text/javascript" src="javascripts/tower.js"></script>
+    <script type="text/javascript" src="javascripts/disk.js"></script>
+    <script type="text/javascript" src="javascripts/canvas.js"></script>
+    <script type="text/javascript" src="javascripts/colour.js"></script>
+    <script type="text/javascript" src="javascripts/init.js"></script>
+
+  <style>
+    html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    pre {
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .w3-sidebar {
+  z-index: 3;
+  width: 200px;
+  top: 54px;
+  bottom: 0;
+  text-decoration: none;
+  display: block;
+  background-color: transparent;
+  padding: 2px 1px 1px 16px;
+  font-size: 15px;
+line-height: 1.5;
+}
+    
+  </style>
+
+  
+<body>
+  <!-- Navbar -->
+  <div class="w3-top w3-teal">
+    <div class="w3-bar w3-teal w3-card w3-left-align w3-large">
+      <a
+        class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-teal w3-large w3-teal"
+        href="javascript:void(0)"
+        onclick="w3_open()"
+        ><i class="fa fa-bars"></i
+      ></a>
+    
+      <a href="/" class="w3-bar-item w3-button w3-padding-large w3-teal w3-text-black"><i class="fa fa-home"></i>  Data Structures and Algorithms</a>
+      <!-- <h3 href="#" class="w3-bar-item w3-button w3-padding-small w3-text-black">Data Structures and Analysis</h3> -->
+      <a href="/chapter1" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black w3-text-black active">Algorithms</a>
+      <a href="/chapter5" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black w3-text-black">Basic Data Structures</a>
+      <a href="/chapter9" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black w3-text-black">Trees</a>
+      <a href="/chapter7" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black w3-text-black">Sorting and Searching</a>
+      <a href="/chapter13" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black w3-text-black">Basic Graphs</a>
+      <a href="/fibonaccis" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black w3-text-black">Implementations</a>
+    </div>
+  </div>
 
    <!-- Sidebar -->
    <nav class="w3-sidebar activecolor w3-bar-block w3-collapse  w3-animate-left w3-light-grey" id="mySidebar">
@@ -11,14 +91,14 @@
     
     <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/fibonaccis" >Fibonacci</a>
     <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/factorials">Factorial</a>
-    <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/hanoi">Towers of Hanoi</a>
+    <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge active" href="/hanoi">Towers of Hanoi</a>
 
     <h4 class="w3-text-black">Data Structures </span></h4>
     
     <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/stacks" >Stack</a>
-    <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge  active" href="/queue">Queue</a>
-    <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/Chapter1" >Singly linked list</a>
-    <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/Chapter1">Doubly linked list</a>
+ <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/queue">Queue</a>
+ <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/singly" >Singly linked list</a>
+ <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/doubly">Doubly linked list</a>
     
   </nav>
 

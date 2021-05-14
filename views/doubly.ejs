@@ -1,0 +1,397 @@
+<%- include("header") -%>
+
+
+<!-- Sidebar -->
+<nav class="w3-sidebar activecolor w3-bar-block w3-collapse  w3-animate-left w3-light-grey" id="mySidebar">
+ <a href="javascript:void(0)" onclick="w3_close()"
+   class="w3-right w3-xlarge w3-padding-large w3-hover-teal w3-hide-large" title="Close Menu">
+   <i class="fa fa-remove"></i>
+ </a>
+
+ <h4 class="w3-text-black">Recursion</span></h4>
+ 
+ <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/fibonaccis" >Fibonacci</a>
+ <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/factorials">Factorial</a>
+ <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/hanoi">Towers of Hanoi</a>
+
+ <h4 class="w3-text-black">Data Structures </span></h4>
+ 
+ <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge " href="/stacks" >Stack</a>
+ <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/queue">Queue</a>
+ <a  target="_top" class="w3-bar-item w3-button w3-round-xxlarge" href="/singly" >Singly linked list</a>
+ <a target="_top" class="w3-bar-item w3-button w3-round-xxlarge  active" href="/doubly">Doubly linked list</a>
+ 
+</nav>
+
+
+ <!-- Overlay effect when opening sidebar on small screens -->
+ <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor: pointer" title="close side menu"
+   id="myOverlay"></div>
+
+ <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+ <div class="w3-main" style="margin-left: 250px">
+   <div class="w3-row w3-padding-64">
+     <div class=" w3-container">
+   
+
+     <!-- New section -->
+       <h1 class="w3-text-teal w3-center" id="#properties"> Doubly Linked List Implementation</h1>
+    
+
+       <h4 class="w3-text-black" >How it works</h4>
+
+       <p>
+        <ul type="1">
+
+                <li>
+                    <b class = "w3-text-teal">Create Doubly linked</b> - Tap this button to create the list.
+                </li>
+
+                <li>
+                    <b class = "w3-text-teal">push</b> - Tap this button to add a value (entered in "input number" space) at the front of the list.
+                </li>
+
+                <li>
+                    <b class = "w3-text-teal">append</b> - Tap this button to add a value (entered in "input number" space) at the end of the list.
+                </li>
+
+                <li>
+                    <b class = "w3-text-teal">retrieve all</b> - Use this to return and show all values in the current list.
+                </li>
+
+                <li>
+                    <b class = "w3-text-teal">remove head</b> - Tap this remove item at front of the list.
+                </li>
+
+                <li>
+                 <b class = "w3-text-teal">remove Tail</b> - Tap this to remove item at the end of the list.
+               </li>
+
+               <li>
+               <b class = "w3-text-teal">remove Before</b> - Enter a value for which you want the value before it deleted.
+               <br> <i>Note:</i> This won't work for some scenarios like; one value in the list, trying to delete the value before first value in 
+               the list etcetera.
+
+               </li>
+
+               <li>
+                 <b class = "w3-text-teal">remove After - Enter a value for which you want its succeeding value removed.</b> - 
+                 </li>
+
+               <li>
+                 <b class = "w3-text-teal">Insert after</b> - Enter the node value for which you want a value inserted after in the space labelled(first) and the value you want inserted in the (second space).
+               </li>
+
+               <li>
+                 <b class = "w3-text-teal">Inasert Before</b> - Enter the node value for which you want a value inserted before in the space labelled(first) and the value you want inserted in the (second space).
+               </li>
+
+                
+        </ul>
+        
+    </p>
+
+
+
+
+
+
+       <form class="w3-center">
+
+
+         
+         
+         <input type="text"  name="input" placeholder="Input Number">
+         <p><input style="background-color: #009494;" type="button" value = "push"onClick="createdDoubly.push(this.form.input.value)">
+          <input style="background-color: #009494;" type="button" value = "append"onClick="createdDoubly.append(this.form.input.value)" >
+          <p><input style="background-color: #009494;" type="button" value = "remove head"onClick="createdDoubly.removeHead()" >
+          <input style="background-color: #009494;" type="button" value = "remove Tail"onClick="createdDoubly.removeTail()" >
+          <p><input style="background-color: #009494;" type="button" value = "remove before"onClick="createdDoubly.removeBefore(this.form.input.value)" >
+            <p><input style="background-color: #009494;" type="button" value = "remove after"onClick="createdDoubly.removeAfter(this.form.input.value)" >
+          <p><input style="background-color: #009494;" type="button" value = "retieve all"onClick="this.form.output.value = printing()">
+          <!-- <input style="background-color: #009494;" type="button" value = "Filled size"onClick="this.form.output.value = createdQueue.sizer()"> -->
+          <!-- <p><input style="background-color: #009494;" type="button" value = "Queue size"onClick="this.form.output.value = createdQueue.sized()"> -->
+            <!-- <input style="background-color: #009494;" type="button" value = "Is Queue Empty"onClick="this.form.output.value = createdQueue.isEmpty()"> -->
+            <!-- <input style="background-color: #009494;" type="button" value = "Is Queue Full"onClick="this.form.output.value = createdQueue.isFull()"> -->
+            <p>Output: <input type="text"  placeholder= "Output appears here" name="output">
+              <p><input style="background-color: #009494;" type="button" value = "Create Doubly linked"onClick="createdDoubli()">
+                <!-- <a class=" w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;" type="submit">ENTER</a> -->
+                
+                <p> <input type="text" id="prev" name="input1" placeholder="First">
+                <input type="text"  id="val" name="input2" placeholder="Second" >
+                <p><input style="background-color: #009494;" type="button" value = "insert after"onClick="InsertedAfter()" >
+                <input style="background-color: #009494;" type="button" value = "insert Before"onClick="InsertedBefore()" >
+                 <!-- <p><input style="background-color: #009494;" type="button" value = "insert after"onClick="createdDoubly.insertAfter(this.form.input1.value, this.form.input2.value)" > -->
+                
+
+       </form>
+
+       
+
+     </div>
+
+     <!-- End section -->
+
+  
+     </div>
+
+     
+         
+
+<script>
+var Doubly = /** @class */ (function () {
+    function Doubly() {
+        if (this.head === undefined) {
+            this.head = null;
+        }
+    }
+    Doubly.prototype.push = function (new_data) {
+        var new_Node = new Doubly.Node(this, new_data);
+        new_Node.next = this.head;
+        new_Node.prev = null;
+        if (this.head != null)
+            this.head.prev = new_Node;
+        this.head = new_Node;
+    };
+    Doubly.prototype.removeHead = function () {
+        this.head = this.head.next;
+    };
+    Doubly.prototype.removeAfter = function (val) {
+        var node = this.head;
+        var keep1;
+        var keep2;
+        var keep3;
+        if(node.data === val){
+
+            keep1 = node;
+            node = node.next;
+            keep2 = node;
+            if(node.next == null){
+                this.removeTail();
+            }
+            else{
+                while(1){
+                    node = node.next;
+                    keep3 = node;
+                
+                    keep3.prev = keep2.prev;
+                    keep1.next = keep2.next;
+                    break;
+                }
+            }   
+        }
+        else{
+                while(node.data != val){
+                    
+                    node = node.next;
+                    keep1 = node;
+
+                }
+                
+                    node = node.next;
+                    keep2 = node;
+                
+                    if(keep2.next === null){
+                        this.removeTail();
+                        break;
+                    }else{
+
+                        while(1){
+                            node = node.next;
+                            keep3 = node;
+                            keep3.prev = keep2.prev;
+                            keep1.next = keep2.next;
+                            break;
+                        }
+                    }
+
+    }
+      return;
+
+    };
+    Doubly.prototype.removeBefore = function (val) {
+        var node = this.head;
+        var node3 = this.head;
+        var keep1;
+        if (node3.next.data === val){
+            this.removeHead;
+        }
+        else{
+            while(node.data != val){
+            keep1 = node;
+            node = node.next;
+        }
+        var node2 =this.head;
+        var keep2;
+        while(node2 != keep1){
+            keep2 = node2;
+            node2 = node2.next;
+        }
+        keep2.next = node2.next;
+        node.prev = node2.prev;
+        }
+    };
+    Doubly.prototype.InsertAfter = function (prevNode, new_data) {
+        var nodes = this.head;
+        var prev_Node;
+        while(nodes.data != prevNode){
+            nodes = nodes.next
+        }
+
+        prev_Node = nodes;
+        if (prev_Node == null) {
+            console.info("The given previous node cannot be NULL ");
+            return;
+        }
+        var new_node = new Doubly.Node(this, new_data);
+        new_node.next = prev_Node.next;
+        prev_Node.next = new_node;
+        new_node.prev = prev_Node;
+        if (new_node.next != null)
+            new_node.next.prev = new_node;
+    };
+    Doubly.prototype.InsertBefore = function (nextNode, new_data) {
+        var nodes = this.head;
+        var prev_Node, nodekeep;
+        while(nodes.data != nextNode){
+            nodekeep = nodes;
+            nodes = nodes.next;
+        }
+
+        prev_Node = nodekeep;
+        if (prev_Node == null) {
+            console.info("The given previous node cannot be NULL ");
+            return;
+        }
+        var new_node = new Doubly.Node(this, new_data);
+        new_node.next = prev_Node.next;
+        prev_Node.next = new_node;
+        new_node.prev = prev_Node;
+        if (new_node.next != null)
+            new_node.next.prev = new_node;
+    };
+    Doubly.prototype.append = function (new_data) {
+        var new_node = new Doubly.Node(this, new_data);
+        var last = this.head;
+        new_node.next = null;
+        if (this.head == null) {
+            new_node.prev = null;
+            this.head = new_node;
+            return;
+        }
+        while ((last.next != null)) {
+            last = last.next;
+        }
+        ;
+        last.next = new_node;
+        new_node.prev = last;
+    };
+    Doubly.prototype.removeTail = function () {
+        var last = null;
+        var node = this.head;
+      while(node != null){
+          last = node;
+          node = node.next;
+      }
+      last = last.prev;
+      last.next = null;
+      
+    };
+    Doubly.prototype.printlist = function (node) {
+        var printer = [];
+        var i = 0;
+
+        var last = null;
+        //console.info("Traversal in forward Direction");
+        while ((node != null)) {
+            {
+                console.info(node.data + " ");
+                printer[i] = node.data;
+                last = node;
+                node = node.next;
+                i++;
+            }
+        }
+        ;
+
+        // console.info();
+        // console.info("Traversal in reverse direction");
+        while ((last != null)) {
+            {
+                console.info(last.data + " ");
+                last = last.prev;
+            }
+        }
+        ;
+        return printer;
+    };
+    return Doubly;
+}());
+Doubly["__class"] = "Doubly";
+(function (Doubly) {
+    var Node = /** @class */ (function () {
+        function Node(__parent, d) {
+            this.__parent = __parent;
+            if (this.data === undefined) {
+                this.data = 0;
+            }
+            if (this.prev === undefined) {
+                this.prev = null;
+            }
+            if (this.next === undefined) {
+                this.next = null;
+            }
+            this.data = d;
+        }
+        return Node;
+    }());
+    Doubly.Node = Node;
+    Node["__class"] = "Doubly.Node";
+})(Doubly || (Doubly = {}));
+
+
+let createdDoubly;
+
+function createdDoubli(){
+
+    /* Start with the empty list */
+            createdDoubly = new Doubly();
+}
+
+        function printing() {
+            var ar = [];
+             ar = createdDoubly.printlist(createdDoubly.head);
+             return ar;
+
+        }
+
+        function InsertedAfter() { 
+    var fn, ln; 
+    fn = document.getElementById("prev").value; 
+    ln = document.getElementById("val").value; 
+    createdDoubly.InsertAfter(fn,ln);
+    // document.getElementById("demo2").innerHTML = result; 
+}
+
+function InsertedBefore() { 
+    var fn, ln; 
+    fn = document.getElementById("prev").value; 
+    ln = document.getElementById("val").value; 
+    createdDoubly.InsertBefore(fn,ln);
+    // document.getElementById("demo2").innerHTML = result; 
+}
+</script>
+  
+
+
+             
+
+
+   <!-- <div class="w3-clear nextprev w3-padding-32">
+     <a class="w3-left w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;" href="/chapter9">
+       Previous</a>
+     <a class="w3-right w3-button w3-medium w3-round-xxlarge" style="background-color: #009494;"
+       href="#">Next</a>
+   </div> -->
+
+   <%- include("footer") -%>
